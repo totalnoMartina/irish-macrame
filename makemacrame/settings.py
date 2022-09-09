@@ -31,6 +31,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu63.gitpod.io']
+
+
 
 # Application definition
 
