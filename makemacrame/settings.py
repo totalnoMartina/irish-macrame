@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu64.gitpod.io']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,7 +52,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     #     'allauth.socialaccount.providers.google',
-
 ]
 
 MIDDLEWARE = [
@@ -89,6 +87,8 @@ TEMPLATES = [
         },
     },
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -180,6 +180,7 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
