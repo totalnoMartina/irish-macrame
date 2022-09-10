@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,600&display=swap');
+/* 
+font-family: 'Indie Flower', cursive;
+font-family: 'Playfair Display', serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playfair+Display:ital,wght@1,600&display=swap');
 
 html {
-    background-image: url('/media/macrame-coaster.png');
+    /* background-image: url('/media/macrame-coaster.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
@@ -19,8 +23,9 @@ body {
     background: -webkit-linear-gradient(to top right, #965d30, #b76a44, #e8a49a, #ffbfbe) no-repeat;
     background: -o-linear-gradient(to top right, #965d30, #b76a44, #e8a49a, #ffbfbe) no-repeat;
     background-size: cover;
-    font-family: 'Libre Bodoni', serif;
-    color: #f7cfa9;
+    color: #753a03;
+    font-family: 'Indie Flower', cursive;
+
 }
 
 
@@ -33,7 +38,7 @@ p {
 }
 
 .product-details-container {
-    background-color: white;
+    background-color: rgb(179, 6, 6);
 }
 
 h4 {
