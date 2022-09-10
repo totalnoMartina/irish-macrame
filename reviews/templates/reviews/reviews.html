@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<form action="#" method="POST" class="text-center text-white">
+    {% csrf_token %}
+    <h2 class="m-3">Add you review of {{ macrame.name }}!
+        <br>And thank you for sharing :)</h2>
+    <!-- add style here for each pat of review to be a nice form -->
+
+    {{form.as_p}}
+
+
+
+    <input type="submit" name="Submit" class="m-2 btn">
+</form>
+
+{% endblock %}

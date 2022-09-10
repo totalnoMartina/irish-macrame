@@ -95,8 +95,8 @@
     </div>
     <h2 class="subtitle text-center">Reviews</h2>
     <div class="review-wrap text-center">
-        {% if review %}
-        {% for review in macrame.reviews.all %}
+
+        {% for review in product_reviewed.reviews.all %}
 
         <div class="notification">
             <p>
@@ -106,8 +106,8 @@
             <h2>{{review.title}}</h2>
             <p>{{review.content}}</p>
         </div>
-        <a href="#" class="btn">Update Review</a>
-        <a href="#" class="btn btn-danger">Remove Review</a></td>
+        <a href="{% url 'update_review' review.id %}" class="btn">Update Review</a>
+        <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Remove Review</a></td>
 
         {% empty %}
         <div class="notification">No Reviews Yet, Be the first!</div>
@@ -117,7 +117,7 @@
             <div class="col-md">
 
                 {% if request.user.is_authenticated %}
-                <a href="#" class="btn rounded m-2">Add a Reivew</a>
+                <a href="{% url 'create_review' macrame.id %}" class="btn rounded m-2">Add a Reivew</a>
 
 
             </div>
@@ -125,7 +125,6 @@
 
             {% else %}
             <p> Please Login to add a review</p>
-            {% endif %}
             {% endif %}
         </div>
     </div>

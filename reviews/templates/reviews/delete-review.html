@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<div class="container text-center">
+
+
+    <h3>Are you sure you want to delete "{{item}}"</h3>
+
+    <br>
+    <form method="POST" action="{% url 'delete_review' item.id %}">
+        {% csrf_token %}
+        {{form}}
+        <a href="{% url 'shoppingapp/macrames' %}" class="btn">Cancel</a>
+        <input type="submit" name="Confirm" class="btn">
+
+    </form>
+</div>
+<br>
+<br>
+{% endblock %}

@@ -45,13 +45,16 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'shoppingapp',
     'django.contrib.sites',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     #     'allauth.socialaccount.providers.google',
+
+    # my apps
+    'shoppingapp',
+    'reviews',
 ]
 
 MIDDLEWARE = [
