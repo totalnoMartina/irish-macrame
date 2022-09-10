@@ -39,7 +39,7 @@
                 <small class="text-muted">No Rating Yet</small>
                 {% endif %}
                 <h4 class="mt-3 p-2">{{ macrame.description }}</h4>
-                <form class="form" action="#" method="POST">
+                <form class="form" action="{% url 'add_to_shoppingcart' macrame.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         {% with macrame.has_sizes as s %}
@@ -96,7 +96,7 @@
     <h2 class="subtitle text-center">Reviews</h2>
     <div class="review-wrap text-center">
 
-        {% for review in Review.product_reviewed.reviews.all %}
+        {% for review in macrames.reviews.all %}
 
         <div class="notification">
             <p>

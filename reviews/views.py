@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from shoppingapp import urls
 from .models import Macrame, Review
 from .forms import ReviewForm
 

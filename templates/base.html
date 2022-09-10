@@ -104,17 +104,17 @@
                             <a href="{% url 'account_login' %}" class="rounded-left p-1">Login</a>
                         </li>
                         {% endif %}
-                        <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                                <div class="text-center">
+                        <li class="list-inline-item col-sm-3 align-self-end">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_shoppingcart' %}">
+                                <div class="text-right">
                                     <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                                    <p class="my-0">
+                                    <div class="my-0">
                                         {% if grand_total %}
                                         €{{ grand_total|floatformat:2 }}
                                         {% else %}
                                         €0.00
                                         {% endif %}
-                                    </p>
+                                    </div>
                                 </div>
                             </a>
                         </li>
