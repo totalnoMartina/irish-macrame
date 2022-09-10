@@ -60,4 +60,14 @@ def all_macrames(request):
 
     return render(request, 'shoppingapp/macrames.html', context)
 
+def macrame_detail(request, macrame_id):
+    """ A view to show individual product details """
+
+    macrame = get_object_or_404(Macrame, pk=macrame_id)
+
+    context = {
+        'macrame': macrame,
+    }
+
+    return render(request, 'shoppingapp/macrame-detail.html', context)
 

@@ -23,7 +23,7 @@ body {
     background: -webkit-linear-gradient(to top right, #965d30, #b76a44, #e8a49a, #ffbfbe) no-repeat;
     background: -o-linear-gradient(to top right, #965d30, #b76a44, #e8a49a, #ffbfbe) no-repeat;
     background-size: cover;
-    color: #753a03;
+    color: #2e1b09;
     font-family: 'Indie Flower', cursive;
 
 }
@@ -38,7 +38,8 @@ p {
 }
 
 .product-details-container {
-    background-color: rgb(179, 6, 6);
+    background-color: rgb(193, 96, 96);
+    color: #886e67;
 }
 
 h4 {
