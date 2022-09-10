@@ -82,7 +82,7 @@
                     <!-- Links -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a href="#" class="rounded-left p-1">Macrame Selection</a>
+                            <a href="{% url 'macrames' %}" class="rounded-left p-1">Macrame Selection</a>
                         </li>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
