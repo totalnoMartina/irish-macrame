@@ -57,6 +57,10 @@ INSTALLED_APPS = [
     'reviews',
     'shoppingcart',
     'checkout',
+    'profiles',
+
+    # Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -88,9 +92,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'shoppingcart.contexts.cart_contents',
-
-
             ],
+             'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -199,7 +205,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'statisfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Payments delivery proces
-
+# Payments delivery proces and
+# Stripe details
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECREY = os.getenv('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'martinagoodliving@gmail.com'
