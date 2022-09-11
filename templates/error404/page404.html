@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    {% block extra_title %}404 Error Page{% endblock %}
+</head>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1 class="col">404 Page</h1>
+        <div class="image-fluid">
+            <img src="{% static 'images/404page-image.png' %}" alt="A 404 Error image">
+        </div>
+        <strong>Oh! It seems that this page doesn't exist.</strong>
+        <div class="form__btns accent">
+            <a href="{% url 'macrames' %}" aria-label="Back to homepage" class="btn">
+                <i class="fas fa-store"></i>
+                Back to Irish Macrame
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
