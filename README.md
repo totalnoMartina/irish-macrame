@@ -57,7 +57,7 @@ The User Stories that have been satisfied are:
 ## Features
 
 ## General Features
-- Main Navigation on the right hand side, supposing the users are more rigght-handed si it is easier access on mobile versions. -- procide images of Navigation
+- Main Navigation on the right hand side, supposing the users are more rigght-handed so it is easier to manage and access on mobile versions. -- provide images of Navigation
 - Main Logo and Homepage/landing page (add some text if Marika agrees)
 - Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
 - Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page (will consider if i need liking also inside detailed page) and the detailed product page with ability to add products in the shopping cart
@@ -110,18 +110,24 @@ Python
 
 # Bugs and Issues
 
-Naviagation Burger Bar - The navingation was working just fine but when i left the app for a while and came back to it, the navigation of burger button to turn into 'X' on opening of navigatrion started to go outside of the navigation bar, going to the left so I will have to explore as i have Javascript function to close navigation onclick when clicked outside of the navbar which might cause issues for this burger menu bar to be out of order.
+Naviagation Burger Bar - The navingation was working just fine but when I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigatrion started to go outside of the navigation bar, going to the left so I will have to explore as i have Javascript function to close navigation onclick when clicked outside of the navbar which might cause issues for this burger menu bar to be out of order.
 
 I used another app similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with thecreate part as it was using forms in the case of tutorials I followed adn most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i am exploring solution for this one.
 
 I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here my redirect needs fixing, I am trying to find solution for the like to work without refreshing the whole page so stil lexploring this one.
 
+I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I am just now finding best way to test to see my error page, so still looking into this.
 # Deployment
 
-Github and Heroku?
+Github and Heroku - explain all steps
 # Credits
 
-For the start, the css was not loading background linear so I used [stackoverflow](www.stackoverflow.com) and found [this solution](https://stackoverflow.com/questions/45134867/css-html-how-to-stop-linear-gradient-from-repeating-vertically-and-horizontall).
+
+I would like to thank to my mentor Tim Nelson, a fellow students Iulia Konovalova and JoGorska, as well as the CI community and Slack community for the support and sharing the bugs and solutions that help each other grow, it is highly apreciated and forever remembered to be passed on to another student in the future.
+
+Most of the code has been used from Code Institute curriculum for the e-commerce related code, mainly from 'Boutique Ado', and for deployment steps, cloudinary and starting apps has been followed by the walkthrough project 'I think, Therefore I Blog'
+
+First bugs were related to CSS, as it was not loading background linear so I used [stackoverflow](www.stackoverflow.com) and found [this solution](https://stackoverflow.com/questions/45134867/css-html-how-to-stop-linear-gradient-from-repeating-vertically-and-horizontall).
 The [MyColor](https://mycolor.space) was used to help choose colors. [Google Fonts](https://fonts.google.com/) was used for selection of fonts for the website.
 Finding a cool navigation was not an easy task but [here](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/) I found one that suits.
 
@@ -136,4 +142,4 @@ I wanted likes to be only available to users that are logged in so I found more 
 
 Found a guide on supscriptions/newsletters for non-registered user which I might use as I have used the dynamic year jinja template on this [link](https://medium.com/geekculture/subscribe-to-newsletter-in-django-427da9db74ed)
 
-a [link](https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verification-failed-request-aborted-reason-given-for-fail) that helped me handle scrf token error in the begining because i am using Django 4
+a [link](https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verification-failed-request-aborted-reason-given-for-fail) that helped me handle scrf token error in the begining because i am using Django 4.
