@@ -47,9 +47,9 @@
                     <tr>
                         <td class="p-3 w-25">
                             {% if item.macrame.image %}
-                            <img class="image-fluid-rounded" src="{{ item.macrame.image.url }}">
+                            <img class="image-fluid-rounded" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                             {% else %}
-                            <img class="image-fluid-rounded" src="{{ MEDIA_URL }}noimage.jpg">
+                            <img class="image-fluid-rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="image not uploaded">
                             {% endif %} </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.macrame.name }}</strong></p>
