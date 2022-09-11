@@ -62,6 +62,7 @@ def all_macrames(request):
 
     return render(request, 'shoppingapp/macrames.html', context)
 
+
 def macrame_detail(request, macrame_id):
     """ A view to show individual product details """
 
@@ -73,14 +74,15 @@ def macrame_detail(request, macrame_id):
 
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
+
 def add_macrame(request):
-    """ Add a product to the store """
+    """ Add a macrame item to the store """
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = MacrameForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            macrame = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_macrame'))
+            return redirect(reverse('macrame-detail', args=[macrame.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -92,3 +94,35 @@ def add_macrame(request):
     }
 
     return render(request, template, context)
+
+
+def edit_macrame(request, macrame_id):
+    """ Edit a macrame item in the store """
+    macrame = get_object_or_404(Macrame, pk=macrame_id)
+    if request.method == 'POST':
+        form = MacrameForm(request.POST, request.FILES, instance=macrame)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated item!')
+            return redirect(reverse('macrame-detail', args=[macrame.id]))
+        else:
+            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
+    else:
+        form = MacrameForm(instance=macrame)
+        messages.info(request, f'You are editing {macrame.name}')
+
+    template = 'shoppingapp/edit_macrame.html'
+    context = {
+        'form': form,
+        'macrame': macrame,
+    }
+
+    return render(request, template, context)
+
+
+def delete_macrame(request, macrame_id):
+    """ Delete a product from the store """
+    macrame = get_object_or_404(Macrame, pk=macrame_id)
+    macrame.delete()
+    messages.success(request, 'Item deleted!')
+    return redirect(reverse('macrames'))

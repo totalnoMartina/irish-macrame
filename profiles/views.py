@@ -16,6 +16,8 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
+        else:
+            messages.error(request, 'Update failed. Please ensure form is valid.')
 
     form = UserProfileForm(instance=profile_)
     orders = profile_.orders.all()

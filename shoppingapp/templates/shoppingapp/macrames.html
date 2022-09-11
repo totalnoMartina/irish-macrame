@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+<head>
+    <title>Irish Macrame {% block extra_title %} Macrame Items {% endblock %}</title>
+
+</head>
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -45,12 +49,13 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">€{{ macrame.price }}</p>
-                                    {% if macrame.rating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ macrame.rating }} / 5</small>
-                                    {% else %}
-                                    <small class="text-muted">No Rating</small>
-                                    {% endif %}
                                 </div>
+                                {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_macrame' macrame.id %}">Edit</a> |
+                                    <a class="text-danger" href="{% url 'delete_macrame' macrame.id %}">Delete</a>
+                                </small>
+                                {% endif %}
 
                                 <div class="likes-font">Likes :
                                     <form method="post" action="#">

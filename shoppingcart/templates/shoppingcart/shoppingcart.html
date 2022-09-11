@@ -2,6 +2,10 @@
 {% load static %}
 {% load cart_tools %}
 
+<head>
+    <title>Irish Macrame {% block extra_title %}Shopping Cart{% endblock %}</title>
+
+</head>
 
 {% block page_header %}
 <div class="container header-container">
@@ -42,8 +46,11 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ item.macrame.image.url }}">
-                        </td>
+                            {% if item.macrame.image %}
+                            <img class="image-fluid-rounded" src="{{ item.macrame.image.url }}">
+                            {% else %}
+                            <img class="image-fluid-rounded" src="{{ MEDIA_URL }}noimage.jpg">
+                            {% endif %} </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.macrame.name }}</strong></p>
                             <p class="my-0"><strong>Size: </strong>{% if item.macrame.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>

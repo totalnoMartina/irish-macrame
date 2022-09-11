@@ -2,7 +2,7 @@
 {% load static %}
 
 <head>
-    <title>Irish Macrame {% block extra_title %} Adding Items {% endblock %}</title>
+    <title>Irish Macrame {% block extra_title %} Editing Items {% endblock %}</title>
 
 </head>
 {% block page_header %}
@@ -14,29 +14,25 @@
 {% endblock %}
 
 {% block content %}
-<br>
-<br>
-<br>
-<br>
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="logo-font mb-4">Product Management</h2>
-            <h5 class="text-muted">Add a Product</h5>
+            <h2 class="logo-font mb-4">Macrame Stock Management</h2>
+            <h5 class="text-muted">Edit a Macrame Item</h5>
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'add_macrame' %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'edit_macrame' macrame.id %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
                     <a class="btn btn-outline-black rounded-0" href="{% url 'macrames' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                    <button class="btn btn-black rounded-0" type="submit">Update Item Details</button>
                 </div>
             </form>
         </div>

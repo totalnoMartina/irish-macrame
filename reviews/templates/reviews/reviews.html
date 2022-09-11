@@ -3,7 +3,7 @@
 <br>
 <br>
 <br>
-<form action="#" method="POST" class="text-center text-white">
+<form action="{% url 'create_review' macrame.id %}" method="POST" class="text-center text-white">
     {% csrf_token %}
     <h2 class="m-3">Add you review of {{ macrame.name }}!
         <br>And thank you for sharing :)</h2>
