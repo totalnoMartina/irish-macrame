@@ -4,6 +4,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.views.generic import View
 from .models import Macrame, Category
+from .forms import MacrameForm
+
 
 
 def index(request):
@@ -71,3 +73,22 @@ def macrame_detail(request, macrame_id):
 
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
+def add_macrame(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_macrame'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = MacrameForm()
+        
+    template = 'shoppingapp/add_macrames.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
