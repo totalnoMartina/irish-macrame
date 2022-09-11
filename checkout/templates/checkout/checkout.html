@@ -47,7 +47,7 @@
                         {% if item.product.image %}
                         <img class="w-100" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ macrame.name }}">
+                        <img class="w-100" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ macrame.name }}">
                         {% endif %}
                     </a>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="col-3">
                     <p class="my-0">€{{ total | floatformat:2 }}</p>
                     <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
