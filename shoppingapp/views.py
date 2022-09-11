@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.views.generic import View
 from .models import Macrame, Category
 from .forms import MacrameForm
-
 
 
 def index(request):
@@ -52,7 +52,6 @@ def all_macrames(request):
             macrames = macrames.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
     context = {
         'macrames': macrames,
         'search_term': query,
@@ -75,8 +74,12 @@ def macrame_detail(request, macrame_id):
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
 
+@login_required
 def add_macrame(request):
     """ Add a macrame item to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
     if request.method == 'POST':
         form = MacrameForm(request.POST, request.FILES)
         if form.is_valid():
@@ -96,8 +99,13 @@ def add_macrame(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_macrame(request, macrame_id):
     """ Edit a macrame item in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     if request.method == 'POST':
         form = MacrameForm(request.POST, request.FILES, instance=macrame)
@@ -120,8 +128,13 @@ def edit_macrame(request, macrame_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_macrame(request, macrame_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     macrame.delete()
     messages.success(request, 'Item deleted!')
