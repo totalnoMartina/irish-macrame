@@ -84,7 +84,7 @@ First three pages for wireframes
 ![Project Agile](/media/agile.png?raw=true)
 
 
-To create the User stories I used Github Issues and then I grouped them according to MoSCoW prioritization technique. The link with live issues can be found [here](https://github.com/totalnoMartina/black-moon-designs/projects/1). Some of the User Stories will be left for the future development and they are labeled as 'Could Have'.
+To create the User stories I used Github Issues and then I grouped them according to MoSCoW prioritization technique. The link with live issues can be found [here](https://github.com/users/totalnoMartina/projects/6). Some of the User Stories will be left for the future development and they are labeled as 'Could Have'.
 
 --check how to do this ?? The issues were than closed automaticaly when the pull request was linked to the issue.
 # Technologies Used
@@ -93,7 +93,7 @@ To create the User stories I used Github Issues and then I grouped them accordin
 - Font Awesome v4
 - Javascript
 - Bootstrap 4.6
-- Python3 -- Django 3.2
+- Python3 -- Django 4
 - Stripe
 
 # Code Validation
