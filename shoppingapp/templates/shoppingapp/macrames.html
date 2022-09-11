@@ -58,7 +58,7 @@
                                 {% endif %}
 
                                 <div class="likes-font">Likes :
-                                    <form method="post" action="#">
+                                    <form method="post" action="{% url 'like' macrame.id %}">
                                         {% csrf_token %}
                                         <input type="hidden" name="next_" value="{{ request.path }}">
                                         {% if macrame.likes %}

@@ -4,6 +4,9 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.views.generic import View
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
 from .models import Macrame, Category
 from .forms import MacrameForm
 
@@ -74,6 +77,27 @@ def macrame_detail(request, macrame_id):
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
 
+class AddLike(LoginRequiredMixin, View):
+    """ A class for liking products """
+
+    def post(self, request, pk, *args, **kwargs):
+        """ Modifying post method to submit likes """
+        macrame = Macrame.objects.get(pk=pk)
+        is_like = False
+        for like in macrame.likes.all():
+            if like == request.user:
+                is_like = True
+                break
+        if not is_like:
+            macrame.likes.add(request.user)
+            messages.success(request, 'Thanks for the "Like"!')
+        if is_like:
+            macrame.likes.remove(request.user)
+            
+        next_ = request.POST.get('next_', '/')
+        return HttpResponseRedirect(next_)
+
+
 @login_required
 def add_macrame(request):
     """ Add a macrame item to the store """
@@ -134,7 +158,7 @@ def delete_macrame(request, macrame_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     macrame.delete()
     messages.success(request, 'Item deleted!')
