@@ -39,7 +39,7 @@ def all_macrames(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             macrames = macrames.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             macrames = macrames.filter(category__name__in=categories)
@@ -50,7 +50,6 @@ def all_macrames(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('macrames'))
-            
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             macrames = macrames.filter(queries)
 
@@ -61,7 +60,6 @@ def all_macrames(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-
     return render(request, 'shoppingapp/macrames.html', context)
 
 
@@ -163,3 +161,4 @@ def delete_macrame(request, macrame_id):
     macrame.delete()
     messages.success(request, 'Item deleted!')
     return redirect(reverse('macrames'))
+    

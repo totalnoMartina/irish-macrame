@@ -1,1 +1,139 @@
+# Irish Macrame by Black Moon Designs
+
+![](media/images/someimage--.png?raw=true)
+
+# Contents
+
+* [Project Purpose - Overview](#project-purpose-overview)
+* [User Experience Design](#user-experience-design)
+   * [Strategy](#strategy)
+   * [Target Audience](#target-audience)
+   * [User Stories](#user-stories)
+   * [Scope](#scope)
+   * [Features](#features)
+      * [General Features](#general-features)
+      * [Future Features](#future-features)
+   * [Structure](#structure)
+   <!-- * [Browser Compatibility](#browser-compatibility) -->
+* [Skeleton](#skeleton)
+   * [Wireframes](#wireframes)
+* [Agile Methodology](#agile-methodology)
+* [Technologies Used](#technologies-used)
+* [Code Validation](#code-validation)
+* [Testing](#testing)
+   * [Manual Testing](#manual-testing)
+   * [Lighthouse](#lighthouse)
+   * [Bugs and Issues](#bugs-and-issues)
+* [Deployment](#deployment)
+* [Credits](#credits)
+
+# Project Purpose - Overview
+
+A website that promotes handmade macrame items for sale, made by an artist Marika from Poland. She collects wood samples from the forests around the suburban Dublin and creates items tying Irish Cotton around them to make items like Macrames and similar handmade products. She shipps and packs each item hersel and cares for the outlook of every package herself. Her shop started on Etsy on [this link](https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936)
+
+# User Experience Design
+
+Color palette is chosen by the macrame creator, boho, earthy notes in colours.
+ image of the palette
+## Strategy
+
+## Target Audience
+
+A Macrame shop is for people who like handmade unique macrame products, and have a fond for irish cotton and wood. It is perfect for Gift shopping or for special occasions. Wood taken from Irish forests outside of Dublin and surroundings and Cotton provided from (ask Marika where does she get her supplies to refer)
+
+## User Stories
+
+The user stories were categorised into different priorities, from highest to lowest: "Should Have" "Must Have" "Could Have" "Might Have" "Won't Have". Some User Stories that have been labeled as "Could Have" are not prioritized to be implemented in this edition of this app.
+
+The User Stories that have been satisfied are:
+
+* Create User Navigation : users are able to easy navigate through pages
+* Create a homepage and a page for presenting the products - Landing page clearly states the purpose of the app to be a shopping app
+* Create a button guiding to browse products - A button to direct to browsing products as main user story 
+* Create Searching feature - Ability to search macrames by word if it shows up in description or name
+* Create Shopping bag page/view - A page that shows options to add macrame product to choose for purchase
+## Scope
+
+## Features
+
+## General Features
+- Main Navigation on the right hand side, supposing the users are more rigght-handed si it is easier access on mobile versions. -- procide images of Navigation
+- Main Logo and Homepage/landing page (add some text if Marika agrees)
+- Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
+- Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page (will consider if i need liking also inside detailed page) and the detailed product page with ability to add products in the shopping cart
+- Messages to notify the user when he/she is logged in succesfully or made an order
+- Add/ Update/ Remove product into the shopping cart
+- Checkout page for reaching the payment and completing with stripe payments system
+
+
+## Future Features
+
+- Write response for the reviews by the author
+
+## Structure
+# Skeleton
+## Wireframes
+
+First three pages for wireframes
+
+![First three pages for wireframes](/media/home-list-detail.png?raw=true)
+
+# Agile Methodology
+
+
+![Project Agile](/media/agile.png?raw=true)
+
+
+To create the User stories I used Github Issues and then I grouped them according to MoSCoW prioritization technique. The link with live issues can be found [here](https://github.com/totalnoMartina/black-moon-designs/projects/1). Some of the User Stories will be left for the future development and they are labeled as 'Could Have'.
+
+--check how to do this ?? The issues were than closed automaticaly when the pull request was linked to the issue.
+# Technologies Used
+
+- HTML5/CSS3
+- Font Awesome v4
+- Javascript
+- Bootstrap 4.6
+- Python3 -- Django 3.2
+- Stripe
+
+# Code Validation
+
+Html 
+CSS
+Javascript
+Python
+
+# Testing
+## Manual Testing
+- Test manually on all devices you have - iphone, linux chromebook, ipad
+## Lighthouse
+
+# Bugs and Issues
+
+Naviagation Burger Bar - The navingation was working just fine but when i left the app for a while and came back to it, the navigation of burger button to turn into 'X' on opening of navigatrion started to go outside of the navigation bar, going to the left so I will have to explore as i have Javascript function to close navigation onclick when clicked outside of the navbar which might cause issues for this burger menu bar to be out of order.
+
+I used another app similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with thecreate part as it was using forms in the case of tutorials I followed adn most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i am exploring solution for this one.
+
+I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here my redirect needs fixing, I am trying to find solution for the like to work without refreshing the whole page so stil lexploring this one.
+
+# Deployment
+
+Github and Heroku?
+# Credits
+
+For the start, the css was not loading background linear so I used [stackoverflow](www.stackoverflow.com) and found [this solution](https://stackoverflow.com/questions/45134867/css-html-how-to-stop-linear-gradient-from-repeating-vertically-and-horizontall).
+The [MyColor](https://mycolor.space) was used to help choose colors. [Google Fonts](https://fonts.google.com/) was used for selection of fonts for the website.
+Finding a cool navigation was not an easy task but [here](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/) I found one that suits.
+
+Finding way to easy CRUD functionality through this [link](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15)
+More info on CRUD on this [website](https://www.youtube.com/watch?v=Y5vvGQyHtpM)
+
+More help for the review idea on this [video](https://www.youtube.com/watch?v=Y5vvGQyHtpM)
+
+A great example of a README.md found [here](https://github.com/JoGorska/mileage-tracker/blob/main/README.md#tank-mileage-tracker) by [JoGorska](https://github.com/JoGorska) , a very inspiring individual and Alumni at the Code Institute.
+
+I wanted likes to be only available to users that are logged in so I found more information on [django documentation here](https://docs.djangoproject.com/en/3.2/topics/auth/default/)
+
+Found a guide on supscriptions/newsletters for non-registered user which I might use as I have used the dynamic year jinja template on this [link](https://medium.com/geekculture/subscribe-to-newsletter-in-django-427da9db74ed)
+
 a [link](https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verification-failed-request-aborted-reason-given-for-fail) that helped me handle scrf token error in the begining because i am using Django 4
