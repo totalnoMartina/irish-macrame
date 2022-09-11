@@ -142,6 +142,7 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
+{% include 'shoppingapp/includes/quantity-input-script.html' %}
 
 <script type="text/javascript">
     // Update quantity on click
