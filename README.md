@@ -14,7 +14,6 @@
       * [General Features](#general-features)
       * [Future Features](#future-features)
    * [Structure](#structure)
-   <!-- * [Browser Compatibility](#browser-compatibility) -->
 * [Skeleton](#skeleton)
    * [Wireframes](#wireframes)
 * [Agile Methodology](#agile-methodology)
@@ -25,7 +24,15 @@
    * [Lighthouse](#lighthouse)
    * [Bugs and Issues](#bugs-and-issues)
 * [Deployment and making a clone](#deployment-and-making-a-clone)
-* [Credits](#credits)
+   *[Deployment to heroku](#deployment-to-heroku)
+   *[Forking the Github Repository](#forking-the-github-repository)
+   *[Making a local clone](#making-a-local-clone)
+   *[Setting up your local environment](#setting-up-your-local-enviroment)
+   *[Getting Stripe keys](#getting-stripe-keys)
+   *[Getting email variables from gmail](#getting-email-variables-from-gmail)
+ * [Credits](#credits)
+   *[Online Resources](#online-resources)
+   *[Tutorials, stackoverflow and people](#tutorials-stackoverflow-and-people)
 
 # Project Purpose - Overview
 
@@ -135,7 +142,7 @@ I spoke to a fellow student Iulia Konovalova about Error pages and she recommend
 
 **Log into heroku**
 
-3. Log into [Heroku](https://dashboard.heroku.com/apps) or create a new account and log in
+3. Log into [Heroku](https://dashboard.heroku.com/) or create a new account and log in
 
 4. top right-hand corner click "New" and choose the option Create new app, if you are a new user, the "Create new app" button will appear in the middle of the screen
 
@@ -161,7 +168,7 @@ I spoke to a fellow student Iulia Konovalova about Error pages and she recommend
 
 12. Procfile needs to be created in your app
 ```
-web: gunicorn PROJ_NAME.wsgi
+web: gunicorn PROJECT_NAME.wsgi
 ```
 
 13. In settings in your app add Heroku to ALLOWED_HOSTS
@@ -198,7 +205,7 @@ The live link can be found [here](live/page/here/???).
 By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
 1. Log in to GitHub and locate the [GitHub Repository](repo here???)
-2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+2. Above the Repository code just above the "Settings" button on the menu, locate the "Fork" button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ## Making a Local Clone
@@ -243,7 +250,6 @@ PostgreSQL and AWS keys are needed only on Heroku, not in local IDE
 pip3 install -r requirements.txt
 ```
 
-
 ## Getting Stripe keys
 Go to developers tab. On side menu you will find API keys. Copy STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY.
 
@@ -252,6 +258,7 @@ Add endpoint URL (your local or deployed URL)
 Add all events 
 Than click add endpoint
 You should be redirected to this webhook's page. Reveal webhook sign in secret and copy to Settings and to heroku as STRIPE_WH_SECRET variable
+
 
 ## Getting email variables from gmail
 
@@ -272,6 +279,13 @@ EMAIL_HOST_USER is the gmail email address
 
 Github and Heroku - explain all steps
 # Credits
+## Online Resources
+
+* [Font Awesome](https://fontawesome.com/)
+* [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* [Google Fonts](https://fonts.google.com/)
+*[Coolors Website](https://coolors.co/)
+## Tutorials, stackoverflow and people
 
 Most of the code has been used from Code Institute curriculum for the e-commerce related code, mainly from 'Boutique Ado' regarding items, bag and payment section, and for deployment steps, cloudinary and starting apps has been followed by the walkthrough project 'I think, Therefore I Blog'. Many thanks to teachers that presented us a way to make an e-commerce website using Django.
 
