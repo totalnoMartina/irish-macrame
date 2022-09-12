@@ -24,15 +24,15 @@
    * [Lighthouse](#lighthouse)
    * [Bugs and Issues](#bugs-and-issues)
 * [Deployment and making a clone](#deployment-and-making-a-clone)
-   *[Deployment to heroku](#deployment-to-heroku)
-   *[Forking the Github Repository](#forking-the-github-repository)
-   *[Making a local clone](#making-a-local-clone)
-   *[Setting up your local environment](#setting-up-your-local-enviroment)
-   *[Getting Stripe keys](#getting-stripe-keys)
-   *[Getting email variables from gmail](#getting-email-variables-from-gmail)
+   * [Deployment to heroku](#deployment-to-heroku)
+   * [Forking the Github Repository](#forking-the-github-repository)
+   * [Making a local clone](#making-a-local-clone)
+   * [Setting up your local environment](#setting-up-your-local-enviroment)
+   * [Getting Stripe keys](#getting-stripe-keys)
+   * [Getting email variables from gmail](#getting-email-variables-from-gmail)
  * [Credits](#credits)
-   *[Online Resources](#online-resources)
-   *[Tutorials, stackoverflow and people](#tutorials-stackoverflow-and-people)
+   * [Online Resources](#online-resources)
+   * [Tutorials, stackoverflow and people](#tutorials-stackoverflow-and-people)
 
 # Project Purpose - Overview
 
@@ -131,8 +131,9 @@ I used another app similar to this to try and test out the CRUD functionality of
 I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here my redirect needs fixing, I am trying to find solution for the like to work without refreshing the whole page so stil lexploring this one.
 
 I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I am just now finding best way to test to see my error page, so still looking into this.
-# Deployment and making a clone
 
+During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charges all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored
+# Deployment and making a clone
 ## Deployment to heroku
 
 **In your app** 
