@@ -37,6 +37,14 @@ Color palette is chosen by the macrame creator, boho, earthy notes in colours.
  image of the palette
 ## Strategy
 
+### Facebook Page
+
+The artist of macrame items actually had already made real FB page which I could not find just by engering keywords, but just after the artist shared this [link](https://www.facebook.com/BlackMoonDesigns13)
+
+![Facebook page image of the page](/media/fb-blackmoondesign.png?raw=true)
+![Facebook page image of the content on the page](/media/fb-blackmoon-content.png?raw=true)
+
+
 ## Target Audience
 
 A Macrame shop is for people who like handmade unique macrame products, and have a fond for irish cotton and wood. It is perfect for Gift shopping or for special occasions. Wood taken from Irish forests outside of Dublin and surroundings and Cotton provided from (ask Marika where does she get her supplies to refer)
@@ -68,7 +76,8 @@ The User Stories that have been satisfied are:
 
 ## Future Features
 
-- Write response for the reviews by the author
+- Add pagination to macrame items page
+- Ability to write responses to the reviews of users by the author
 
 ## Structure
 # Skeleton
@@ -81,12 +90,10 @@ First three pages for wireframes
 # Agile Methodology
 
 
-![Project Agile](/media/agile.png?raw=true)
+![Project Agile](/media/user-stories-image-kanban.png?raw=true)
 
 
 To create the User stories I used Github Issues and then I grouped them according to MoSCoW prioritization technique. The link with live issues can be found [here](https://github.com/users/totalnoMartina/projects/6). Some of the User Stories will be left for the future development and they are labeled as 'Could Have'.
-
---check how to do this ?? The issues were than closed automaticaly when the pull request was linked to the issue.
 # Technologies Used
 
 - HTML5/CSS3
@@ -122,10 +129,7 @@ I spoke to a fellow student Iulia Konovalova about Error pages and she recommend
 Github and Heroku - explain all steps
 # Credits
 
-
-I would like to thank to my mentor Tim Nelson, a fellow students Iulia Konovalova and JoGorska, as well as the CI community and Slack community for the support and sharing the bugs and solutions that help each other grow, it is highly apreciated and forever remembered to be passed on to another student in the future.
-
-Most of the code has been used from Code Institute curriculum for the e-commerce related code, mainly from 'Boutique Ado', and for deployment steps, cloudinary and starting apps has been followed by the walkthrough project 'I think, Therefore I Blog'
+Most of the code has been used from Code Institute curriculum for the e-commerce related code, mainly from 'Boutique Ado' regarding items, bag and payment section, and for deployment steps, cloudinary and starting apps has been followed by the walkthrough project 'I think, Therefore I Blog'. Many thanks to teachers that presented us a way to make an e-commerce website using Django.
 
 First bugs were related to CSS, as it was not loading background linear so I used [stackoverflow](www.stackoverflow.com) and found [this solution](https://stackoverflow.com/questions/45134867/css-html-how-to-stop-linear-gradient-from-repeating-vertically-and-horizontall).
 The [MyColor](https://mycolor.space) was used to help choose colors. [Google Fonts](https://fonts.google.com/) was used for selection of fonts for the website.
@@ -140,6 +144,8 @@ A great example of a README.md found [here](https://github.com/JoGorska/mileage-
 
 I wanted likes to be only available to users that are logged in so I found more information on [django documentation here](https://docs.djangoproject.com/en/3.2/topics/auth/default/)
 
-Found a guide on supscriptions/newsletters for non-registered user which I might use as I have used the dynamic year jinja template on this [link](https://medium.com/geekculture/subscribe-to-newsletter-in-django-427da9db74ed)
+Found a guide on supscriptions/newsletters for non-registered user which I might use as I have used the dynamic rendering of the curent year using a jinja template on this [link](https://medium.com/geekculture/subscribe-to-newsletter-in-django-427da9db74ed)
 
-a [link](https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verification-failed-request-aborted-reason-given-for-fail) that helped me handle scrf token error in the begining because i am using Django 4.
+A [link](https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verification-failed-request-aborted-reason-given-for-fail) that helped me handle csrf token error in the begining because i am using Django 4.
+
+I would like to thank to my mentor Tim Nelson, fellow students Iulia Konovalova and JoGorska, as well as the CI community and Slack community for the support and sharing the bugs and solutions that help each other grow, it is highly apreciated and forever remembered to be passed on to another student/fellow coder in the future.

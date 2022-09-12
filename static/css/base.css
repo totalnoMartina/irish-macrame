@@ -87,6 +87,7 @@ a.category-badge>span.badge:hover {
     cursor: pointer;
 }
 
+
 /* Macrame Form with the widget */
 
 .custom-checkbox .custom-control-label::before {
@@ -266,9 +267,6 @@ a.category-badge>span.badge:hover {
     opacity: 0;
 }
 
-
-
-
 a {
     font-size: 2rem;
     background-color: #f3ab99;
@@ -282,7 +280,7 @@ a:hover {
 }
 
 .fa-shopping-bag:hover {
-    color: #493a3a;
+    color: #675454;
 }
 
 .navbar-brand,
@@ -319,8 +317,9 @@ a:hover {
 }
 
 .blockquote-footer {
-    color: #f3ab99 !important;
+    color: #eacac2 !important;
     background-color: unset;
+    font-size: 1.5rem;
 }
 
 /* ------------------------------- bootstrap toasts */
