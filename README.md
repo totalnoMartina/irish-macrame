@@ -6,7 +6,7 @@
 
 * [Project Purpose - Overview](#project-purpose-overview)
 * [User Experience Design](#user-experience-design)
-   * [Strategy](#strategy)
+   * [Marketing Strategy](#marketing-strategy)
    * [Target Audience](#target-audience)
    * [Color Palette](#color-palette)
    * [User Stories](#user-stories)
@@ -42,7 +42,9 @@ A website that promotes handmade macrame items for sale, made by an artist Marik
 
 Color palette is chosen by the macrame creator, boho, earthy notes in colours.
  image of the palette
-## Strategy
+## Marketing Strategy
+
+Describe marketing side of the project and strategy to engage the user with website
 
 ### Facebook Page
 
