@@ -34,11 +34,11 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if macrame.image %}
-                        <a href="{% url 'macrame-detail' macrame.id %}" class="h-100">
+                        <a href="{% url 'macrame-detail' macrame.id %}" class="h-100" aria-label="image of the macrame item leading to details page">
                             <img class="card-img-top img-fluid card__img rounded h-75" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
                         </a>
                         {% else %}
-                        <a href="{% url 'macrame-detail' macrame.id %}">
+                        <a href="{% url 'macrame-detail' macrame.id %}" aria-label="no-image placeholder of the macrame item leading to details page">
                             <img class="card-img-top img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ macrame.name }}">
                         </a>
                         {% endif %}
@@ -52,8 +52,8 @@
                                 </div>
                                 {% if request.user.is_superuser %}
                                 <small class="ml-3">
-                                    <a href="{% url 'edit_macrame' macrame.id %}">Edit</a> |
-                                    <a class="text-danger" href="{% url 'delete_macrame' macrame.id %}">Delete</a>
+                                    <a href="{% url 'edit_macrame' macrame.id %}" aria-label="editing macrame item - admin">Edit</a> |
+                                    <a class="text-danger" href="{% url 'delete_macrame' macrame.id %}" aria-label="deleting macrame item - admin">Delete</a>
                                 </small>
                                 {% endif %}
 
