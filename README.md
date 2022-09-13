@@ -136,11 +136,13 @@ I need to improve contrast by adding borders just for better Accessibility
 
 # Bugs and Issues
 
-Naviagation Burger Bar - The navingation was working just fine but when I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigatrion started to go outside of the navigation bar, going to the left so I will have to explore as i have Javascript function to close navigation onclick when clicked outside of the navbar which might cause issues for this burger menu bar to be out of order.
+Naviagation Burger Bar - The navigation was working  fine but when I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigation started to go outside of the navigation bar, going to the left so I will have to explore as i have Javascript function to close navigation onclick when clicked outside of the navbar which might cause issues for this burger menu bar to be out of order. Also I thought of dropping it altogether.
 
 I used another app similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with thecreate part as it was using forms in the case of tutorials I followed adn most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i am exploring solution for this one.
 
-I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here my redirect needs fixing, I am trying to find solution for the like to work without refreshing the whole page so stil lexploring this one.
+I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking' so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here my redirect needs fixing, I am trying to find solution for the like to work without refreshing the whole page so still exploring this.
+
+I am also trying to test newsletter app in [this repo](https://github.com/totalnoMartina/the-macrames) as I want to make sure something works before I include it in my project as I have crashed so many apps during developing this one. At the moment it is not commited as I am having small issues figuring it out in the most simple way. I might need help from my mentor about this as I got the impression that it is easy but then some tutorials have it a bit complicated, so I am exploring this through [this tutorial](https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27).
 
 I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I am just now finding best way to test to see my error page, so still looking into this.
 
@@ -167,24 +169,25 @@ During payment process, message shows email confirmation will be sent but no ema
 
 8. Go to Resources Tab, Add-ons, search and add Heroku Postgres
 
-9. Choose "settings" from the menu on the top of the page
+9. Choose "Settings" from the menu on the top of the page
 
 10. Go to section "Config Vars" and click button "Reveal Config Vars". 
 
 11. Add the below variables to the list
 
     * Database URL will be added automaticaly
-    * Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
+    * Secret_key - one can be generated [here](https://miniwebtool.com/django-secret-key-generator/) or make up your own secret key.
 
 
 **Go back to your code**
 
 12. Procfile needs to be created in your app
+Content of Procfile has a structure like this :
 ```
 web: gunicorn PROJECT_NAME.wsgi
 ```
 
-13. In settings in your app add Heroku to ALLOWED_HOSTS
+13. In settings in your app add your name of your Heroku App to ALLOWED_HOSTS without the starting slashes and 'https:'
 
 14. Add and commit the changes in your code and push to github
 
@@ -217,13 +220,13 @@ The live link can be found [here](live/page/here/???).
 
 By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](repo here???)
-2. Above the Repository code just above the "Settings" button on the menu, locate the "Fork" button.
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/totalnoMartina/irish-macrame)
+2. In the same line as the name of your repository, on the right side there are a few buttons, locate the "Fork" button and click on it
 3. You should now have a copy of the original repository in your GitHub account.
 
 ## Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](repo here???)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/totalnoMartina/irish-macrame)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open commandline interface on your computer
@@ -231,19 +234,19 @@ By forking the GitHub Repository you will be able to make a copy of the original
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone http..repo here???
+$ git clone https://github.com/totalnoMartina/irish-macrame
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ## Setting up your local enviroment
 
-1. Create Virtual enviroment on your computer or use gitpod built in virtual enviroment feature.
+1. Create Virtual enviroment on your computer or use gitpod built-in virtual enviroment feature.
 
 2. Create env.py file. It needs to contain those 5 variables.
 
-* Database URL can be obtained from [heroku](https://dashboard.heroku.com/), add PostgreSQL as an add on when creating an app. 
-* Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
+* Database URL can be obtained from [heroku](https://dashboard.heroku.com/), add PostgreSQL as an add-on when creating an app. 
+* Secret_key - the django secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
 * Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. 
 * Google API key can be obtained [here](https://cloud.google.com/gcp?authuser=1) you will have to register with google and create new app to get the API key. Follow the instructions on the website.
 
@@ -256,11 +259,11 @@ STRIPE_SECRET_KEY
 STRIPE_WH_SECRET
 
 ```
-PostgreSQL and AWS keys are needed only on Heroku, not in local IDE
+PostgreSQL and Cloudinary URL keys are needed only on Heroku, not in local IDE
 
 3. Run command 
 ```
-pip3 install -r requirements.txt
+pip3 freeze --local > requirements.txt
 ```
 
 ## Getting Stripe keys

@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-2 mb-1">
                     <a href="{% url 'macrame-detail' item.macrame.id %}">
-                        {% if item.product.image %}
+                        {% if item.macrame.image %}
                         <img class="w-100" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                         {% else %}
                         <img class="w-100" src="{{ MEDIA_URL }}noimage.jpg" alt="no image uploaded">

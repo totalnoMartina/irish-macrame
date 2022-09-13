@@ -19,6 +19,7 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """ A function to keep cache data if checkout fails """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -136,7 +137,6 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-
     return render(request, template, context)
 
 
