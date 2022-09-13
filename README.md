@@ -8,13 +8,13 @@
 * [User Experience Design](#user-experience-design)
    * [Strategy](#strategy)
    * [Target Audience](#target-audience)
+   * [Color Palette](#color-palette)
    * [User Stories](#user-stories)
    * [Scope](#scope)
    * [Features](#features)
       * [General Features](#general-features)
       * [Future Features](#future-features)
    * [Structure](#structure)
-* [Skeleton](#skeleton)
    * [Wireframes](#wireframes)
 * [Agile Methodology](#agile-methodology)
 * [Technologies Used](#technologies-used)
@@ -56,6 +56,11 @@ The artist of macrame items actually had already made real FB page which I could
 
 A Macrame shop is for people who like handmade unique macrame products, and have a fond for irish cotton and wood. It is perfect for Gift shopping or for special occasions. Wood taken from Irish forests outside of Dublin and surroundings and Cotton provided from (ask Marika where does she get her supplies to refer)
 
+## Color palette
+
+Artist suggested more warm, boho, soft colors so i went for a combination of these ![colors](/media/palette-colors.png?raw=true)
+
+
 ## User Stories
 
 The user stories were categorised into different priorities, from highest to lowest: "Should Have" "Must Have" "Could Have" "Might Have" "Won't Have". Some User Stories that have been labeled as "Could Have" are not prioritized to be implemented in this edition of this app.
@@ -72,14 +77,18 @@ The User Stories that have been satisfied are:
 ## Features
 
 ## General Features
+
+---> pictures of the user stories
+
 - Main Navigation on the right hand side, supposing the users are more rigght-handed so it is easier to manage and access on mobile versions. -- provide images of Navigation
 - Main Logo and Homepage/landing page (add some text if Marika agrees)
 - Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
 - Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page (will consider if i need liking also inside detailed page) and the detailed product page with ability to add products in the shopping cart
 - Messages to notify the user when he/she is logged in succesfully or made an order
+- User profile wher users can update their personal information
+- Admin ability to add, update and remove product without accessing the admin panel featured in Django
 - Add/ Update/ Remove product into the shopping cart
 - Checkout page for reaching the payment and completing with stripe payments system
-
 
 ## Future Features
 
@@ -87,7 +96,6 @@ The User Stories that have been satisfied are:
 - Ability to write responses to the reviews of users by the author
 
 ## Structure
-# Skeleton
 ## Wireframes
 
 First three pages for wireframes
@@ -121,6 +129,10 @@ Python
 ## Manual Testing
 - Test manually on all devices you have - iphone, linux chromebook, ipad
 ## Lighthouse
+
+![Homepage](/media/homepage-lighth.png?raw=true)
+
+I need to improve contrast by adding borders just for better Accessibility
 
 # Bugs and Issues
 

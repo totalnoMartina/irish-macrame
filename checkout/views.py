@@ -12,8 +12,10 @@ from shoppingcart.contexts import cart_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
+
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
