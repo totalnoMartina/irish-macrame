@@ -322,6 +322,11 @@ a:hover {
     font-size: 1.5rem;
 }
 
+.review-wrap {
+    background-color: #faf3f3;
+    opacity: 0.8;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
