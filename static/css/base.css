@@ -29,13 +29,16 @@ body {
 }
 
 p {
-    color: #965d30;
+    color: #2f231a;
 }
 
+.nav-link:hover {
+    color: white !important;
+}
 
 .product-details-container {
-    background-color: rgba(52, 40, 40, 0.188);
-    color: #3d1b11;
+    background-color: rgba(240, 223, 223, 0.188);
+    color: #22100a;
     font-size: 2rem;
 }
 

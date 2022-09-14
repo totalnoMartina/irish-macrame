@@ -50,7 +50,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <!-- Navbar brand -->
             <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}">
                 <h1 class="logo">
@@ -64,16 +64,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item mt-4 text-right">
-                        <a href="{% url 'macrames' %}" class="rounded-bottom pb-3">Macrames</a>
+                        <a class="nav-link rounded-bottom" href="{% url 'macrames' %}">Macrames</a>
                     </li>
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
                     <li class="nav-item dropdown text-right">
-                        {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
                         <a class="nav-link dropdown-toggle mt-4" href="{% url 'profile' %}" role="button" data-toggle="dropdown" aria-expanded="false">
                             My Profile<i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         {% endif %}
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu text-right">
                             <a class="dropdown-item" href="{% url 'add_macrame' %}" class="rounded-botom">Manage Stock</a>
                             <a class="dropdown-item" href="{% url 'account_logout' %}" class="rounded-bottom">Logout</a>
                             {% else %}
@@ -83,22 +83,22 @@
                         </div>
                         {% endif %}
                     </li>
-                    <li class="nav-item col-sm-3 align-self-end mt-4">
+                    <li class="nav-item mt-4 text-right">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_shoppingcart' %}">
                             <div class="text-right">
-                                <div><i class="fa fa-shopping-cart fa-sm" aria-hidden="true"></i></div>
-                                <div>
+                                <span>
+                                    <i class="fa fa-shopping-cart fa-sm" aria-hidden="true"></i>
                                     {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
                                     {% else %}
                                     €0.00
                                     {% endif %}
-                                </div>
+                                </span>
                             </div>
                         </a>
                     </li>
                 </ul>
-                <form method="GET" action="{% url 'macrames' %}" class="form-inline my-2 my-lg-0">
+                <form method="GET" action="{% url 'macrames' %}" class="form-inline mx-auto">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">

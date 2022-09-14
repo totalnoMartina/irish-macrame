@@ -8,26 +8,25 @@
 </head>
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container my-4">
-    <div class="row mt-3">
+<div class="container">
+    <div class="row">
         <div class="col">
             <br>
             <br>
             <br>
-            <h2 class="logo-font mb-4 text-center">Shopping Bag</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 class="logo-font mb-4 text-center">Shopping Cart</h2>
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             {% if cart_items %}
@@ -36,13 +35,11 @@
                     <thead class="text-black">
                         <tr>
                             <th scope="col">Product Info</th>
-                            <th scope="col"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
@@ -54,7 +51,6 @@
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.macrame.name }}</strong></p>
                             <p class="my-0"><strong>Size: </strong>{% if item.macrame.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.macrame.price }}</p>
@@ -138,12 +134,12 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
+            <p class="lead mb-5 text-black font-weight-bold">Your Shopping Cart is empty.</p>
             <a href="{% url 'macrames' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
-                <span class="p-1">Keep Shopping</span>
+                <span class="p-1 font-weight-bold">Keep Shopping</span>
             </a>
             {% endif %}
         </div>
