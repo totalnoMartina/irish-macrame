@@ -19,6 +19,8 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
     <div class="row">
         <div class="col text-center">
             <h1 class="logo-font mt-4">Macrame Selection</h1>
@@ -28,17 +30,17 @@
     <div class="row py-4">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row mb-2 align-items-end">
+            <div class="row mb-2 align-items-end h-100">
                 {% for macrame in macrames %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
+                    <div class="card border-0">
                         {% if macrame.image %}
                         <a href="{% url 'macrame-detail' macrame.id %}" aria-label="image of the macrame item leading to details page">
-                            <img class="card-img-top img-fluid card__img rounded" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
+                            <img class="img-fluid img-thumbnail rounded card__img" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'macrame-detail' macrame.id %}" aria-label="no-image placeholder of the macrame item leading to details page">
-                            <img class="card-img-top img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ macrame.name }}">
+                            <img class="img-fluid img-thumbnail rounded card__img" src="{{ MEDIA_URL }}noimage.png" alt="{{ macrame.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
