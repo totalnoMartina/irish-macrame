@@ -87,10 +87,10 @@
                     </li>
 
                     <li class="nav-item mt-4 text-right">
-                        <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link rounded-right" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
+                        <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link rounded-right cart__nav" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
                             <div class="text-right">
                                 <span>
-                                    <i class="fa fa-shopping-cart fa-sm" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
                                     {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -169,7 +169,7 @@
         <p class="blockquote-footer">&copy; {% now "Y" %} Handmade Macrame, Inc. </p>
         <br>
     </footer>
-    <p class="text-right mr-2 fixed-bottom"><a href="#"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+    <p class="text-right mr-2 fixed-bottom to-top__btn"><a href="#"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
         </a></p>
 
 </body>
