@@ -40,7 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script rel="javascript" src="/static/js/base.js" type="text/javascript"></script>
     <!-- Stripe javascript -->
-    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://js.stripe.com/v3/" type="text/javascript"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -53,7 +53,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <!-- Navbar brand -->
-            <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}">
+            <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}" title="Irish Macrames Home">
                 <h1 class="logo mt-4">
                     <img src="/media/cacti-moonlogo-08.jpg" style="height: 7rem; width: 7rem;" class="rounded-circle" alt="logo of creator">
                     Irish Macrames
@@ -63,14 +63,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item mt-4 text-right">
-                        <a class="nav-link rounded-left" href="{% url 'macrames' %}">Macrames</a>
+                <ul class="navbar-nav mr-auto align-items-right">
+                    <li class="nav-item active mt-4 text-right">
+                        <a class="nav-link rounded-left" href="{% url 'macrames' %}" title="Macrame Selection">Macrames</a>
                     </li>
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                     <li class="nav-item dropdown text-right">
-                        <a class="nav-link dropdown-toggle mt-4 rounded-bottom" href="{% url 'profile' %}" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle mt-4 rounded-bottom" title="My Profile" href="{% url 'profile' %}" role="button" data-toggle="dropdown" aria-expanded="false">
                             My Profile<i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         {% endif %}
@@ -85,7 +85,7 @@
                         {% endif %}
                     </li>
                     <li class="nav-item mt-4 text-right">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link rounded-right" href="{% url 'view_shoppingcart' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link rounded-right" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
                             <div class="text-right">
                                 <span>
                                     <i class="fa fa-shopping-cart fa-sm" aria-hidden="true"></i>
@@ -99,11 +99,11 @@
                         </a>
                     </li>
                 </ul>
-                <form method="GET" action="{% url 'macrames' %}" class="form-inline mx-auto">
+                <form method="GET" action="{% url 'macrames' %}" class="form-inline my-2 my-lg-0 my-md-0">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded" type="text" name="q" placeholder="Search our site">
+                        <input class="form-control border border-black rounded mr-sm-2" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn border-black rounded" type="submit">
+                            <button class="form-control btn border-black rounded my-2 my-sm-0" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>

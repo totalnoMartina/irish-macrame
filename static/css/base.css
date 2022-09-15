@@ -39,6 +39,10 @@ p {
     color: #2f231a;
 }
 
+.nav-link {
+    color: #1e1f1f !important;
+}
+
 .nav-link:hover {
     color: white !important;
 }
