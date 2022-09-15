@@ -71,9 +71,11 @@ The User Stories that have been satisfied are:
 
 |User Story - Navigation|Image of the User Story completed|
 |-----------------------|---------------------------------|
-|Users are navigating   |![image of nav]()
-| webiste easily
-* Create a homepage and a page for presenting the products - Landing page clearly states the purpose of the app to be a shopping app
+|Logged out Navbar   |![image of nav logged out](/media/logged-out-navbar.png?raw=true)
+|Logged out Navbar   |![image of nav logged out](/media/logged-in-nav.png?raw=true)
+| Home page   |![Homepage](/media/homepage.png?raw=true)
+|A button for shopping and browsing macrames|![Browse/Shop here button](/media/shop-browse-btn.png?raw=true)
+
 * Create a button guiding to browse products - A button to direct to browsing products as main user story 
 * Create Searching feature - Ability to search macrames by word if it shows up in description or name
 * Create Shopping bag page/view - A page that shows options to add macrame product to choose for purchase
