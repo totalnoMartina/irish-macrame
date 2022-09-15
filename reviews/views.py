@@ -44,10 +44,10 @@ def update_review(request, pk):
         'review_': review_
     }
     if request.method == 'POST':
-        form = ReviewForm(request.POST, instance=review)
+        form = ReviewForm(request.POST, instance=review_)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('macrame-detail')
 
     return render(request, 'reviews/update_reviews.html', context)
 
