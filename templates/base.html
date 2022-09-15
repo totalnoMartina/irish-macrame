@@ -80,9 +80,10 @@
                             {% else %}
                             <a class="dropdown-item nav-link" href="{% url 'account_signup' %}" class="rounded-bottom">Register</a>
                             <a class="dropdown-item nav-link" href="{% url 'account_login' %}" class="rounded-bottom">Login</a>
+                            {% endif %}
                         </div>
                     </li>
-                    {% endif %}
+
                     <li class="nav-item mt-4 text-right">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link rounded-right" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
                             <div class="text-right">

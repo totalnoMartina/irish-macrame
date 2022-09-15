@@ -49,10 +49,13 @@ p {
 
 .nav-link {
     color: #1e1f1f !important;
+    background-color: #f3ab99 !important;
+
 }
 
 .nav-link:hover {
     color: #ebe8ee !important;
+    background-color: #b76a44 !important;
 }
 
 .product-details-container {
