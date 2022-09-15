@@ -69,18 +69,18 @@ The user stories were categorised into different priorities, from highest to low
 
 The User Stories that have been satisfied are:
 
-|User Story |Image of the User Story completed|
-|-----------------------|---------------------------------|
-|Logged out Navbar   |![image of nav logged out](/media/logged-out-navbar.png?raw=true)
-|Logged in Navbar   |![image of nav logged in](/media/logged-in-nav.png?raw=true)
-| Home page   |![Homepage](/media/homepage.png?raw=true)
-|A button for shopping and browsing macrames|![Browse/Shop here button](/media/shop-browse-btn.png?raw=true)
-|Create a Search Feature| ![Search Feature](/media/search-bar-user-story.png?raw=true)|
+|User Story |Image of the User Story completed|Label|
+|-----------------------|---------------------------------|-----------|
+|Logged out Navbar   |![image of nav logged out](/media/logged-out-navbar.png?raw=true)| Must Have|
+|Logged in Navbar   |![image of nav logged in](/media/logged-in-nav.png?raw=true)| Must Have|
+| Home page   |![Homepage](/media/homepage.png?raw=true)|Must Have|
+|A button for shopping and browsing macrames|![Browse/Shop here button](/media/shop-browse-btn.png?raw=true)|Must Have|
+|Create a Search Feature| ![Search Feature](/media/search-bar-user-story.png?raw=true)|Should Have|
 |A Shopping Cart Feature with adding items| ![Shopping Cart](/media/shopping-cart-page-feature.png?raw=true)|
 |Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|
-|Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|
-|Add page that displays items details with ability to add tehm to shoping cart| ![Macrame Deatils page](/media/view-item-details-add-to-cart-feature.png?raw=true)|
-|Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|
+|Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
+|Add page that displays items details with ability to add tehm to shoping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
+|Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|Could Have|
 ## Scope
 
 ## Features
