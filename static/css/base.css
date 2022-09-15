@@ -2,6 +2,15 @@
 font-family: 'Indie Flower', cursive;
 font-family: 'Playfair Display', serif; */
 
+/* color palette:   #1ef1f1 for a impactfull black text on navbar and Logo
+                    #965d30 for a combination of colors for the background - first shade
+                    #b76a44 for a combination of colors for the background - second shade
+                    #e8a49a for a combination of colors for the background - third shade
+                    #ffbfbe for a combination of colors for the background - fourth shade
+                    #ebe8ee for the ghost white to accentuate dark text and on some text
+                
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playfair+Display:ital,wght@1,600&display=swap');
 
 html {
@@ -9,7 +18,6 @@ html {
     margin: 0;
     padding: 0;
 }
-
 
 body {
     background: linear-gradient(to top right, #965d30, #b76a44, #e8a49a, #ffbfbe) no-repeat;
@@ -44,12 +52,12 @@ p {
 }
 
 .nav-link:hover {
-    color: white !important;
+    color: #ebe8ee !important;
 }
 
 .product-details-container {
     background-color: rgba(37, 23, 23, 0.188);
-    color: #eac6ba;
+    color: #ebe8ee;
     font-size: 2rem;
 }
 
@@ -162,13 +170,13 @@ a:hover {
 }
 
 .blockquote-footer {
-    color: #eacac2 !important;
+    color: #ebe8ee !important;
     background-color: unset;
     font-size: 1.5rem;
 }
 
 .review-wrap {
-    background-color: #faf3f3;
+    background-color: #ebe8ee;
     opacity: 0.8;
 }
 
@@ -246,23 +254,30 @@ a:hover {
 
 /* Media queries */
 
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .logo {
+        font-size: 2rem
+    }
+}
 
-// Small devices (landscape phones, less than 768px)
+
+/* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     .logo {
         font-size: 3rem;
     }
 }
 
-// Medium devices (tablets, less than 992px)
+/* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     .logo {
         font-size: 3.5rem;
     }
 }
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1010.98px) {
     .logo {
         font-size: 4rem
     }
@@ -291,12 +306,5 @@ a:hover {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
-    }
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .logo {
-        font-size: 2rem
     }
 }
