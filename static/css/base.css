@@ -292,7 +292,7 @@ input[name='q']::placeholder {
         padding-top: 116px;
     }
 
-    img>.cart__img {
+    .cart__img {
         max-width: 220px !important;
     }
 }
