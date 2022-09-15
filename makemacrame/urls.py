@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handle_erorr_404
+from .views import handle_error_404
 
 
 urlpatterns = [
@@ -14,6 +14,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profiles/', include('profiles.urls'))
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 handle_error_404 = 'makemacrame.views.handle_error_404'

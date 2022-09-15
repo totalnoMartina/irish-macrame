@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Macrame, Review
 from .forms import ReviewForm
 
@@ -12,7 +13,7 @@ def macrames(request):
     }
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
-
+@login_required
 def create_review(request, pk):
     """ Creating a review """
     form = ReviewForm(initial={'product_reviewed': pk, 'user_reviewing': request.user})
@@ -31,6 +32,7 @@ def create_review(request, pk):
     return render(request, 'reviews/reviews.html', context)
 
 
+@login_required
 def update_review(request, pk):
     """ A view to update review """
 
@@ -49,6 +51,7 @@ def update_review(request, pk):
     return render(request, 'reviews/reviews.html', context)
 
 
+@login_required
 def delete_review(request, pk):
     """ A view to delete reviews """
     review = Review.objects.get(id=pk)

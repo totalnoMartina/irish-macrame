@@ -4,9 +4,7 @@
 
 <head>
     <title>Irish Macrame {% block extra_title %}Shopping Cart{% endblock %}</title>
-
 </head>
-
 {% block page_header %}
 {% endblock %}
 
@@ -149,7 +147,6 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'shoppingapp/includes/quantity-input-script.html' %}
-
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
@@ -161,11 +158,11 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
+        var size = $(this).data('macrame_size');
+        var url = `/shoppingcart/remove/${itemId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
-            'product_size': size
+            'macrame_size': size
         };
 
         $.post(url, data)
