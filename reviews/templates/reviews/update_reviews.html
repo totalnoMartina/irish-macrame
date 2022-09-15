@@ -17,14 +17,19 @@
 <div class="container">
     <div class="row text-center ">
         <div class="col">
-            <form method="POST">
+            {% for review in macrame.product_reviewed.all %}
+            <form method="POST" action="#">
                 {% csrf_token %}
-                <h1> {{review_.title}}</h1>
+                <h1> {{review.title}}</h1>
                 {{form.as_p}}
-                <a href="{% url 'update_review' review.id %}" class="btn">Update</a>
-                <hr>
-                <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Remove</a>
+
             </form>
+            <a href="{% url 'update_review' review.id %}" class="btn">Update</a>
+            <hr>
+            <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Remove</a>
+
+            {% endfor %}
+
         </div>
     </div>
 </div>
