@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Macrame, Review
 from .forms import ReviewForm
@@ -36,6 +37,10 @@ def create_review(request, pk):
 def update_review(request, pk):
     """ A view to update review """
 
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     review_ = Review.objects.get(id=pk)
     form = ReviewForm(instance=review_)
     context = {
@@ -45,8 +50,11 @@ def update_review(request, pk):
         form = ReviewForm(request.POST, instance=review_)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Successfully updated review!')
             return redirect('macrame-detail')
-
+        else:
+            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
+    messages.info(request, f'You are editing {review_.title}')
     return render(request, 'reviews/update_reviews.html', context)
 
 
