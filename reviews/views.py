@@ -6,9 +6,9 @@ from .forms import ReviewForm
 
 def macrames(request):
     """ Rendering products of macrames to be able to manipulate reviews connected to macrames """
-    macrame_ = Macrame.objects.all()
+    macrame_all = Macrame.objects.all()
     context = {
-        'macrame_': macrame_,
+        'macrame_all': macrame_all,
 
     }
     return render(request, 'shoppingapp/macrame-detail.html', context)
@@ -36,11 +36,12 @@ def create_review(request, pk):
 def update_review(request, pk):
     """ A view to update review """
 
-    review = Review.objects.get(id=pk)
+    review_ = Review.objects.get(id=pk)
 
-    form = ReviewForm(instance=review)
+    form = ReviewForm(instance=review_)
     context = {
         'form': form,
+        'review_': review_
     }
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
@@ -48,7 +49,7 @@ def update_review(request, pk):
             form.save()
             return redirect('/')
 
-    return render(request, 'reviews/reviews.html', context)
+    return render(request, 'reviews/update_reviews.html', context)
 
 
 @login_required
