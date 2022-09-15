@@ -293,7 +293,7 @@ input[name='q']::placeholder {
     }
 
     img>.cart__img {
-        max-width: 300px !important;
+        max-width: 220px !important;
     }
 }
 
