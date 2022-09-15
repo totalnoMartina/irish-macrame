@@ -69,7 +69,10 @@ The user stories were categorised into different priorities, from highest to low
 
 The User Stories that have been satisfied are:
 
-* Create User Navigation : users are able to easy navigate through pages
+|User Story - Navigation|Image of the User Story completed|
+|-----------------------|---------------------------------|
+|Users are navigating   |![image of nav]()
+| webiste easily
 * Create a homepage and a page for presenting the products - Landing page clearly states the purpose of the app to be a shopping app
 * Create a button guiding to browse products - A button to direct to browsing products as main user story 
 * Create Searching feature - Ability to search macrames by word if it shows up in description or name
