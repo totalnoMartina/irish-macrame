@@ -13,6 +13,7 @@
                             with personalized wall hangers and macrame items">
     <meta name="keywords" content="macrame, shop, irish, handmade, wall hangings, home decor,
                             gift macrame, personalized gift, ireland, europe, plant hangers">
+
     {% endblock %}
 
     {% block extra_meta %}
@@ -27,7 +28,6 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
 
     <link rel="shortcut icon" href="#">
-
     {% endblock %}
 
     {% block extra_css %}
@@ -55,7 +55,7 @@
             <!-- Navbar brand -->
             <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}" title="Irish Macrames Home">
                 <h1 class="logo mt-4">
-                    <img src="/static/images/cacti-moonlogo-08.jpg" style="height: 7rem; width: 7rem;" class="rounded-circle" alt="logo of creator">
+                    <img src="{% static 'images/cacti-moonlogo-08.jpg' %}" style="height: 7rem; width: 7rem;" class="rounded-circle" alt="logo of creator">
                     Irish Macrames
                 </h1>
             </a>
