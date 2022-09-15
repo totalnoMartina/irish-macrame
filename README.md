@@ -39,12 +39,8 @@
 A website that promotes handmade macrame items for sale, made by an artist Marika from Poland. She collects wood samples from the forests around the suburban Dublin and creates items tying Irish Cotton around them to make items like Macrames and similar handmade products. She shipps and packs each item hersel and cares for the outlook of every package herself. Her shop started on Etsy on [this link](https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936)
 
 # User Experience Design
-
-Color palette is chosen by the macrame creator, boho, earthy notes in colours.
- image of the palette
 ## Marketing Strategy
 
-Describe marketing side of the project and strategy to engage the user with website
 
 ### Facebook Page
 
@@ -60,7 +56,7 @@ A Macrame shop is for people who like handmade unique macrame products, and have
 
 ## Color palette
 
-Artist suggested more warm, boho, soft colors so i went for a combination of these ![colors](/media/palette-colors.png?raw=true)
+Artist suggested more warm, boho, soft colors so i went for a combination of these ![colors](/media/coolors.png?raw=true)
 
 
 ## User Stories
@@ -76,8 +72,8 @@ The User Stories that have been satisfied are:
 | Home page   |![Homepage](/media/homepage.png?raw=true)|Must Have|
 |A button for shopping and browsing macrames|![Browse/Shop here button](/media/shop-browse-btn.png?raw=true)|Must Have|
 |Create a Search Feature| ![Search Feature](/media/search-bar-user-story.png?raw=true)|Should Have|
-|A Shopping Cart Feature with adding items| ![Shopping Cart](/media/shopping-cart-page-feature.png?raw=true)|
-|Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|
+|A Shopping Cart Feature with adding items| ![Shopping Cart](/media/shopping-cart-page-feature.png?raw=true)|Should Have|
+|Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|Must Have|
 |Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
 |Add page that displays items details with ability to add tehm to shoping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
 |Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|Could Have|
