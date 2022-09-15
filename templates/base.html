@@ -51,7 +51,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top align-items-right">
             <!-- Navbar brand -->
             <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}" title="Irish Macrames Home">
                 <h1 class="logo mt-4">
@@ -64,7 +64,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto align-items-right">
-                    <li class="nav-item active mt-4 text-right">
+                    <li class="nav-item mt-4 text-right">
                         <a class="nav-link rounded-left" href="{% url 'macrames' %}" title="Macrame Selection">Macrames</a>
                     </li>
                     {% if request.user.is_authenticated %}

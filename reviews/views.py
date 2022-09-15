@@ -37,11 +37,9 @@ def update_review(request, pk):
     """ A view to update review """
 
     review_ = Review.objects.get(id=pk)
-
     form = ReviewForm(instance=review_)
     context = {
         'form': form,
-        'review_': review_
     }
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review_)
