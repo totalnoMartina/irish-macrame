@@ -133,10 +133,10 @@ def edit_macrame(request, macrame_id):
         form = MacrameForm(request.POST, request.FILES, instance=macrame)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated item!')
+            messages.success(request, 'Successfully updated Macrame item!')
             return redirect(reverse('macrame-detail', args=[macrame.id]))
         else:
-            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
+            messages.error(request, 'Failed updating. Please ensure the form is valid.')
     else:
         form = MacrameForm(instance=macrame)
         messages.info(request, f'You are editing {macrame.name}')
