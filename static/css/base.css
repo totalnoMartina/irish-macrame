@@ -31,9 +31,6 @@ body {
     font-family: 'Indie Flower', cursive;
 }
 
-.logo {
-    font-size: 4.5rem;
-}
 
 .card__img {
     object-fit: cover;
@@ -105,12 +102,6 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-
 input[name='q']::placeholder {
     color: #aab7c4;
 }
@@ -128,20 +119,20 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-a {
+.home__a {
     font-size: 2rem;
     background-color: #f3ab99;
     color: #493a3a;
 }
 
-a:hover {
+.home__a:hover {
     background-color: #493a3a;
     color: #f3ab99;
     text-decoration: none;
 }
 
-.fa-shopping-bag:hover {
-    color: #675454;
+.fa-shopping-cart:hover {
+    color: #696363;
 }
 
 .navbar-brand,
@@ -159,10 +150,12 @@ a:hover {
     font-size: 1.5rem;
 }
 
-.update-link:hover,
+.update-link:hover {
+    background-color: #835b51 !important;
+}
+
 .remove-item:hover {
-    background-color: #f3ab99;
-    color: #493a3a;
+    background-color: #e19ea4;
 }
 
 .logo-font {
@@ -262,35 +255,8 @@ a:hover {
 
 /* Media queries */
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .logo {
-        font-size: 2rem
-    }
-}
-
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-    .logo {
-        font-size: 3rem;
-    }
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-    .logo {
-        font-size: 3.5rem;
-    }
-}
-
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1010.98px) {
-    .logo {
-        font-size: 4rem
-    }
-}
-
+@media (max-width: 1010.98px) {}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -310,9 +276,18 @@ a:hover {
     }
 }
 
+/* Medium devices (tablets, less than 992px) */
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
     }
 }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 525.98px) {}
