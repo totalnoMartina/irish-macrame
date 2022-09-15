@@ -21,9 +21,9 @@
                 {% csrf_token %}
                 <h1> {{review_.title}}</h1>
                 {{form.as_p}}
-                <a href="{% url 'update_review' review_.id %}" class="btn">Update</a>
+                <a href="{% url 'update_review' review.id %}" class="btn">Update</a>
                 <hr>
-                <a href="{% url 'delete_review' review_.id %}" class="btn text-danger">Remove</a>
+                <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Remove</a>
             </form>
         </div>
     </div>

@@ -41,20 +41,20 @@ def update_review(request, pk):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    review_ = Review.objects.get(id=pk)
-    form = ReviewForm(instance=review_)
+    review = Review.objects.get(pk=pk)
+    form = ReviewForm(instance=review)
     context = {
         'form': form,
     }
     if request.method == 'POST':
-        form = ReviewForm(request.POST, instance=review_)
+        form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated review!')
             return redirect('macrame-detail')
         else:
-            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
-    messages.info(request, f'You are editing {review_.title}')
+            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+    messages.info(request, f'You are editing {review.title}')
     return render(request, 'reviews/update_reviews.html', context)
 
 
