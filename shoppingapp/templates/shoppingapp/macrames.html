@@ -30,13 +30,13 @@
     <div class="row py-4">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row mb-2 align-items-end h-100">
+            <div class="row mb-2 align-items-end">
                 {% for macrame in macrames %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card border-0">
                         {% if macrame.image %}
                         <a href="{% url 'macrame-detail' macrame.id %}" aria-label="image of the macrame item leading to details page">
-                            <img class="img-fluid img-thumbnail rounded card__img" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
+                            <img class="img-thumbnail rounded card__img" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'macrame-detail' macrame.id %}" aria-label="no-image placeholder of the macrame item leading to details page">
