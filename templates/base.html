@@ -70,16 +70,16 @@
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                     <li class="nav-item dropdown text-right">
-                        <a class="nav-link dropdown-toggle mt-4 rounded-bottom" title="My Profile" href="{% url 'profile' %}" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle mt-4 rounded-bottom text-right mr-2" title="My Profile" href="{% url 'profile' %}" role="button" data-toggle="dropdown" aria-expanded="false">
                             My Profile<i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         {% endif %}
                         <div class="dropdown-menu text-right">
-                            <a class="dropdown-item nav-link" href="{% url 'add_macrame' %}" class="rounded-botom">Manage Stock</a>
-                            <a class="dropdown-item nav-link" href="{% url 'account_logout' %}" class="rounded-bottom">Logout</a>
+                            <a class="dropdown-item nav-link text-right mr-2" href="{% url 'add_macrame' %}" class="rounded-botom">Manage Stock</a>
+                            <a class="dropdown-item nav-link text-right mr-2" href="{% url 'account_logout' %}" class="rounded-bottom">Logout</a>
                             {% else %}
-                            <a class="dropdown-item nav-link" href="{% url 'account_signup' %}" class="rounded-bottom">Register</a>
-                            <a class="dropdown-item nav-link" href="{% url 'account_login' %}" class="rounded-bottom">Login</a>
+                            <a class="dropdown-item nav-link text-right mr-2" href="{% url 'account_signup' %}" class="rounded-bottom">Register</a>
+                            <a class="dropdown-item nav-link text-right mr-2" href="{% url 'account_login' %}" class="rounded-bottom">Login</a>
                             {% endif %}
                         </div>
                     </li>
