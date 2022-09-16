@@ -99,9 +99,7 @@ class AddLike(LoginRequiredMixin, View):
 @login_required
 def add_macrame(request):
     """ Add a macrame item to the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = MacrameForm(request.POST, request.FILES)
         if form.is_valid():
@@ -150,7 +148,7 @@ def edit_macrame(request, macrame_id):
 @login_required
 def delete_macrame(request, macrame_id):
     """ Delete a product from the store """
-    
+
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     macrame.delete()
     messages.success(request, 'Item deleted!')
