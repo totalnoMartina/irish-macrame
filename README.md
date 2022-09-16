@@ -6,7 +6,7 @@
 
 * [Project Purpose - Overview](#project-purpose-overview)
 * [User Experience Design](#user-experience-design)
-   * [Marketing Strategy](#marketing-strategy)
+   * [Business Marketing Strategy](#business-marketing-strategy)
    * [Target Audience](#target-audience)
    * [Color Palette](#color-palette)
    * [User Stories](#user-stories)
@@ -36,11 +36,16 @@
 
 # Project Purpose - Overview
 
-A website that promotes handmade macrame items for sale, made by an artist Marika from Poland. She collects wood samples from the forests around the suburban Dublin and creates items tying Irish Cotton around them to make items like Macrames and similar handmade products. She shipps and packs each item hersel and cares for the outlook of every package herself. Her shop started on Etsy on [this link](https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936)
+A website that promotes handmade macrame items for sale, made by an artist Marika from Poland. She collects wood samples from the forests around the suburban Dublin and creates items tying Irish Cotton around them to make items like Macrame wall hangings, wall decorations, earrings, keychains and similar handmade items that look warm and comforting. She is very enthusiastic about her passion and as she worked in Hospitality, this pandemic has inspred her to start using her hobbies to make other people happy too, by selling these handmade items online. She organizes the shipment and packs each item herself and cares very much for the display of every package. Every item represents her and her passion towards handmade originals as she rarely could make any two items exactly the same, which makes these even more special. She is also very active on instagram in promoting her items and has ready made promotional instagram page with videos and reels that present her new collections so she has quite an audience on Instagram, Facebook and Etsy which are bringing revenue her way. Her shop started on Etsy on [this link](https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936)
 
 # User Experience Design
-## Marketing Business Strategy
+## Business Model and Marketing Strategy
 
+This website is made for a small irish business that promotes handmade macrame items, and allows users to purchase items through the website directly from the owner of the website. This is a B2C - Business to Customer model, as it allows for direct communication between the owner/artist of the items and customers. 
+As delivery is not easy
+
+
+SEO implementations is used with an accent towards home decor and cozy cotton feel so it inspires good feelings for users while browsing interesting items in warm colors. The website color matches the items in a sense that it is kept to few pinkish and brown/grey shades and black and white to be for the contrast and the palette is chosen by the owner with a hint for 'boho' style to match the macrame.
 
 
 ### Facebook Page
@@ -100,11 +105,12 @@ The User Stories that have been satisfied are:
 
 - Add pagination to macrame items page
 - Ability to write responses to the reviews of users by the author
+- Add delivery price to be determined by the country where items are shipped out to
 
 ## Structure
 ## Wireframes
 
-First three pages for wireframes
+First three pages for wireframes - Homepage, Macrame list page, item details page
 
 ![First three pages for wireframes](/media/home-list-detail.png?raw=true)
 

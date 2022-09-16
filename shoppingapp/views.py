@@ -38,8 +38,6 @@ def all_macrames(request):
     context = {
         'macrames': macrames,
         'search_term': query,
-        'current_categories': categories,
-        'current_sorting': current_sorting,
     }
     return render(request, 'shoppingapp/macrames.html', context)
 

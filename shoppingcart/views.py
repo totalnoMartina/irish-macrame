@@ -66,7 +66,7 @@ def adjust_shoppingcart(request, item_id):
 
 
 def remove_from_shoppingcart(request, item_id):
-    """Remove the item from the shopping bag"""
+    """Remove the item from the shopping cart"""
 
     try:
         size = None
