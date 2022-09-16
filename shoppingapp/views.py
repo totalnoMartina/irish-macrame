@@ -124,9 +124,6 @@ def add_macrame(request):
 @login_required
 def edit_macrame(request, macrame_id):
     """ Edit a macrame item in the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
 
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     if request.method == 'POST':
@@ -153,10 +150,7 @@ def edit_macrame(request, macrame_id):
 @login_required
 def delete_macrame(request, macrame_id):
     """ Delete a product from the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
+    
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     macrame.delete()
     messages.success(request, 'Item deleted!')
