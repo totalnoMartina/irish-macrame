@@ -67,7 +67,6 @@ def macrame_detail(request, macrame_id):
     """ A view to show individual product details """
 
     macrame = get_object_or_404(Macrame, pk=macrame_id)
-
     context = {
         'macrame': macrame,
     }
@@ -141,7 +140,6 @@ def edit_macrame(request, macrame_id):
         'form': form,
         'macrame': macrame,
     }
-
     return render(request, template, context)
 
 
@@ -153,4 +151,3 @@ def delete_macrame(request, macrame_id):
     macrame.delete()
     messages.success(request, 'Item deleted!')
     return redirect(reverse('macrames'))
-    

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .models import Macrame, Review
 from .forms import ReviewForm
@@ -14,6 +15,7 @@ def macrames(request):
     }
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
+
 @login_required
 def create_review(request, pk):
     """ Creating a review """
@@ -24,7 +26,6 @@ def create_review(request, pk):
         'macrame': macrame,
     }
     if request.method == 'POST':
-        print('Printing Post:', request.POST)
         form = ReviewForm(request.POST)
         if form.is_valid():
             form.save()
@@ -63,15 +64,17 @@ def delete_review(request, pk):
     """ A view to delete reviews """
     review = Review.objects.get(id=pk)
     form = ReviewForm(instance=review)
+    macrame_id = review.product_reviewed.id
 
     context = {
-        # 'form': form,
+        'form': form,
         'item': review,
     }
 
     if request.method == 'POST':
         review.delete()
-        return redirect('/')
+# add at the top of the file: from django.http import HttpResponseRedirect
+        return  HttpResponseRedirect(
+                    reverse('macrame-detail', kwargs={'macrame_id': macrame_id}))
 
     return render(request, 'reviews/delete_review.html', context)
-

@@ -15,9 +15,10 @@
 <br>
 <br>
 <div class="container">
-    <div class="row text-center ">
-        <h1>Update your review here! </h1>
+    <div class="row text-center">
         <div class="col">
+            <h1>Update your review here! </h1>
+
             {% for review in macrame.product_reviewed.all %}
             <form method="POST" action="#">
                 {% csrf_token %}

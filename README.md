@@ -39,7 +39,8 @@
 A website that promotes handmade macrame items for sale, made by an artist Marika from Poland. She collects wood samples from the forests around the suburban Dublin and creates items tying Irish Cotton around them to make items like Macrames and similar handmade products. She shipps and packs each item hersel and cares for the outlook of every package herself. Her shop started on Etsy on [this link](https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936)
 
 # User Experience Design
-## Marketing Strategy
+## Marketing Business Strategy
+
 
 
 ### Facebook Page
