@@ -19,11 +19,17 @@
         <div class="col">
             <h1>Update your review here! </h1>
 
-            {% for review in macrame.product_reviewed.all %}
+            {% for review in review.macrame_id %}
             <form method="POST" action="#">
                 {% csrf_token %}
-                <h1> {{review.title}}</h1>
-                {{form.as_p}}
+                <h1> {{form}}</h1>
+
+                {% for field in form %}
+                {{ field | as_crispy_field }}
+
+                {{ field }}
+
+                {% endfor %}
 
             </form>
             <a href="{% url 'update_review' review.id %}" class="btn">Update</a>

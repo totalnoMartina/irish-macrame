@@ -26,25 +26,6 @@ def all_macrames(request):
     direction = None
 
     if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                macrames = macrames.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            macrames = macrames.order_by(sortkey)
-
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            macrames = macrames.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
