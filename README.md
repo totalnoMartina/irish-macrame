@@ -42,8 +42,6 @@ A website that promotes handmade macrame items for sale, made by an artist Marik
 ## Business Model and Marketing Strategy
 
 This website is made for a small irish business that promotes handmade macrame items, and allows users to purchase items through the website directly from the owner of the website. This is a B2C - Business to Customer model, as it allows for direct communication between the owner/artist of the items and customers. 
-As delivery is not easy
-
 
 SEO implementations is used with an accent towards home decor and cozy cotton feel so it inspires good feelings for users while browsing interesting items in warm colors. The website color matches the items in a sense that it is kept to few pinkish and brown/grey shades and black and white to be for the contrast and the palette is chosen by the owner with a hint for 'boho' style to match the macrame.
 
