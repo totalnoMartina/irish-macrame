@@ -8,11 +8,13 @@ The live version of the website can be seen [here](https://black-moon-design.her
 
 * [Project Purpose - Overview](#project-purpose-overview)
 * [User Experience Design](#user-experience-design)
-   * [Business Marketing Strategy](#business-marketing-strategy)
+   * [UX, SEO, Business model and Marketing](#ux-seo-business-model-and-marketing)
+      * [UX](#ux)
+      *[SEO](#seo)
+      *[Business model and marketing strategy](#business-model-and-marketing-strategy)
    * [Target Audience](#target-audience)
    * [Color Palette](#color-palette)
    * [User Stories](#user-stories)
-   * [Scope](#scope)
    * [Features](#features)
       * [Existing Features](#existing-features)
       * [Future Features](#future-features)
@@ -63,7 +65,7 @@ The artist of macrame items had made a FB page which  cannot be found just by en
 
 ## Target Audience
 
-A Macrame shop is for people who like handmade unique macrame products, and have a fond for irish cotton and wood. It is perfect for Gift shopping or for special occasions. Wood taken from Irish forests outside of Dublin and surroundings and Cotton provided from (ask Marika where does she get her supplies to refer)
+A Macrame shop is for people of all ages and gender, who like handmade unique macrame products, and have a fond for (irish) cotton and wood. For a dash of nature in anyones home,it would also make a nice present/gift or just pure home decor with style. Wood was taken from Irish forests outside of Dublin and surroundings and Cotton provided from [Amazon](https://www.amazon.co.uk/)
 
 ## Color palette
 
@@ -88,7 +90,6 @@ The User Stories that have been satisfied are:
 |Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
 |Add page that displays items details with ability to add tehm to shoping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
 |Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|Could Have|
-## Scope
 
 ## Features
 
@@ -107,11 +108,27 @@ The User Stories that have been satisfied are:
 
 - Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
 
+![Macrame detail - Likes](/media/macrame-detail-pg.png?raw=true)
+
 - Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page
+
+![Macrame Detail - Add item to shopping cart](/media/add-macrame-detail.png?raw=true)
+
 - Detailed product page with ability to add products in the shopping cart
+
+
+![Message user signed in](/media/msg-sign-in.png?raw=true)
+![Message user signed out](/media/msg-sign-out.png?raw=true)
+
 - Messages to notify the user when he/she is logged in succesfully or made an order
+
+![My Profile Page](/media/my-profile-pg.png?raw=true)
+ 
+
 - User profile wher users can update their personal information
+
 - Admin ability to add, update and remove product without accessing the admin panel featured in Django
+
 - Add/ Update/ Remove product into the shopping cart
 - Checkout page for reaching the payment and completing with stripe payments system
 
