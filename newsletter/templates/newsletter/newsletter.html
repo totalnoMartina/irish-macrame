@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="#" method="POST">
+    {% csrf_token %}
+    Subscribe to receive news when new collections are released!
+    <input value="Enter Email address" type="email">
+    <button type="submit">Subscribe!
+    </button>
+</form>
+{% endblock %}

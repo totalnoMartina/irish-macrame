@@ -12,7 +12,8 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
     path('shoppingcart/', include('shoppingcart.urls')),
     path('checkout/', include('checkout.urls')),
-    path('profiles/', include('profiles.urls'))
+    path('profiles/', include('profiles.urls')),
+    path('newsletter/', include('newsletter.urls')),
 
 ]
 
