@@ -88,8 +88,12 @@ The User Stories that have been satisfied are:
 |A Shopping Cart Feature with adding items| ![Shopping Cart](/media/shopping-cart-page-feature.png?raw=true)|Should Have|
 |Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|Must Have|
 |Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
-|Add page that displays items details with ability to add tehm to shoping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
+|Add page that displays items details with ability to add item to shopping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
 |Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|Could Have|
+|Add ability to make payments using Stripe |![Add stripe payments](/media/stripe-payments.png?raw=true)|Must Have|
+|Review macrame items user have purchased|![Add Reviews for items](/media/reviews.png?raw=true)|Could Have|
+|Add Subscription to newsletter| ![Add Newsletter supscription](/media/newsletter.png?raw=true)|Must Have|
+|Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
 
 ## Features
 
