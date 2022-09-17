@@ -378,6 +378,14 @@ input[name='q']::placeholder {
 @media (max-width: 500.98px) {
 
     .cart__img {
-        max-width: 200px !important;
+        max-width: 110px !important;
+    }
+
+    .checkout__img {
+        max-width: 150px !important;
+    }
+
+    .logo {
+        max-width: 140px !important;
     }
 }
