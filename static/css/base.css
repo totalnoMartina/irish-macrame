@@ -373,7 +373,6 @@ input[name='q']::placeholder {
     }
 }
 
-
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 500.98px) {
 
@@ -387,5 +386,9 @@ input[name='q']::placeholder {
 
     .logo {
         max-width: 140px !important;
+    }
+
+    .home__a {
+        font-size: 1.5rem !important;
     }
 }
