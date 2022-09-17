@@ -79,22 +79,23 @@ The user stories were categorised into different priorities, from highest to low
 The User Stories that have been satisfied are:
 
 |User Story |Image of the User Story completed|Label|
-|-----------------------|---------------------------------|-----------|
-|Logged out Navbar   |![image of nav logged out](/media/logged-out-navbar.png?raw=true)| Must Have|
-|Logged in Navbar   |![image of nav logged in](/media/logged-in-nav.png?raw=true)| Must Have|
-| Home page   |![Homepage](/media/homepage.png?raw=true)|Must Have|
-|A button for shopping and browsing macrames|![Browse/Shop here button](/media/shop-browse-btn.png?raw=true)|Must Have|
-|Create a Search Feature| ![Search Feature](/media/search-bar-user-story.png?raw=true)|Should Have|
-|A Shopping Cart Feature with adding items| ![Shopping Cart](/media/shopping-cart-page-feature.png?raw=true)|Should Have|
-|Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|Must Have|
-|Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
-|Add page that displays items details with ability to add item to shopping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
-|Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|Could Have|
-|Add ability to make payments using Stripe |![Add stripe payments](/media/stripe-payments.png?raw=true)|Must Have|
-|Review macrame items user have purchased|![Add Reviews for items](/media/reviews.png?raw=true)|Could Have|
-|Add Subscription to newsletter| ![Add Newsletter supscription](/media/newsletter.png?raw=true)|Must Have|
-|Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
-|Add Checkout Page | ![Checkout Page](/media/checkout-pg.png?raw=true)|Must Have|
+|-----------------------|---------------------------------|-----------
+|[#1](https://github.com/totalnoMartina/irish-macrame/issues/1) Add Subscription to newsletter| ![Add Newsletter supscription](/media/newsletter.png?raw=true)|Must Have||
+|[#2](https://github.com/totalnoMartina/irish-macrame/issues/2) Logged out Navbar   |![image of nav logged out](/media/logged-out-navbar.png?raw=true)| Must Have|
+|[#3](https://github.com/totalnoMartina/irish-macrame/issues/3) Add page that displays items details with ability to add item to shopping cart| ![Macrame Details page](/media/view-item-details-add-to-cart-feature.png?raw=true)|Should Have|
+|[#4](https://github.com/totalnoMartina/irish-macrame/issues/4)  Create a Search Feature| ![Search Feature](/media/search-bar-user-story.png?raw=true)|Should Have|
+|[#5](https://github.com/totalnoMartina/irish-macrame/issues/5) A button for shopping and browsing macrames|![Browse/Shop here button](/media/shop-browse-btn.png?raw=true)|Must Have|
+|[#6](https://github.com/totalnoMartina/irish-macrame/issues/6) A Shopping Cart Feature with adding items| ![Shopping Cart](/media/shopping-cart-page-feature.png?raw=true)|Should Have|
+| [#7](https://github.com/totalnoMartina/irish-macrame/issues/7) Add Checkout Page| ![Checkout Page](/media/checkout-pg.png?raw=true)|Must Have|
+|[#8](https://github.com/totalnoMartina/irish-macrame/issues/8) Add feature to like an item| ![Add likes](/media/like-unlike-feature.png?raw=true)|Could Have|
+|[#9](https://github.com/totalnoMartina/irish-macrame/issues/9) Create User Profile Page |![My Profile User page](/media/my-profile-pg.png?raw=true)
+|[#10](https://github.com/totalnoMartina/irish-macrame/issues/10) Review macrame items user have purchased|![Add Reviews for items](/media/reviews.png?raw=true)|Could Have|
+|[#12](https://github.com/totalnoMartina/irish-macrame/issues/12) Add ability to make payments using Stripe |![Add stripe payments](/media/stripe-payments.png?raw=true)|Must Have|
+|[#13](https://github.com/totalnoMartina/irish-macrame/issues/13) Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
+|[#14](https://github.com/totalnoMartina/irish-macrame/issues/14) Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|Must Have|
+|[#15](https://github.com/totalnoMartina/irish-macrame/issues/15) Admin authorisation and authentication   |![image of admin logged in](/media/logged-in-nav.png?raw=true)| Must Have|
+|[#20](https://github.com/totalnoMartina/irish-macrame/issues/20) Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
+|[#19](https://github.com/totalnoMartina/irish-macrame/issues/19) Home page   |![Homepage](/media/homepage.png?raw=true)|Must Have|
 
 ## Features
 
