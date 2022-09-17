@@ -337,14 +337,13 @@ EMAIL_HOST_PASS is the password copied from above.
 EMAIL_HOST_USER is the gmail email address
 
 
-Github and Heroku - explain all steps
 # Credits
 ## Online Resources
 
 * [Font Awesome](https://fontawesome.com/)
 * [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 * [Google Fonts](https://fonts.google.com/)
-*[Coolors Website](https://coolors.co/)
+* [Coolors Website](https://coolors.co/)
 ## Tutorials, stackoverflow and people
 
 Most of the code has been used from Code Institute curriculum for the e-commerce related code, mainly from 'Boutique Ado' regarding items, bag and payment section, and for deployment steps, cloudinary and starting apps has been followed by the walkthrough project 'I think, Therefore I Blog'. Many thanks to teachers that presented us a way to make an e-commerce website using Django.
