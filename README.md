@@ -10,8 +10,8 @@ The live version of the website can be seen [here](https://black-moon-design.her
 * [User Experience Design](#user-experience-design)
    * [UX, SEO, Business model and Marketing](#ux-seo-business-model-and-marketing)
       * [UX](#ux)
-      *[SEO](#seo)
-      *[Business model and marketing strategy](#business-model-and-marketing-strategy)
+      * [SEO](#seo)
+      * [Business model and marketing strategy](#business-model-and-marketing-strategy)
    * [Target Audience](#target-audience)
    * [Color Palette](#color-palette)
    * [User Stories](#user-stories)
@@ -154,12 +154,13 @@ First three pages for wireframes - Homepage, Macrame list page, item details pag
 To create the User stories I used Github Issues and then I grouped them according to MoSCoW prioritization technique. The link with live issues can be found [here](https://github.com/users/totalnoMartina/projects/6). Some of the User Stories will be left for the future development and they are labeled as 'Could Have'.
 # Technologies Used
 
-- HTML5/CSS3
-- Font Awesome v4
-- Javascript
-- Bootstrap 4.6
-- Python3 -- Django 4
-- Stripe
+- [HTML5](https://html.com/html5/)/[CSS3](https://www.css3.com/)
+- [Font Awesome v4](https://fontawesome.com/v4/)
+- [Javascript](https://www.javascript.com/)
+- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Python3](https://www.python.org/)
+- [Django 4(https://www.djangoproject.com/)]
+- [Stripe](https://stripe.com/en-ie)
 
 # Code Validation
 
