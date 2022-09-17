@@ -94,6 +94,7 @@ The User Stories that have been satisfied are:
 |Review macrame items user have purchased|![Add Reviews for items](/media/reviews.png?raw=true)|Could Have|
 |Add Subscription to newsletter| ![Add Newsletter supscription](/media/newsletter.png?raw=true)|Must Have|
 |Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
+|Add Checkout Page | ![Checkout Page](/media/checkout-pg.png?raw=true)|Must Have|
 
 ## Features
 
