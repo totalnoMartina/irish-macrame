@@ -11,7 +11,7 @@
     <form method="POST" action="{% url 'delete_review' item.id %}">
         {% csrf_token %}
         {{form}}
-        <a href="{% url 'shoppingapp/macrames' %}" class="btn">Cancel</a>
+        <a href="{% url 'macrame-detail' macrame_id=macrame_id %}" class="btn">Cancel</a>
         <input type="submit" name="Confirm" class="btn">
 
     </form>
