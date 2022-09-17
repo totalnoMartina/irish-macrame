@@ -19,7 +19,7 @@
         <div class="col">
             <h1>Update your review here! </h1>
 
-            {% for review in review.macrame_id %}
+            {% for review in review.pk %}
             <form method="POST" action="#">
                 {% csrf_token %}
                 <h1> {{form}}</h1>

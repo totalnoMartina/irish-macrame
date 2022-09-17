@@ -46,7 +46,6 @@ p {
     color: #2f231a;
 }
 
-
 .nav-link {
     color: #1e1f1f !important;
     background-color: #f3ab99 !important;
@@ -74,12 +73,13 @@ h5 {
 }
 
 .log-btn {
-    background-color: #ffbfbe;
+    background-color: #ffbfbe !important;
 }
 
 .log-btn:hover {
-    background-color: #965d30;
+    background-color: #965d30 !important;
 }
+
 
 .overlay {
     height: 100%;
@@ -147,8 +147,12 @@ input[name='q']::placeholder {
     color: #493a3a !important;
 }
 
+.btn {
+    background-color: #b783eb !important;
+}
+
 .btn:hover {
-    background-color: #f3ab99;
+    background-color: #ffbfbe !important;
 }
 
 .update-link,

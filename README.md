@@ -12,7 +12,7 @@
    * [User Stories](#user-stories)
    * [Scope](#scope)
    * [Features](#features)
-      * [General Features](#general-features)
+      * [Existing Features](#existing-features)
       * [Future Features](#future-features)
    * [Structure](#structure)
    * [Wireframes](#wireframes)
@@ -85,7 +85,7 @@ The User Stories that have been satisfied are:
 
 ## Features
 
-## General Features
+## Existing Features
 
 ---> pictures of the user stories
 
