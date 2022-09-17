@@ -94,8 +94,8 @@ The User Stories that have been satisfied are:
 |[#13](https://github.com/totalnoMartina/irish-macrame/issues/13) Add messages to indicate status of the adding items into cart| ![Shopping Cart](/media/status-msg-shopping-cart.png?raw=true)|Must Have|
 |[#14](https://github.com/totalnoMartina/irish-macrame/issues/14) Add Footer with links| ![Footer](/media/footer-links.png?raw=true)|Must Have|
 |[#15](https://github.com/totalnoMartina/irish-macrame/issues/15) Admin authorisation and authentication   |![image of admin logged in](/media/logged-in-nav.png?raw=true)| Must Have|
-|[#20](https://github.com/totalnoMartina/irish-macrame/issues/20) Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
 |[#19](https://github.com/totalnoMartina/irish-macrame/issues/19) Home page   |![Homepage](/media/homepage.png?raw=true)|Must Have|
+|[#20](https://github.com/totalnoMartina/irish-macrame/issues/20) Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
 
 ## Features
 
@@ -140,10 +140,10 @@ The User Stories that have been satisfied are:
 
 ## Future Features
 
-- Add pagination to macrame items page
-- Ability to write responses to the reviews of users by the author
-- Add delivery price to be determined by the country where items are shipped out to
-
+- [#11](https://github.com/totalnoMartina/irish-macrame/issues/11) Add pagination to macrame items page
+- [#21](https://github.com/totalnoMartina/irish-macrame/issues/21) Ability to write responses to the reviews of users by the author
+- [#16](https://github.com/totalnoMartina/irish-macrame/issues/16) Add Facebook/Google Login option 
+- [#18](https://github.com/totalnoMartina/irish-macrame/issues/18) Add delivery price to be determined by the country where items are shipped out to 
 ## Structure
 ## Wireframes
 
@@ -165,7 +165,7 @@ To create the User stories I used Github Issues and then I grouped them accordin
 - [Javascript](https://www.javascript.com/)
 - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 - [Python3](https://www.python.org/)
-- [Django 4(https://www.djangoproject.com/)]
+- [Django 4](https://www.djangoproject.com/)
 - [Stripe](https://stripe.com/en-ie)
 
 # Code Validation
