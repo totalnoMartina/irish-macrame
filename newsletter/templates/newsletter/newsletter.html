@@ -1,12 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <form action="#" method="POST">
     {% csrf_token %}
     Subscribe to receive news when new collections are released!
-    <input value="Enter Email address" type="email">
+    <input placeholder="Enter Email address" type="email" name="email">
     <button type="submit">Subscribe!
     </button>
 </form>
+
+<!-- message if email is sent -->
+{% if messages %}
+{% for message in messages %}
+<div class="my-5 alert alert-success">
+    <h5 class="m-0">
+        {{ message }}
+    </h5>
+</div>
+{% endfor %}
+{% endif %}
 {% endblock %}

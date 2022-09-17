@@ -8,4 +8,4 @@ class NewsletterUserForm(forms.ModelForm):
 
     class Meta:
         model = NewsletterUser()
-        fields = 'email_user'
+        fields = '__all__'
