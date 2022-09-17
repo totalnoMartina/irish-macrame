@@ -10,14 +10,21 @@
 <br>
 <br>
 <br>
-<form action="#" method="POST">
-    {% csrf_token %}
-    Subscribe to receive news when new collections are released!
-    <input placeholder="Enter Email address" type="email" name="email">
-    <button type="submit">Subscribe!
-    </button>
-</form>
+<div class="container">
 
+
+    <form action="#" method="POST">
+        {% csrf_token %}
+        Subscribe to receive news when new collections are released!
+        <input placeholder="Enter Email address" type="email" name="email">
+        <button type="submit">Subscribe!
+        </button>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
 <!-- message if email is sent -->
 {% if messages %}
 {% for message in messages %}
