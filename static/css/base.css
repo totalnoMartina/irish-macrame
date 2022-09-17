@@ -170,8 +170,9 @@ input[name='q']::placeholder {
 }
 
 
-.logo-font {
-    color: #694741;
+.logo {
+    color: #412722;
+    font-size: 2rem;
 }
 
 .likes-font {
@@ -268,7 +269,7 @@ input[name='q']::placeholder {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     /* mt-4 */
     color: #6c757d;
     /* text-secondary */
@@ -322,6 +323,15 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
+.signout-btn {
+    background-color: #e8a49a;
+    border-radius: 15%;
+}
+
+.signout-btn:hover {
+    background-color: #768591;
+}
+
 /* Media queries */
 
 /* Large devices (desktops, less than 1200px) */
@@ -350,7 +360,7 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 146px;
     }
 
     .cart__img {
