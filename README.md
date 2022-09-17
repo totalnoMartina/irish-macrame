@@ -74,7 +74,7 @@ Artist suggested more warm, boho, soft colors so i went for a combination of the
 
 ## User Stories
 
-The user stories were categorised into different priorities, from highest to lowest: "Should Have" "Must Have" "Could Have" "Might Have" "Won't Have". Some User Stories that have been labeled as "Could Have" are not prioritized to be implemented in this edition of this app.
+The user stories were categorized into different priorities, from highest to lowest: "Should Have" ,"Must Have", "Could Have", "Wont Have". User Stories that have been labeled as "Wont Have" are not prioritized to be implemented in this edition of this app but as a future feature.
 
 The User Stories that have been satisfied are:
 
@@ -133,10 +133,15 @@ The User Stories that have been satisfied are:
 
 - User profile wher users can update their personal information
 
+![Manage Admin, Edit and delete items from offer](/media/manage-stock-panel-edit-delete.png?raw=true)
 - Admin ability to add, update and remove product without accessing the admin panel featured in Django
 
+![Add, update, remove items from shopping cart](/media/add-macrame-detail.png?raw=true)
+
 - Add/ Update/ Remove product into the shopping cart
-- Checkout page for reaching the payment and completing with stripe payments system
+
+![Checkout Page](/media/checkout-pg.png?raw=true)
+- Checkout page for reaching the payment and completing with stripe payment system
 
 ## Future Features
 
