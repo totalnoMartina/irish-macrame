@@ -1,6 +1,8 @@
 # Irish Macrame by Black Moon Designs
 
-![](media/images/someimage--.png?raw=true)
+![Home Page Macrames](media/homepage-macrame.png?raw=true)
+
+The live version of the website can be seen [here](https://black-moon-design.herokuapp.com/)
 
 # Contents
 
@@ -38,17 +40,22 @@
 
 A website that promotes handmade macrame items for sale, made by an artist Marika from Poland. She collects wood samples from the forests around the suburban Dublin and creates items tying Irish Cotton around them to make items like Macrame wall hangings, wall decorations, earrings, keychains and similar handmade items that look warm and comforting. She is very enthusiastic about her passion and as she worked in Hospitality, this pandemic has inspred her to start using her hobbies to make other people happy too, by selling these handmade items online. She organizes the shipment and packs each item herself and cares very much for the display of every package. Every item represents her and her passion towards handmade originals as she rarely could make any two items exactly the same, which makes these even more special. She is also very active on instagram in promoting her items and has ready made promotional instagram page with videos and reels that present her new collections so she has quite an audience on Instagram, Facebook and Etsy which are bringing revenue her way. Her shop started on Etsy on [this link](https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936)
 
-# User Experience Design
+# UX, SEO, Business model and Marketing
+
+### UX 
+The website color matches the items in a sense that it is kept to few pinkish and brown/grey shades and black and white to be for the contrast and the palette is chosen by the owner with a hint for 'boho' style to match the macrame. I wanted originally to have all buttons the same pinkish color to be seen only on hover as not to be too accentuated.
+
+### SEO 
+SEO implementations is used with an accent towards home decor and cozy cotton feel so it inspires good feelings for users while browsing interesting items in warm colors.
+Keywords are used to associate website with handmade macrame art, original, cotton, home decorations.
+
 ## Business Model and Marketing Strategy
 
 This website is made for a small irish business that promotes handmade macrame items, and allows users to purchase items through the website directly from the owner of the website. This is a B2C - Business to Customer model, as it allows for direct communication between the owner/artist of the items and customers. 
 
-SEO implementations is used with an accent towards home decor and cozy cotton feel so it inspires good feelings for users while browsing interesting items in warm colors. The website color matches the items in a sense that it is kept to few pinkish and brown/grey shades and black and white to be for the contrast and the palette is chosen by the owner with a hint for 'boho' style to match the macrame.
-
-
 ### Facebook Page
 
-The artist of macrame items actually had already made real FB page which I could not find just by engering keywords, but just after the artist shared this [link](https://www.facebook.com/BlackMoonDesigns13)
+The artist of macrame items had made a FB page which  cannot be found just by engering keywords, but just after the artist shared this [link](https://www.facebook.com/BlackMoonDesigns13). The content showcases the items and the stories with the items make it even more original as artist is the one doing everything, from packing, through marketing, and shipping.
 
 ![Facebook page image of the page](/media/fb-blackmoondesign.png?raw=true)
 ![Facebook page image of the content on the page](/media/fb-blackmoon-content.png?raw=true)
@@ -87,12 +94,21 @@ The User Stories that have been satisfied are:
 
 ## Existing Features
 
----> pictures of the user stories
+![Mobile navigation](/media/navbar-open-closed.png?raw=true)
 
-- Main Navigation on the right hand side, supposing the users are more rigght-handed so it is easier to manage and access on mobile versions. -- provide images of Navigation
-- Main Logo and Homepage/landing page (add some text if Marika agrees)
+![Navigation Desktop](/media/nav-desktop.png?raw=true)
+- Main Navigation right next to the Logo on Desktop versions, but on mobile the navigation is placed on the right hand side, supposing the users are more rigght-handed so it is easier to manage and access on mobile versions.
+
+![Homepage Logos](/media/logos-homepage.png?raw=true)
+
+- Main Logo and Homepage/landing page
+
+![Homepage Logos](/media/browse-btn.png?raw=true)
+
 - Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
-- Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page (will consider if i need liking also inside detailed page) and the detailed product page with ability to add products in the shopping cart
+
+- Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page
+- Detailed product page with ability to add products in the shopping cart
 - Messages to notify the user when he/she is logged in succesfully or made an order
 - User profile wher users can update their personal information
 - Admin ability to add, update and remove product without accessing the admin panel featured in Django
