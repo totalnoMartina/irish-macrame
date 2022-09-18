@@ -356,6 +356,16 @@ Makemacrame - urls.py
 
 ## Manual Testing
 
+
+- Google chrome dev tools
+
+- [Lighthouse](toohttps://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to audit the site (efficiency).
+
+- [Validator](https://validator.w3.org/)
+
+- [Jigsaw](https://jigsaw.w3.org/css-validator)
+
+
 ## Lighthouse
 
 ![Homepage](/media/homepage-lighth.png?raw=true)
