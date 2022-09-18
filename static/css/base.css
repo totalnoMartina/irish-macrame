@@ -32,8 +32,18 @@ body {
 }
 
 
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    max-height: 17rem;
+}
+
 .card__img {
-    object-fit: fill;
+    object-fit: contain !important;
+    display: block !important;
+    max-height: 100% !important;
+    margin: 0 auto;
 }
 
 .card__img:hover {
@@ -78,6 +88,17 @@ h5 {
     background-color: #965d30 !important;
 }
 
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: grid;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1pxsolidrgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
 
 .overlay {
     height: 100%;
