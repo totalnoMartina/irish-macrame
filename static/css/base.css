@@ -150,7 +150,7 @@ input[name='q']::placeholder {
 }
 
 .btn {
-    background-color: #b783eb !important;
+    background-color: #bd7c5b !important;
 }
 
 .btn:hover {
@@ -182,7 +182,7 @@ input[name='q']::placeholder {
     color: #564c4a;
 }
 
-.heart-btn {
+.heart__btn {
     color: #dc3545;
 }
 
@@ -279,7 +279,7 @@ input[name='q']::placeholder {
 .allauth-form-inner-content p {
     margin-top: 2.5rem;
     /* mt-4 */
-    color: #6c757d;
+    color: #222425;
     /* text-secondary */
 }
 
@@ -308,8 +308,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: rgb(92, 65, 42);
+    border: 1px solid rgb(73, 30, 30);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -337,7 +337,7 @@ input[name='q']::placeholder {
 }
 
 .signout-btn:hover {
-    background-color: #768591;
+    background-color: #4f5458;
 }
 
 /* Media queries */
