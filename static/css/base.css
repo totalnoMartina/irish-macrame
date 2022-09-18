@@ -200,6 +200,10 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.shop-now-button:hover {
+    background-color: #ed9da3 !important;
+}
+
 .home__a,
 .to-top__btn {
     font-size: 2rem;
