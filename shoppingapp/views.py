@@ -1,13 +1,14 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect
+""" Imports for modules, models, forms """
+from django.shortcuts import (render,
+             redirect, reverse, get_object_or_404, HttpResponseRedirect)
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-from django.db.models.functions import Lower
 from django.views.generic import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-from .models import Macrame, Category
+from .models import Macrame
 from .forms import MacrameForm
 
 
@@ -17,13 +18,9 @@ def index(request):
 
 
 def all_macrames(request):
-    """ A view to show all macrame items, including sorting and search queries """
-
+    """ A view to show all macrame items, including search queries """
     macrames = Macrame.objects.all()
     query = None
-    categories = None
-    sort = None
-    direction = None
 
     if request.GET:
         if 'q' in request.GET:
@@ -34,7 +31,6 @@ def all_macrames(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             macrames = macrames.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
     context = {
         'macrames': macrames,
         'search_term': query,
@@ -49,13 +45,11 @@ def macrame_detail(request, macrame_id):
     context = {
         'macrame': macrame,
     }
-
     return render(request, 'shoppingapp/macrame-detail.html', context)
 
 
 class AddLike(LoginRequiredMixin, View):
     """ A class for liking products """
-
     def post(self, request, pk, *args, **kwargs):
         """ Modifying post method to submit likes """
         macrame = Macrame.objects.get(pk=pk)
@@ -69,7 +63,6 @@ class AddLike(LoginRequiredMixin, View):
             messages.success(request, 'Thanks for the "Like"!')
         if is_like:
             macrame.likes.remove(request.user)
-            
         next_ = request.POST.get('next_', '/')
         return HttpResponseRedirect(next_)
 
@@ -77,7 +70,6 @@ class AddLike(LoginRequiredMixin, View):
 @login_required
 def add_macrame(request):
     """ Add a macrame item to the store """
-
     if request.method == 'POST':
         form = MacrameForm(request.POST, request.FILES)
         if form.is_valid():
@@ -85,22 +77,20 @@ def add_macrame(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('macrame-detail', args=[macrame.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+            'Failed to add product. Please ensure the form is valid.')
     else:
         form = MacrameForm()
-        
     template = 'shoppingapp/add_macrames.html'
     context = {
         'form': form,
     }
-
     return render(request, template, context)
 
 
 @login_required
 def edit_macrame(request, macrame_id):
     """ Edit a macrame item in the store """
-
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     if request.method == 'POST':
         form = MacrameForm(request.POST, request.FILES, instance=macrame)
@@ -109,11 +99,11 @@ def edit_macrame(request, macrame_id):
             messages.success(request, 'Successfully updated Macrame item!')
             return redirect(reverse('macrame-detail', args=[macrame.id]))
         else:
-            messages.error(request, 'Failed updating. Please ensure the form is valid.')
+            messages.error(request,
+            'Failed updating. Please ensure the form is valid.')
     else:
         form = MacrameForm(instance=macrame)
         messages.info(request, f'You are editing {macrame.name}')
-
     template = 'shoppingapp/edit_macrame.html'
     context = {
         'form': form,
@@ -125,7 +115,6 @@ def edit_macrame(request, macrame_id):
 @login_required
 def delete_macrame(request, macrame_id):
     """ Delete a product from the store """
-
     macrame = get_object_or_404(Macrame, pk=macrame_id)
     macrame.delete()
     messages.success(request, 'Item deleted!')

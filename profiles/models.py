@@ -1,3 +1,4 @@
+""" Imports of modules, User """
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
@@ -20,7 +21,7 @@ class UserProfile(models.Model):
                          null=True, blank=True)
     default_town_or_city = models.CharField(max_length=40,
                          null=True, blank=True)
-    default_street_address1 = models.CharField(max_length=80, 
+    default_street_address1 = models.CharField(max_length=80,
                          null=True, blank=True)
     default_street_address2 = models.CharField(max_length=80,
                          null=True, blank=True)

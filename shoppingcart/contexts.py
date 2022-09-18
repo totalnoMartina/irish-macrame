@@ -1,3 +1,4 @@
+""" Imports for mmodules and models """
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
@@ -5,7 +6,7 @@ from shoppingapp.models import Macrame
 
 
 def cart_contents(request):
-
+    """ Calculating the sum of the cart """
     cart_items = []
     total = 0
     macrame_count = 0
@@ -27,9 +28,9 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,

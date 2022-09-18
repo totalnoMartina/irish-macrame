@@ -1,3 +1,4 @@
+""" Imports of modules, models, forms """
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -7,7 +8,7 @@ from .forms import ReviewForm
 
 
 def macrames(request):
-    """ Rendering products of macrames to be able to manipulate reviews connected to macrames """
+    """ Rendering products of macrames tacas """
     macrame_all = Macrame.objects.all()
     context = {
         'macrame_all': macrame_all,
@@ -19,7 +20,8 @@ def macrames(request):
 @login_required
 def create_review(request, pk):
     """ Creating a review """
-    form = ReviewForm(initial={'product_reviewed': pk, 'user_reviewing': request.user})
+    form = ReviewForm(initial={'product_reviewed': pk,
+                      'user_reviewing': request.user})
     macrame = get_object_or_404(Macrame, pk=pk)
     context = {
         'form': form,
@@ -54,7 +56,8 @@ def update_review(request, pk):
             messages.success(request, 'Successfully updated review!')
             return redirect('macrame-detail')
         else:
-            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+            messages.error(request,
+            'Failed to update review. Please ensure the form is valid.')
     messages.info(request, f'You are editing {review.title}')
     return render(request, 'reviews/update_reviews.html', context)
 
@@ -73,8 +76,8 @@ def delete_review(request, pk):
 
     if request.method == 'POST':
         review.delete()
-# add at the top of the file: from django.http import HttpResponseRedirect
-        return  HttpResponseRedirect(
-                    reverse('macrame-detail', kwargs={'macrame_id': macrame_id}))
+        return HttpResponseRedirect(
+                    reverse('macrame-detail',
+                    kwargs={'macrame_id': macrame_id}))
 
     return render(request, 'reviews/delete_review.html', context)

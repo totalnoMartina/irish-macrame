@@ -1,3 +1,4 @@
+""" Imports of modules, model and messages """
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import messages
 
@@ -8,6 +9,7 @@ def view_shoppingcart(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'shoppingcart/shoppingcart.html')
+
 
 def add_to_shoppingcart(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
@@ -33,7 +35,8 @@ def add_to_shoppingcart(request, item_id):
             shoppingcart[item_id] += quantity
         else:
             shoppingcart[item_id] = quantity
-            messages.success(request, f'Added {macrame.name} to your shopping cart')
+            messages.success(request,
+            f'Added {macrame.name} to your shopping cart')
 
     request.session['shoppingcart'] = shoppingcart
     return redirect(redirect_url)

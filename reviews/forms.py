@@ -8,7 +8,7 @@ class ReviewForm(ModelForm):
     """ A form for the reviews outlook """
 
     def __init__(self, *args, **kwargs):
-        """ A function that hides the item and user 
+        """ A function that hides the item and user
         that is reviewing so it canot be modified """
         super().__init__(*args, **kwargs)
         self.fields['product_reviewed'].widget = forms.HiddenInput()
