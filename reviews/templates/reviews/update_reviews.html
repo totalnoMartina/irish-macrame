@@ -19,18 +19,12 @@
         <div class="col">
             <h1>Update your review here! </h1>
 
-            {% for review in review.macrame.pk %}
             <form method="POST" action="#">
                 {% csrf_token %}
                 <h1> {{form.as_p}}</h1>
-
+                <a href="{% url 'macrame-detail' macrame_id=macrame_id %}" class="btn">Cancel</a>
+                <input type="submit" name="Confirm" class="btn">
             </form>
-            <a href="{% url 'update_review' review.id %}" class="btn">Update</a>
-            <hr>
-            <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Remove</a>
-
-            {% endfor %}
-
         </div>
     </div>
 </div>

@@ -140,6 +140,10 @@ input[name='q']::placeholder {
     color: #696363;
 }
 
+.detail__img__holder {
+    max-width: 10rem !important;
+}
+
 .navbar-brand,
 .fa-shopping-cart {
     color: #493a3a !important;
@@ -150,7 +154,7 @@ input[name='q']::placeholder {
 }
 
 .btn:hover {
-    background-color: #ffbfbe !important;
+    background-color: #f5d4d4 !important;
 }
 
 .update-link,

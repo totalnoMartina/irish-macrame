@@ -433,4 +433,6 @@ A [link](https://stackoverflow.com/questions/70285834/forbidden-403-csrf-verific
 
 As I was trying to find best explanation of deployment steps I found most genuine approach from [JoGorska README.md](https://raw.githubusercontent.com/JoGorska/bonsai-shop/main/README.md) of the project bonsai-shop and used the same approach to explain this.
 
+I found a guide for newsletter [here](https://www.pythonstacks.com/blog/post/integrating-mailchimp-django/) and in the beginning my newsletter is poping messages but not storing the emails.
+
 I would like to thank to my mentor Tim Nelson, fellow students Iulia Konovalova and JoGorska, as well as the CI community and Slack community for the support and sharing the bugs and solutions that help each other grow, it is highly apreciated and forever remembered to be passed on to another student/fellow coder in the future.

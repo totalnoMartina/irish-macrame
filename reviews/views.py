@@ -39,22 +39,29 @@ def create_review(request, pk):
 @login_required
 def update_review(request, pk):
     """ A view to update review """
-
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
     review = Review.objects.get(pk=pk)
     form = ReviewForm(instance=review)
+    macrame_id = review.product_reviewed.id
+
     context = {
         'form': form,
+        'review': review,
+        'macrame_id': macrame_id
     }
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return HttpResponseRedirect(
+                            reverse('macrame-detail',
+                            kwargs={'macrame_id': macrame_id}))
+
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated review!')
-            return redirect('macrame-detail')
+            return HttpResponseRedirect(
+                    reverse('macrame-detail',
+                    kwargs={'macrame_id': macrame_id}))
         else:
             messages.error(request,
             'Failed to update review. Please ensure the form is valid.')
@@ -68,11 +75,16 @@ def delete_review(request, pk):
     review = Review.objects.get(id=pk)
     form = ReviewForm(instance=review)
     macrame_id = review.product_reviewed.id
-
     context = {
         'form': form,
         'item': review,
+        'macrame_id':macrame_id
     }
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return HttpResponseRedirect(
+                            reverse('macrame-detail',
+                            kwargs={'macrame_id': macrame_id}))
 
     if request.method == 'POST':
         review.delete()

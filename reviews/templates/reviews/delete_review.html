@@ -2,13 +2,15 @@
 {% block content %}
 <br>
 <br>
+<br>
+<br>
 <div class="container text-center">
 
 
     <h3>Are you sure you want to delete "{{item}}"</h3>
 
     <br>
-    <form method="POST" action="{% url 'delete_review' item.id %}">
+    <form method="POST" action="{% url 'delete_review' pk=item.id %}">
         {% csrf_token %}
         {{form}}
         <a href="{% url 'macrame-detail' macrame_id=macrame_id %}" class="btn">Cancel</a>
