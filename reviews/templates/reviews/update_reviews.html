@@ -15,15 +15,15 @@
 <br>
 <br>
 <div class="container">
-    <div class="row text-center">
+    <div class="row text-center pb-3 mx-auto">
         <div class="col">
             <h1>Update your review here! </h1>
 
             <form method="POST" action="#">
                 {% csrf_token %}
                 <h1> {{form.as_p}}</h1>
-                <a href="{% url 'macrame-detail' macrame_id=macrame_id %}" class="btn">Cancel</a>
-                <input type="submit" name="Confirm" class="btn">
+                <a href="{% url 'macrame-detail' macrame_id=macrame_id %}" class="btn btn__update_rev">Cancel</a>
+                <input type="submit" name="Confirm" class="btn btn__update_rev">
             </form>
         </div>
     </div>
