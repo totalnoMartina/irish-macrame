@@ -18,7 +18,6 @@ The live version of the website can be seen [here](https://black-moon-design.her
    * [Features](#features)
       * [Existing Features](#existing-features)
       * [Future Features](#future-features)
-   * [Structure](#structure)
    * [Wireframes](#wireframes)
 * [Agile Methodology](#agile-methodology)
 * [Technologies Used](#technologies-used)
@@ -151,7 +150,6 @@ The User Stories that have been satisfied are:
 - [#21](https://github.com/totalnoMartina/irish-macrame/issues/21) Ability to write responses to the reviews of users by the author
 - [#16](https://github.com/totalnoMartina/irish-macrame/issues/16) Add Facebook/Google Login option 
 - [#18](https://github.com/totalnoMartina/irish-macrame/issues/18) Add delivery price to be determined by the country where items are shipped out to 
-## Structure
 ## Wireframes
 
 First three pages for wireframes - Homepage, Macrame list page, item details page
@@ -217,7 +215,7 @@ Newsletter  Supscription
 
 ## CSS Validaton
 
-Base
+Base CSS
 
 ![Base CSS](/media/css-base-valid.png?raw=true)
 
@@ -248,23 +246,23 @@ I need to improve contrast by adding borders just for better Accessibility
 
 # Bugs and Issues
 
-Naviagation Burger Bar - The navigation was working  fine but when I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigation started to go outside of the navigation bar, going to the left so I will have to explore as i have Javascript function to close navigation onclick when clicked outside of the navbar which might cause issues for this burger menu bar to be out of order. Also I thought of dropping it altogether.
+Navigation Burger Bar - turns to X on opening - The navigation was working until I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigation started to go outside of the navigation bar, going to the left so I explored how to fix, there was also Javascript function to close navigation onclick when clicked outside of the navbar which caused issues for this burger menu bar to be out of order. I decided to drop it altogether and go simple as possible I used NavBar from Bootstrap4.
 
-I used another repository to try functions before i use the [the-macrames repository](https://github.com/totalnoMartina/the-macrames) similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with the create part as it was using forms in the case of tutorials I followed and most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i asked for help on Slack and Stackoverflow.
+I used another repository to try functions before i use them, as I was affraid to crash another app, [the-macrames repository](https://github.com/totalnoMartina/the-macrames) similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with the create part as it was using forms in the case of tutorials I followed and most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i asked for help on Slack and Stackoverflow.
 
-I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking' so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here my redirect needs fixing, I am trying to find solution for the like to work without refreshing the whole page so still exploring this.
+I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking' so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here the redirect needed fixing.
 
-I am also trying to test newsletter app in [this repo](https://github.com/totalnoMartina/the-macrames) as I want to make sure something works before I include it in my project as I have crashed so many apps during developing this one. At the moment it is not commited as I am having small issues figuring it out in the most simple way. I might need help from my mentor about this as I got the impression that it is easy but then some tutorials have it a bit complicated, so I am exploring this through [this tutorial](https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27).
+I tryed to test newsletter app in [this repo](https://github.com/totalnoMartina/the-macrames) as I want to make sure something works before I include it in my project as I have crashed so many apps during developing this one. At the moment it is not commited as I am having small issues figuring it out in the most simple way. I might need help from my mentor about this as I got the impression that it is easy but then some tutorials have it quite a bit complicated, so I was exploring this through [this tutorial](https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27).
 
-I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I am just now finding best way to test to see my error page, so still looking into this.
+I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I she helped me and explained finding best way to test to see my error page. She also helped in testing this apps features, so I really appreciate her and her husband Alex Konovalov.
 
-During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charges all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored
+During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charges all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so i removed them.
 # Deployment and making a clone
 ## Deployment to heroku
 
 **In your app** 
 
-1. add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
+1. Add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
 2. Git add and git commit the changes made
 
 **Log into heroku**
@@ -326,7 +324,7 @@ you should see the message "the app was sussesfully deployed"
 
 23. Click the button "View"
 
-The live link can be found [here](live/page/here/???).
+The live link can be found [here](https://black-moon-design.herokuapp.com/)
 
 ## Forking the GitHub Repository
 
@@ -381,15 +379,15 @@ pip3 freeze --local > requirements.txt
 ## Getting Stripe keys
 Go to developers tab. On side menu you will find API keys. Copy STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY.
 
+(The next part I did not implement but it might be useful for the fellow developers)
 Go to Webhooks. Click Add Endpoint button in top right hand corner.
 Add endpoint URL (your local or deployed URL)
 Add all events 
 Than click add endpoint
 You should be redirected to this webhook's page. Reveal webhook sign in secret and copy to Settings and to heroku as STRIPE_WH_SECRET variable
-
+(I skipped this part until here, and made an app on google)
 
 ## Getting email variables from gmail
-
 
 - Log into gmail account
 - Go to Settings and than See all settings
