@@ -45,9 +45,9 @@
                 <div class="col-2 mb-1">
                     <a href="{% url 'macrame-detail' item.macrame.id %}">
                         {% if item.macrame.image %}
-                        <img class="w-100" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
+                        <img class="w-100 checkout__img" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.jpg" alt="no image uploaded">
+                        <img class="w-100 checkout__img" src="{{ MEDIA_URL }}noimage.jpg" alt="no image uploaded">
                         {% endif %}
                     </a>
                 </div>
@@ -140,12 +140,12 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <div class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-circle-notch fa-spin"></i>
             <!-- <i class="fas fa-3x fa-solid fa-spinner fa-spin-pulse"></i> -->
         </span>
-    </h1>
+    </div>
 </div>
 {% endblock %}
 {% block postloadjs %}

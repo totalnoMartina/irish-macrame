@@ -22,14 +22,7 @@
             {% for review in review.macrame.pk %}
             <form method="POST" action="#">
                 {% csrf_token %}
-                <h1> {{form}}</h1>
-
-                {% for field in form %}
-                {{ field | as_crispy_field }}
-
-                {{ field }}
-
-                {% endfor %}
+                <h1> {{form.as_p}}</h1>
 
             </form>
             <a href="{% url 'update_review' review.id %}" class="btn">Update</a>

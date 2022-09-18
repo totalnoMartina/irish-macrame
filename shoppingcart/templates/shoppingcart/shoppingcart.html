@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
+<div class="container my-2">
     <div class="row">
         <div class="col">
             <br>
@@ -32,8 +32,11 @@
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
+                            <th scope="col"></th>
                             <th scope="col">Product Info</th>
                             <th scope="col">Price</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
                             <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
                         </tr>
@@ -42,10 +45,11 @@
                     <tr>
                         <td class="p-3 w-25">
                             {% if item.macrame.image %}
-                            <img class="image-fluid-rounded cart__img" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
+                            <img class="image_fluid cart__img" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                             {% else %}
-                            <img class="image-fluid-rounded cart__img" src="{{ MEDIA_URL }}noimage.jpg" alt="image not uploaded">
-                            {% endif %} </td>
+                            <img class="image_fluid cart__img" src="{{ MEDIA_URL }}noimage.jpg" alt="image not uploaded">
+                            {% endif %}
+                        </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.macrame.name }}</strong></p>
                             <p class="my-0"><strong>Size: </strong>{% if item.macrame.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
@@ -93,7 +97,7 @@
                             </label>
                             {% endif %}
                         </td>
-                        <td class="py-3 w-25">
+                        <td class="py-3 w-50">
                             <p class="my-0">{{ item.quantity }}</p>
                         </td>
                         <td class="py-3">
@@ -102,7 +106,7 @@
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="8" class="pt-5 text-right">
+                        <td colspan="4" class="pt-5 text-right">
                             <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4 grand-total"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -114,7 +118,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="8" class="text-right">
+                        <td colspan="5" class="text-right">
                             <a href="{% url 'macrames' %}" class="btn btn-outline-black rounded btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -143,8 +147,6 @@
         </div>
     </div>
 </div>
-
-
 
 {% endblock %}
 {% block postloadjs %}
