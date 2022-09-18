@@ -1,3 +1,4 @@
+""" Imports for the models and user """
 from django.db import models
 from django.contrib.auth.models import User
 from shoppingapp.models import Macrame

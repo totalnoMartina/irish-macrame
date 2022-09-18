@@ -1,3 +1,4 @@
+""" Imports for forms and model """
 from django import forms
 from .models import UserProfile
 
@@ -5,6 +6,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     """ A form to be presenting information based on UserProfile model """
     class Meta:
+        """ An instance to be excluded of the user """
         model = UserProfile
         exclude = ('user',)
 

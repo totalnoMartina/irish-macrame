@@ -1,3 +1,4 @@
+""" Import a model of review """
 from django.contrib import admin
 
 from .models import Review
