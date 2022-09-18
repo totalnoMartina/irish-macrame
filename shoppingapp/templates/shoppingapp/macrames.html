@@ -53,8 +53,8 @@
                                 </div>
                                 {% if request.user.is_superuser %}
                                 <small class="ml-3">
-                                    <a href="{% url 'edit_macrame' macrame.id %}" aria-label="editing macrame item - admin">Edit</a> |
-                                    <a class="text-danger" href="{% url 'delete_macrame' macrame.id %}" aria-label="deleting macrame item - admin">Delete</a>
+                                    <a href="{% url 'edit_macrame' macrame.id %}" class="editing__mac" aria-label="editing macrame item - admin">Edit</a> |
+                                    <a class=" delete__mac" href="{% url 'delete_macrame' macrame.id %}" aria-label="deleting macrame item - admin">Delete</a>
                                 </small>
                                 {% endif %}
 
