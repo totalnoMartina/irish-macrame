@@ -244,7 +244,6 @@ Profile - urls.py
 
 ![Profile - urls](/media/profile-url-pep8.png?raw=true)
 
-
 Profile - views.py
 
 ![Profile - views](/media/profile-view-pep8.png?raw=true)
@@ -299,7 +298,11 @@ Shoppingcart - widget.py
 
 Shoppingcart - cart_tools.py
 
-![Shoppingcart - views](/media/cart-tools-pep8.png?raw=true)
+![Shoppingcart - cart_tools](/media/cart-tools-pep8.png?raw=true)
+
+Shoppingcart - urls.py
+
+![Shoppingcart - urls](/media/shopping-urls-pep8.png?raw=true)
 
 
 Checkout - admin.py
@@ -329,9 +332,30 @@ Newsletter - admin.py
 Newsletter - forms.py
 
 ![Newsletter - forms](/media/newsl-form-pep8.png?raw=true)
+
+Newsletter - forms.py
+
+![Newsletter - models](/media/newsl-model-pep8.png?raw=true)
+
+Newsletter - models.py
+
+![Newsletter - urls](/media/newsl-url-pep8.png?raw=true)
+
+Newsletter - views.py
+
+![Newsletter - views](/media/newsl-views-pep8.png?raw=true)
+
+MakeMacrame - views.py
+
+![Macemacrame - views](/media/view-makemacrame-pep8.png?raw=true)
+
+Makemacrame - urls.py
+
+![Makemacrame - urls](/media/urls-makemacrame-pep8.png?raw=true)
 # Testing
+
 ## Manual Testing
-- Test manually on all devices you have - iphone, linux chromebook, ipad
+
 ## Lighthouse
 
 ![Homepage](/media/homepage-lighth.png?raw=true)

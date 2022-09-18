@@ -116,8 +116,8 @@
         </div>
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
-        <a href="{% url 'update_review' pk=review.id %}" class="btn">Update Review</a>
-        <a href="{% url 'delete_review' pk=review.id %}" class="btn btn-danger">Remove Review</a>
+        <a href="{% url 'update_review' pk=review.id %}" class="btn btn__update_rev">Update Review</a>
+        <a href="{% url 'delete_review' pk=review.id %}" class="btn btn__remove__rev">Remove Review</a>
         {% endif %}
         {% endif %}
 

@@ -85,6 +85,25 @@ p {
     font-size: 2rem;
 }
 
+.btn__update_rev {
+    background-color: #e19ea4;
+}
+
+.btn__remove__rev:hover {
+    background-color: #524844;
+    color: #ebe8ee;
+}
+
+.btn__update_rev:hover {
+    background-color: #713338;
+    color: #ebe8ee;
+}
+
+.btn__remove__rev {
+    background-color: #a8552b;
+    color: black;
+}
+
 h4 {
     color: #cfc8c6;
     font-size: smaller;
@@ -187,14 +206,6 @@ input[name='q']::placeholder {
 .navbar-brand,
 .fa-shopping-cart {
     color: #493a3a !important;
-}
-
-.btn {
-    background-color: #bd7c5b !important;
-}
-
-.btn:hover {
-    background-color: #f5d4d4 !important;
 }
 
 .update-link,
