@@ -235,6 +235,100 @@ Increment - Decrement function
 
 ## Python Validation - PEP8
 
+
+Profile - forms.py
+
+![Profile - forms](/media/profile-forms-pep8.png?raw=true)
+
+Profile - urls.py
+
+![Profile - urls](/media/profile-url-pep8.png?raw=true)
+
+
+Profile - views.py
+
+![Profile - views](/media/profile-view-pep8.png?raw=true)
+
+Reviews - forms.py
+
+![Reviews - forms](/media/review-form-pep8.png?raw=true)
+
+Reviews - admin.py
+
+![Reviews - admin](/media/review-admin-pep8.png?raw=true)
+
+Reviews - urls.py
+
+![Reviews - urls](/media/review-urls-pep8.png?raw=true)
+
+Reviews - models.py
+
+![Reviews - models](/media/reviews-model-pep8.png?raw=true)
+
+Shoppingapp - forms.py
+
+![Shoppingapp - forms](/media/shopp-forms-pep8.png?raw=true)
+
+Shoppingapp - admin.py
+
+![Shoppingapp - admin](/media/shopping-admin-pep8.png?raw=true)
+
+Shoppingapp - models.py
+
+![Shoppingapp - models](/media/shopp-models-pep8.png?raw=true)
+
+Shoppingapp - urls.py
+
+![Shoppingapp - urls](/media/shopping-urls-pep8.png?raw=true)
+
+Shoppingapp - views.py
+
+![Shoppingapp - views](/media/shopping-views-pep8.png?raw=true)
+
+Shoppingcart - views.py
+
+![Shoppingcart - views](/media/cart-view-pep8.png?raw=true)
+
+Shoppingcart - contexts.py
+
+![Shoppingcart - contexts](/media/cart-contexts-pep8.png?raw=true)
+
+Shoppingcart - widget.py
+
+![Shoppingcart - widget](/media/cart-widget-pep8.png?raw=true)
+
+Shoppingcart - cart_tools.py
+
+![Shoppingcart - views](/media/cart-tools-pep8.png?raw=true)
+
+
+Checkout - admin.py
+
+![Checkout - admin](/media/checkout-admin-pep8.png?raw=true)
+
+Checkout - form.py
+
+![Checkout - form](/media/checkou-form-pep8.png?raw=true)
+
+Checkout - models.py
+
+![Checkout - models](/media/checkout-model-pep8.png?raw=true)
+
+Checkout - signals.py
+
+![Checkout - signals](/media/checkout-signals-pep8.png?raw=true)
+
+Checkout - views.py
+
+![Checkout - views](/media/checkout-views-pep8.png?raw=true)
+
+Newsletter - admin.py
+
+![Newsletter - admin](/media/newsletter-admin-pep8.png?raw=true)
+
+Newsletter - forms.py
+
+![Newsletter - forms](/media/newsl-form-pep8.png?raw=true)
 # Testing
 ## Manual Testing
 - Test manually on all devices you have - iphone, linux chromebook, ipad
