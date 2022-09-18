@@ -16,4 +16,4 @@ urlpatterns = [
     path('newsletter/', include('newsletter.urls')),
 ]
 
-handle_error_404 = 'makemacrame.views.handle_error_404'
+handler404 = 'makemacrame.views.handle_error_404'
