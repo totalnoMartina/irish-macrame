@@ -50,11 +50,11 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light logo navbar-expand-lg bg-light fixed-top align-items-right">
+        <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top align-items-right">
             <!-- Navbar brand -->
-            <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}" title="Irish Macrames Home">
-                Irish Macrames
-                <img src="{% static 'images/cacti-moonlogo-08.jpg' %}" style="height: 7rem; width: 7rem;" class="rounded-circle" alt="logo of creator">
+            <a class="navbar-brand rounded logo bg-transparent" href="{% url 'home' %}" title="Irish Macrames Home">
+                <div class="logo__name">Irish Macrames</div>
+                <img src="{% static 'images/cacti-moonlogo-08.jpg' %}" class="logo__image rounded-circle" alt="logo of creator">
 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

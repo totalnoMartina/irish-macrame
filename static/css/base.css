@@ -194,9 +194,25 @@ input[name='q']::placeholder {
 }
 
 
-.logo {
+.logo__name {
     color: #412722;
     font-size: 2rem;
+}
+
+.logo {
+    display: flex !important;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+
+a .logo__name:hover {
+    color: #2e1b09;
+}
+
+.logo__image {
+    height: 6rem;
+    width: 6rem;
 }
 
 .likes-font {
@@ -399,6 +415,10 @@ input[name='q']::placeholder {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .logo__name {
+        display: none !important;
+    }
+
     .cart__img {
         max-width: 160px !important;
     }
@@ -415,11 +435,15 @@ input[name='q']::placeholder {
         max-width: 150px !important;
     }
 
-    .logo {
-        max-width: 140px !important;
+    .logo__image {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        background-color: green;
     }
 
     .home__a {
         font-size: 1.5rem !important;
     }
+
+
 }
