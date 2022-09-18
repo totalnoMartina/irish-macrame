@@ -368,9 +368,29 @@ Makemacrame - urls.py
 
 ## Lighthouse
 
+
+The app is extensively tested for validating all forms in all crud functionality, to make sure only authenticated/superusers can reach certain pages. There is implementation of protective programming which was highly recommended by Iulia Konovalova, a fellow student and a friend, who is the best at testing my apps. Also great help in testing and helping discouver css and targeting bugs, was Iulia's husband Alex Konovalov, who made his own 'Allauth-system' for his app and is constant inspiration for me. This project inspired me to even more get into hackathons and get into creating useful applications that this world can benefit from. And Django has become my number 1, so I am really hoping to improve my coding skills.
+
+Homepage 
 ![Homepage](/media/homepage-lighth.png?raw=true)
 
-I need to improve contrast by adding borders just for better Accessibility
+Profile Page
+![Profile Page](/media/profile-light.png?raw=true)
+
+Macrame Selection 
+![Macrame Selection](/media/macrame-selection-light.png?raw=true)
+
+Edit Macrame Item
+![Edit Macrame](/media/editing-mac-light.png?raw=true)
+
+Checkout Success
+![Checkout Success](/media/checkout-success-light.png?raw=true)
+
+Checkout
+![Checkout](/media/checkout-light.png?raw=true)
+
+Add Macrame Page
+![Add Macrame Page](/media/add-mac-light.png?raw=true)
 
 # Bugs and Issues
 

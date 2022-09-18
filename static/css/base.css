@@ -100,6 +100,14 @@ a>.deleting__mac {
     background-color: #a8552b;
 }
 
+.add__rev__btn {
+    background-color: #a8552b;
+}
+
+.add__rev__btn:hover {
+    background-color: #f0c2ac;
+}
+
 .btn__update_rev {
     background-color: #e19ea4;
 }
@@ -272,8 +280,8 @@ a .logo__name:hover {
     background-color: #e8a6ab;
 }
 
-rgb(136, 56, 63)rgb(122, 46, 53) .blockquote-footer {
-    color: #ebe8ee !important;
+.blockquote-footer {
+    color: #301d0f !important;
     background-color: unset;
     font-size: 1.5rem;
 }
