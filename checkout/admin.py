@@ -1,3 +1,4 @@
+""" Imports for admin and model """
 from django.contrib import admin
 from .models import Order, OrderLineItem
 

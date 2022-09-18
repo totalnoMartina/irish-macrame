@@ -5,6 +5,7 @@ from .models import Order
 class OrderForm(forms.ModelForm):
     """ A model for the form of the orders """
     class Meta:
+        """ Rendering of attributes of model order """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

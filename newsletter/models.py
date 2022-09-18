@@ -1,3 +1,4 @@
+""" Importof django models """
 from django.db import models
 
 

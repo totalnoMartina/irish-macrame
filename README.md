@@ -23,6 +23,10 @@ The live version of the website can be seen [here](https://black-moon-design.her
 * [Agile Methodology](#agile-methodology)
 * [Technologies Used](#technologies-used)
 * [Code Validation](#code-validation)
+   * [HTML Validation](#html-validation)
+   * [CSS Validation](#css-validaton)
+   * [Javascript Validation](#javascript-validation)
+   * [Python Validation - PEP8](#python-validation---pep8)
 * [Testing](#testing)
    * [Manual Testing](#manual-testing)
    * [Lighthouse](#lighthouse)
@@ -130,7 +134,6 @@ The User Stories that have been satisfied are:
 
 ![My Profile Page](/media/my-profile-pg.png?raw=true)
  
-
 - User profile wher users can update their personal information
 
 ![Manage Admin, Edit and delete items from offer](/media/manage-stock-panel-edit-delete.png?raw=true)
@@ -142,7 +145,6 @@ The User Stories that have been satisfied are:
 
 ![Checkout Page](/media/checkout-pg.png?raw=true)
 - Checkout page for reaching the payment and completing with stripe payment system
-
 ## Future Features
 
 - [#11](https://github.com/totalnoMartina/irish-macrame/issues/11) Add pagination to macrame items page
@@ -175,10 +177,65 @@ To create the User stories I used Github Issues and then I grouped them accordin
 
 # Code Validation
 
-Html 
-CSS
-Javascript
-Python
+## Html Validation
+
+Homepage 
+
+![Homepage HTML](/media/html-homepage-valid.png?raw=true)
+
+Add Macrame Items 
+
+![Add Macrame Items - Admin](/media/html-adding-item-error-from-django.png?raw=true)
+
+Macrames
+
+![Macrames](/media/html-macrames-valid.png?raw=true)
+
+Macrame Detail
+
+![Marame Detail](/media/html-macrame-detail-valid.png?raw=true)
+
+Add Review 
+
+![Add Review](/media/html-add-review-valid.png?raw=true)
+
+Update Review 
+
+![Update review](/media/html-update-rev-valid.png?raw=true)
+
+Checkout
+
+![Checkout Page](/media/html-checkou-valid.png?raw=true)
+
+Checkout Success 
+
+![Checkout Success](/media/html-checkout-success-valid.png?raw=true)
+
+Newsletter  Supscription
+
+![Newsletter](/media/html-newsletter-valid.png?raw=true)
+
+## CSS Validaton
+
+Base
+
+![Base CSS](/media/css-base-valid.png?raw=true)
+
+Checkout CSS
+
+![Checkout CSS](/media/css-checkout-valid.png?raw=true)
+
+## Javascript Validation
+
+Stripe 
+
+![Stripe JSHint](/media/jshint-stripe-valid.png?raw=true)
+
+Increment - Decrement function
+
+![Increment - Decrement](/media/jshint-increm-decrem-valid.png?raw=true)
+
+## Python Validation - PEP8
 
 # Testing
 ## Manual Testing
