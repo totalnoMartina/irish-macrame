@@ -380,7 +380,7 @@ input[name='q']::placeholder {
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 500.98px) {
+@media (max-width: 480.98px) {
 
     .cart__img {
         max-width: 40px !important;

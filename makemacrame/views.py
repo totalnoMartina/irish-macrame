@@ -1,4 +1,3 @@
-
 """View to handle 404 page"""
 from django.shortcuts import render
 

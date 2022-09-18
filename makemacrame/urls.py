@@ -14,7 +14,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profiles/', include('profiles.urls')),
     path('newsletter/', include('newsletter.urls')),
-
 ]
 
 handle_error_404 = 'makemacrame.views.handle_error_404'
