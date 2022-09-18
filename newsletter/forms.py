@@ -9,5 +9,5 @@ class NewsletterUserForm(forms.ModelForm):
 
     class Meta:
         """ class to render field inside NewsletterUser """
-        model = NewsletterUser()
+        model = NewsletterUser
         fields = '__all__'
