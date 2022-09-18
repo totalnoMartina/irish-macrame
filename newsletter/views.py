@@ -7,6 +7,8 @@ from .forms import NewsletterUserForm
 
 def newsletter_sign_up(request):
     """ A view to render email signup option """
+    form = NewsletterUserForm()
+    context = { 'form': form }
     if request.method == "POST":
         email_user = NewsletterUserForm(request.POST)
         email_user.save() 
@@ -14,4 +16,4 @@ def newsletter_sign_up(request):
         messages.success(request, "Email received. thank You! ")
         return redirect('home')
 
-    return render(request, "newsletter/newsletter.html")
+    return render(request, "newsletter/newsletter.html", context)
