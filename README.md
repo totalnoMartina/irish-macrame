@@ -150,17 +150,21 @@ The User Stories that have been satisfied are:
 - [#21](https://github.com/totalnoMartina/irish-macrame/issues/21) Ability to write responses to the reviews of users by the author
 - [#16](https://github.com/totalnoMartina/irish-macrame/issues/16) Add Facebook/Google Login option 
 - [#18](https://github.com/totalnoMartina/irish-macrame/issues/18) Add delivery price to be determined by the country where items are shipped out to 
+- Review / Msacrame Deletion ability - Admin should be warned before deleting anything so this will be implemented for live sites that will be used in real time
 ## Wireframes
 
 First three pages for wireframes - Homepage, Macrame list page, item details page
 
 ![First three pages for wireframes](/media/home-list-detail.png?raw=true)
 
+## ERD
+Entities that are related here are User, Macrame Item, Shopping Cart, Order, Reviews, Newsletter and Likes
+
+![Relationship Diagram](/media/erd-diagram.png?raw=true)
+
 # Agile Methodology
 
-
 ![Project Agile](/media/user-stories-image-kanban.png?raw=true)
-
 
 To create the User stories I used Github Issues and then I grouped them according to MoSCoW prioritization technique. The link with live issues can be found [here](https://github.com/users/totalnoMartina/projects/6). Some of the User Stories will be left for the future development and they are labeled as 'Could Have'.
 # Technologies Used
@@ -174,7 +178,6 @@ To create the User stories I used Github Issues and then I grouped them accordin
 - [Stripe](https://stripe.com/en-ie)
 
 # Code Validation
-
 ## Html Validation
 
 Homepage 
@@ -356,9 +359,6 @@ Makemacrame - urls.py
 
 ## Manual Testing
 
-
-- Google chrome dev tools
-
 - [Lighthouse](toohttps://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to audit the site (efficiency).
 
 - [Validator](https://validator.w3.org/)
@@ -366,10 +366,59 @@ Makemacrame - urls.py
 - [Jigsaw](https://jigsaw.w3.org/css-validator)
 
 
+- Google chrome dev tools were used all the way, to find bugs and fix most of them. The one that stayed is possibly caused by webhooks as I had them and then removed them so I am not retrieving information on order from admin panel (Django admin built-in)
+Regarding manual testing, there are things that are checked byt few good friends of mine and me, and these are:
+   * Sign Up				
+      1.	Click on Sign Up button =	redirect to Sign Up page= = Y	
+      2.	Click on the Login link in the form	= redirect to Login page = Y	
+      3.	Enter valid email once	= field will only accept email address format	Y	
+      4.	Enter valid password 1 time = field will only accept password format =	Y	
+      5.	Click on Sign Up button	asks user to confirm email page = sends address a confirmation request email	= N- deactivated confirming Email adress as I would figure if one wants to signup they wil try again putting the correct one, maybe this was not the best idea but I find it too demanding sometimes when trying to signup and it is not appealing for me to have to confirm the emails, I would rather to have the time to put 2-step verification with a phone number and a one-time code to enter maybe with authenticator
+	
+      6.	Sign In = redirects user to Homepage =	Y	 
+      7. Sign In with the same email/username and password	= takes user to Homepage  with pop-up confirming successful sign in =	Y	
+      8.	Click "Logout" button in the center of the page	Redirects user to home page	= Y	
+   * Logging In				
+      1.	Click on Log In button	= redirects  to Log In page =	Y	
+      2.	Click on the Sign Up link in the form	= redirect to Sign Up page	= Y	
+      3.	Enter valid email	Field will only accept email address format	= Y	
+      4.	Enter valid password	= field will only accept password format	= Y	
+      5.	Click on Log In button	= redirects user to blank In page	= Y	
+      6.	Click logout button	= redirects user to home page	= Y		
+      7.	Click Remember Me checkbox	= remembers user	= Y	
+      8.	Click logout button	= redirects user to home page	= Y	
+   * Navigation				
+      1.	Click on the logo	= redirects to the home page	= Y	
+      2.	Click 'Browse Now' to check items in the shop =	redirects to Macrame-detailed items page	= Y	
+      3.	Click cart icon button	= redirects to bag page	= Y	
+      4.	Click My Profile button	= redirects to Profile page	Y	
+      5.	Click Logout button	= redirects to logout page	= Y
+   * Macrame Selection - Irish Macrame Shop				
+      1.	Type in search bar = search results are displayed	and keywords of decription are taken into consideration = Y	
+      3.	Click on like button	= Macrame is with 'heart-like' and message will appear to notify user	= Y	
+      If user is logged out, the user will see a message to login and the click will be ignored
+		If user is logged out, the user will see a message to login and the click will be ignored
+      4.	Click on the macrame item = user will be redirected to the macrame details page	= Y	
+      5.	Click on page navigation = users will be redirected to the correct page =	Y
+      I tried making navigation more interesting afew times, but i kept breakins so I stayed with bootstrap one, to try keep it simple and wanted to make sure it works properly first
+      6. Add Reviews in macrame-details page = only for users that are logged in, if not, users will be asked to signu pu/ login first and the message will pop up = Y
+      7. Update Reviews by only superuser = when another user(not a superuser), only ability to post reviews, and if written in url to edit or update, message pops up saying 'only store owners can do that'
+      8. Delete Reviews = superuser might want to delete a review but one thing is missing here is , ther is no checking again if users are sure to delete a review, so i might need to put more protective programming for this feature
+   * My Profile 
+      1. My profile page = for all logged in users to be able to update their own information = I want them to be able to upload an image also =  Yes(Needs improvvement)
+      2. Edit/Delete Account = users should be able to delete their account, and as I did not make this possible for everyone, for the moment only admin has the power to do this = No
+      3. Store my Orders = users are able to see what orderes have they had and paid = Y
+   * Shopping Cart
+      1. Shoppingcart when it is empty, users are redirected to a page that states: your cart is empty! and a 'back to browsing macrame' page = yes
+      2. Adjust items in the shopping bag with Update/remove item = users tays on the page and the number of item reloads or dissapears if selected 'Remove'
+      3. Secure Checkout button - redirects user to checkout page to make a payment = Y
+      4. Checkout Success = users are redirected to a succesfull pop message on a page with details on the code number of the order and email that confirmation is sent to so in each moment thde user is aware what order is this with these 2 details = Y
+   * Admin Macrame add items - Manage Stock
+      1. Only for admin user - ability to add items, edit them and delete, when added admin is redirected to macrame detail page = Y
+      2. Check before deletion - admin should be wanred before deleting anything so this is not implemented right now but kept for future feature = N
 ## Lighthouse
 
-
-The app is extensively tested for validating all forms in all crud functionality, to make sure only authenticated/superusers can reach certain pages. There is implementation of protective programming which was highly recommended by Iulia Konovalova, a fellow student and a friend, who is the best at testing my apps. Also great help in testing and helping discouver css and targeting bugs, was Iulia's husband Alex Konovalov, who made his own 'Allauth-system' for his app and is constant inspiration for me. This project inspired me to even more get into hackathons and get into creating useful applications that this world can benefit from. And Django has become my number 1, so I am really hoping to improve my coding skills.
+The app is extensively tested for validating all forms in all crud functionality, to make sure only authenticated/superusers can reach certain pages. I used Iphone7, Ecosia and Chrome Browsers. There is implementation of protective programming which was highly recommended by Iulia Konovalova, a fellow student and a friend, who is the best at testing my apps. Also great help in testing and helping discouver css and targeting bugs, was Iulia's husband Alex Konovalov, who made his own 'Allauth-system' for his app and is constant inspiration for me. This project inspired me to even more get into hackathons and get into creating useful applications that this world can benefit from. And Django has become my number 1, so I am really hoping to improve my coding skills.
 
 Homepage 
 ![Homepage](/media/homepage-lighth.png?raw=true)
