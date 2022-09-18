@@ -426,11 +426,11 @@ rgb(136, 56, 63)rgb(122, 46, 53) .blockquote-footer {
     background-color: #4f5458;
 }
 
-.blockquote__footer {
+.blockquote-footer {
     color: #0d0d0e !important;
 }
 
-.blockquote__footer:hover {
+.blockquote-footer:hover {
     background-color: #c68c6f !important;
 }
 
