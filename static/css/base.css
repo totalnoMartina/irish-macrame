@@ -192,6 +192,11 @@ input[name='q']::placeholder {
     opacity: 0.8;
 }
 
+.grand-total {
+    color: #0d0d0e !important;
+    font-size: 2rem;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -369,7 +374,7 @@ input[name='q']::placeholder {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     .cart__img {
-        max-width: 220px !important;
+        max-width: 160px !important;
     }
 }
 
@@ -377,7 +382,7 @@ input[name='q']::placeholder {
 @media (max-width: 500.98px) {
 
     .cart__img {
-        max-width: 110px !important;
+        max-width: 40px !important;
     }
 
     .checkout__img {

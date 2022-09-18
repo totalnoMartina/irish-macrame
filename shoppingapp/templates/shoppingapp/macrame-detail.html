@@ -110,7 +110,7 @@
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'update_review' pk=review.id %}" class="btn">Update Review</a>
-        <a href="{% url 'delete_review' pk=review.id %}" class="btn btn-danger">Remove Review</a></td>
+        <a href="{% url 'delete_review' pk=review.id %}" class="btn btn-danger">Remove Review</a>
         {% endif %}
         {% endif %}
         {% empty %}

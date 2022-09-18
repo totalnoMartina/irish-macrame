@@ -82,7 +82,7 @@
                             <a class="update-link bg-white text-dark rounded px-1"><small>Update</small></a>
                             <a class="remove-item bg-dark text-white float-right rounded px-1" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
-                        <div class="form-check form-check-inline float-right mr-0">
+                        <td class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -92,7 +92,7 @@
                                 <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                             </label>
                             {% endif %}
-                        </div>
+                        </td>
                         <td class="py-3 w-25">
                             <p class="my-0">{{ item.quantity }}</p>
                         </td>
@@ -102,10 +102,10 @@
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="8" class="pt-5 text-right">
                             <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            <h4 class="mt-4 grand-total"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
                                 You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
@@ -114,7 +114,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
+                        <td colspan="8" class="text-right">
                             <a href="{% url 'macrames' %}" class="btn btn-outline-black rounded btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -150,7 +150,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'shoppingapp/includes/quantity-input-script.html' %}
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');

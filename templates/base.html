@@ -39,7 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Stripe javascript -->
-    <script src="https://js.stripe.com/v3/" type="text/javascript"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -50,11 +50,12 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top align-items-right">
+        <nav class="navbar navbar-light logo navbar-expand-lg bg-light fixed-top align-items-right">
             <!-- Navbar brand -->
             <a class="navbar-brand rounded bg-transparent" href="{% url 'home' %}" title="Irish Macrames Home">
-                <h1 class="logo mt-4"></h1> Irish Macrames </h1>
+                Irish Macrames
                 <img src="{% static 'images/cacti-moonlogo-08.jpg' %}" style="height: 7rem; width: 7rem;" class="rounded-circle" alt="logo of creator">
+
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -75,13 +76,13 @@
                         <div class="dropdown-menu text-right">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'add_macrame' %}" class="rounded-botom">Manage Stock</a>
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'profile' %}" class="rounded-botom">My Profile</a>
+                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'add_macrame' %}">Manage Stock</a>
+                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'profile' %}">My Profile</a>
                             {% endif %}
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_logout' %}" class="rounded-bottom">Logout</a>
+                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_logout' %}">Logout</a>
                             {% else %}
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_signup' %}" class="rounded-bottom">Register</a>
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_login' %}" class="rounded-bottom">Login</a>
+                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_signup' %}">Register</a>
+                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_login' %}">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -141,7 +142,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}
@@ -150,7 +151,7 @@
     <footer class="container text-center blockquote">
         <a class="blockquote-footer" target="_blank" rel="noopener" href="https://www.etsy.com/ie/shop/BlackmoondesignsArt?ref=simple-shop-header-name&listing_id=1018475936">
             Visit my Etsy Shop <i class="fa fa-etsy" aria-hidden="true"></i>
-        </a> &middot
+        </a> &middot;
         <a class="blockquote-footer" href="#" target="_blank">Terms and conditions</a> &middot;
         <a class="blockquote-footer" href="mailto:martinagoodliving@gmail.com" target="_blank" rel="noopener">
             Email the Artist</a> &middot;
