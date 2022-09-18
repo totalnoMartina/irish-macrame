@@ -17,15 +17,11 @@
 <div class="container-fluid my-5 mt-4">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
+            <div class="image-container my-5 macrame__detail__left">
                 {% if macrame.image %}
-                <a href="{{ macrame.image.url }}" target="_blank" class="detail__img__holder">
-                    <img class="card-img-top img-fluid rounded" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
-                </a>
+                <img class="card-img-top img-fluid rounded" src="{{ macrame.image.url }}" alt="{{ macrame.name }}">
                 {% else %}
-                <a href="#" class="detail__img__holder">
-                    <img class="card-img-top img-fluid rounded " target="_blank" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ macrame.name }}">
-                </a>
+                <img class="card-img-top img-fluid rounded " target="_blank" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ macrame.name }}">
                 {% endif %}
             </div>
         </div>
@@ -95,7 +91,18 @@
         </div>
     </div>
     <h2 class="subtitle text-center">Reviews</h2>
-    <div class="review-wrap text-center rounded">
+    <div row>
+        <div class="col text-center">
+
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'create_review' macrame.id %}" class="btn rounded m-2">Add a Reivew</a>
+            {% else %}
+            <p> Please Login to add a review</p>
+            <a href="{% url 'account_login' %}" class="rounded-left p-1">Login</a>
+            {% endif%}
+        </div>
+    </div>
+    <div class="review-wrap text-center rounded pb-3">
 
         {% for review in macrame.product_reviewed.all %}
         <hr class="w-75">
@@ -113,23 +120,18 @@
         <a href="{% url 'delete_review' pk=review.id %}" class="btn btn-danger">Remove Review</a>
         {% endif %}
         {% endif %}
+
         {% empty %}
         <div class="notification">No Reviews Yet, Be the first!</div>
         {% endfor %}
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md">
-
-                {% if request.user.is_authenticated %}
-                <a href="{% url 'create_review' macrame.id %}" class="btn rounded m-2">Add a Reivew</a>
             </div>
             <div class="col-md-3"></div>
 
-            {% else %}
-            <p> Please Login to add a review</p>
-            <a href="{% url 'account_login' %}" class="rounded-left p-1">Login</a>
 
-            {% endif %}
+
         </div>
     </div>
 </div>

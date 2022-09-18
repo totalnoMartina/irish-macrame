@@ -54,6 +54,20 @@ p {
     color: #2f231a;
 }
 
+.navbar__main {
+    height: 100%;
+    display: flex;
+}
+
+.navbar__main li {
+    border-radius: 20% !important;
+    font-size: 1.5rem;
+}
+
+.navbar__main li:not(:last-child) {
+    margin-right: 0.5em;
+}
+
 .nav-link {
     color: #1e1f1f !important;
     background-color: #f3ab99 !important;
@@ -98,6 +112,11 @@ h5 {
     background-clip: border-box;
     border: 1pxsolidrgba(0, 0, 0, .125);
     border-radius: 0.25rem;
+}
+
+.macrame__detail__left {
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
 .overlay {
@@ -194,16 +213,16 @@ input[name='q']::placeholder {
 }
 
 
+.logo {
+    display: flex !important;
+    justify-content: start;
+    align-items: center;
+}
+
 .logo__name {
     color: #412722;
     font-size: 2rem;
-}
-
-.logo {
-    display: flex !important;
-    width: 100%;
-    justify-content: start;
-    align-items: center;
+    margin-right: 2vw;
 }
 
 a .logo__name:hover {
@@ -411,13 +430,15 @@ a .logo__name:hover {
     .cart__img {
         max-width: 220px !important;
     }
+
+    .logo__name {
+        display: none !important;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .logo__name {
-        display: none !important;
-    }
+
 
     .cart__img {
         max-width: 160px !important;

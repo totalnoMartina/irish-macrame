@@ -61,37 +61,37 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto align-items-right">
-                    <li class="nav-item mt-4 text-right">
-                        <a class="nav-link rounded-left home__a" href="{% url 'macrames' %}" title="Macrame Selection">Macrames</a>
+                <ul class="navbar-nav mr-auto navbar__main align-items-right">
+                    <li class="nav-item text-right">
+                        <a class="nav-link rounded home__a" href="{% url 'macrames' %}" title="Macrame Selection">Macrames</a>
                     </li>
-                    <li class="nav-item mt-4 text-right">
-                        <a class="nav-link rounded-left home__a" href="{% url 'newsletter' %}" title="Subscribe to newsletter section">Subscribe!</a>
+                    <li class="nav-item text-right">
+                        <a class="nav-link home__a" href="{% url 'newsletter' %}" title="Subscribe to newsletter section">Subscribe!</a>
                     </li>
                     <li class="nav-item dropdown text-right">
-                        <a class="nav-link dropdown-toggle mt-4 rounded-bottom text-right mr-2 home__a" title="My Profile" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-right  home__a" title="My Profile" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
 
                         <div class="dropdown-menu text-right">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'add_macrame' %}">Manage Stock</a>
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'profile' %}">My Profile</a>
+                            <a class="dropdown-item nav-link text-right home__a" href="{% url 'add_macrame' %}">Manage Stock</a>
+                            <a class="dropdown-item nav-link text-right home__a" href="{% url 'profile' %}">My Profile</a>
                             {% endif %}
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="dropdown-item nav-link text-right home__a" href="{% url 'account_logout' %}">Logout</a>
                             {% else %}
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_signup' %}">Register</a>
-                            <a class="dropdown-item nav-link text-right mr-2 home__a" href="{% url 'account_login' %}">Login</a>
+                            <a class="dropdown-item nav-link text-right home__a" href="{% url 'account_signup' %}">Register</a>
+                            <a class="dropdown-item nav-link text-right home__a" href="{% url 'account_login' %}">Login</a>
                             {% endif %}
                         </div>
                     </li>
 
-                    <li class="nav-item mt-4 text-right">
+                    <li class="nav-item text-right">
                         <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link rounded-right cart__nav" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
                             <div class="text-right">
                                 <span>
-                                    <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
                                     {% else %}
