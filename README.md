@@ -194,7 +194,7 @@ Macrames
 
 Macrame Detail
 
-![Marame Detail](/media/html-macrame-detail-valid.png?raw=true)
+![Macrame Detail](/media/html-macrame-detail-valid.png?raw=true)
 
 Add Review 
 
@@ -367,7 +367,7 @@ Makemacrame - urls.py
 
 
 - Google chrome dev tools were used all the way, to find bugs and fix most of them. The one that stayed is possibly caused by webhooks as I had them and then removed them so I am not retrieving information on order from admin panel (Django admin built-in)
-Regarding manual testing, there are things that are checked byt few good friends of mine and me, and these are:
+Regarding manual testing, there are things that are checked by a few good friends of mine and me, and these are:
    * Sign Up				
       1.	Click on Sign Up button =	redirect to Sign Up page= = Y	
       2.	Click on the Login link in the form	= redirect to Login page = Y	
@@ -418,7 +418,7 @@ Regarding manual testing, there are things that are checked byt few good friends
       2. Check before deletion - admin should be wanred before deleting anything so this is not implemented right now but kept for future feature = N
 ## Lighthouse
 
-The app is extensively tested for validating all forms in all crud functionality, to make sure only authenticated/superusers can reach certain pages. I used Iphone7, Ecosia and Chrome Browsers. There is implementation of protective programming which was highly recommended by Iulia Konovalova, a fellow student and a friend, who is the best at testing my apps. Also great help in testing and helping discouver css and targeting bugs, was Iulia's husband Alex Konovalov, who made his own 'Allauth-system' for his app and is constant inspiration for me. This project inspired me to even more get into hackathons and get into creating useful applications that this world can benefit from. And Django has become my number 1, so I am really hoping to improve my coding skills.
+The app is extensively tested for validating all forms in all crud functionality, to make sure only authenticated/superusers can reach certain pages. I used Iphone7 Safari Browser, and Chrome Browser on Chromebook, Linux OS - Debian. I meant to install Ecosia to test it for browser Compatibility and it crashed so I did not have working Ecosia Browser. There is implementation of protective programming which was highly recommended by Iulia Konovalova, a fellow student and a friend, who is the best at testing my apps. Also great help in testing and helping discouver css and targeting bugs, was Iulia's husband Alex Konovalov, who made his own 'Allauth-system' for his app and is constant inspiration for me. This project inspired me to even more get into hackathons and get into creating useful applications that this world can benefit from. And Django has become my number 1, so I am really working to improve my coding skills by making small projects.
 
 Homepage 
 ![Homepage](/media/homepage-lighth.png?raw=true)
@@ -447,13 +447,21 @@ Navigation Burger Bar - turns to X on opening - The navigation was working until
 
 I used another repository to try functions before i use them, as I was affraid to crash another app, [the-macrames repository](https://github.com/totalnoMartina/the-macrames) similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with the create part as it was using forms in the case of tutorials I followed and most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i asked for help on Slack and Stackoverflow.
 
+I had a bug for a while, or that I thought it was a bug, showing 404 error when on homepage, but I went to check on Slack and it turned out that I only needed to clear cache and it would render without issues, also incognito works perfect. 
+
 I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking' so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here the redirect needed fixing.
 
 I tryed to test newsletter app in [this repo](https://github.com/totalnoMartina/the-macrames) as I want to make sure something works before I include it in my project as I have crashed so many apps during developing this one. At the moment it is not commited as I am having small issues figuring it out in the most simple way. I might need help from my mentor about this as I got the impression that it is easy but then some tutorials have it quite a bit complicated, so I was exploring this through [this tutorial](https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27).
 
-I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I she helped me and explained finding best way to test to see my error page. She also helped in testing this apps features, so I really appreciate her and her husband Alex Konovalov.
+I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I she helped me and explained finding best way to test to see my error page. She also helped in testing this apps features, so I really appreciate her and her husband Alex Konovalov's help in making sure my error page does show as i had actually renamed the variable that comes from the module that is called 'handler404' and this made an issue.
 
-During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charges all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so i removed them.
+During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charged all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I removed them.
+
+Last minute bug appeared on an admin page, coming from Django admin, when chosen an order, it shows 500 error and the variable 'original_bag' was not found, and my variable is called 'original_shoppingcart'. So I am able to recall orders from Admin side when not on django admin, while in django official admin, past orders dont show up. I will put this into the 'Future Feature - Bug Fixes'.
+
+Another last minute bug appeared on Update review page in my Safari mobile IPhone7 version(quite a small screen too), as the form is slightly overflowing the screen but not too much, the ability to fill out a form is still functional but i need to fix this when working more with django form rendering, item by item, so that i could better control the County field also and the fact that stars on reviews ar possible to go until any number, the reason why I did not target to limit this to be 6 stars as I wanted, I decided to leave these details for the time when I will have more time to learn more about detailed fomr handling in Django. 
+Updated Bug: As doing the last check, putting a bootstrap class of mx-auto on form of Update Review, it centers it so nothing overflows. so Bug resolved almost.
+
 # Deployment and making a clone
 ## Deployment to heroku
 
@@ -633,3 +641,5 @@ As I was trying to find best explanation of deployment steps I found most genuin
 I found a guide for newsletter [here](https://www.pythonstacks.com/blog/post/integrating-mailchimp-django/) and in the beginning my newsletter is poping messages but not storing the emails.
 
 I would like to thank to my mentor Tim Nelson, fellow students Iulia Konovalova and JoGorska, as well as the CI community and Slack community for the support and sharing the bugs and solutions that help each other grow, it is highly apreciated and forever remembered to be passed on to another student/fellow coder in the future.
+
+I also have a friend that is opening a bakery and asked me to do a website for him for wholesale so I will use this knowledge and put it into practice in real life very soon, I am really grateful for the Code Institute and all the people that guided us and were teaching us, supported us through this last year
