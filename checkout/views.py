@@ -5,6 +5,10 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
+
+import stripe
+import json
+
 from shoppingapp.models import Macrame
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -12,10 +16,6 @@ from shoppingcart.contexts import cart_contents
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-
-import stripe
-import json
-
 
 @require_POST
 def cache_checkout_data(request):

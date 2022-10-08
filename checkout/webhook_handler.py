@@ -1,3 +1,4 @@
+""" A webhook handler function with Stripe payments """
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -9,6 +10,7 @@ from .models import Order, OrderLineItem
 
 import json
 import time
+
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -31,7 +33,7 @@ class StripeWH_Handler:
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )
 
     def handle_event(self, event):
         """

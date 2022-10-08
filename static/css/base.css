@@ -127,6 +127,14 @@ a>.deleting__mac {
     color: black;
 }
 
+a>.btn__checkout {
+    background-color: #713338 !important;
+}
+
+a>.btn__checkout:hover {
+    background-color: #e19ea4 !important;
+}
+
 h4 {
     color: #cfc8c6;
     font-size: smaller;
