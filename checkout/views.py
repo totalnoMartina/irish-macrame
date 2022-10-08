@@ -172,7 +172,7 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. Thank you for Your order!')
+        Your order number is {order_number}. We will contact you within 48 hours')
 
     if 'shoppingcart' in request.session:
         del request.session['shoppingcart']
