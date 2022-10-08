@@ -100,6 +100,22 @@ a>.deleting__mac {
     background-color: #a8552b;
 }
 
+.btn__shopping {
+    background-color: #a8552b;
+}
+
+.btn__shopping:hover {
+    background-color: #e19ea4;
+}
+
+.btn__add {
+    background-color: #988e8f;
+}
+
+.btn__add:hover {
+    background-color: #713338;
+}
+
 .add__rev__btn {
     background-color: #a8552b;
 }
@@ -128,7 +144,7 @@ a>.deleting__mac {
 }
 
 a>.btn__checkout {
-    background-color: #713338 !important;
+    background-color: #6f5a5c !important;
 }
 
 a>.btn__checkout:hover {
