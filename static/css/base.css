@@ -63,7 +63,7 @@ p {
     font-size: 1.5rem;
 }
 
-.navbar__main li:not(:last-child) {
+.navbar__main li {
     margin-right: 0.5em;
 }
 
