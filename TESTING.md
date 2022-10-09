@@ -8,6 +8,7 @@
    * [CSS Validation](#css-validaton)
    * [Javascript Validation](#javascript-validation)
    * [Python Validation - PEP8](#python-validation---pep8)
+   * [Python Validation - flake8](#python-validation---flake8)
 # Manual Testing
 
 * This application is tested on Chromebook; Chrome is made possible by the [Chromium](https://www.chromium.org/chromium-projects/) open source project and other open source software.
@@ -259,6 +260,15 @@ MakeMacrame - views.py
 Makemacrame - urls.py
 
 ![Makemacrame - urls](/media/urls-makemacrame-pep8.png?raw=true)
+
+## Python validation - flake8
+Flake8 Shoppingcart views
+
+![Flake8 - shoppingcart views](/media/flake8-cart-views.png?raw=true)
+Flake8 Newsletter views
+
+![Flake8 - newsletter views](/media/flake8-news-views.png?raw=true)
+
 ## Manual Testing
 
 - [Lighthouse](toohttps://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to audit the site (efficiency).

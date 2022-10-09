@@ -6,7 +6,9 @@ from .models import Review
 
 class ReviewForm(ModelForm):
     """ A form for the reviews outlook """
-    stars = forms.CharField(label='Stars', widget=forms.TextInput(attrs={'min':1,'max': '5','type': 'number'}))
+    stars = forms.CharField(label='Stars',
+        widget=forms.TextInput(attrs={'min': 1, 'max': '5', 'type': 'number'}))
+
     def __init__(self, *args, **kwargs):
         """ A function that hides the item and user
         that is reviewing so it canot be modified """
@@ -18,4 +20,3 @@ class ReviewForm(ModelForm):
         """ An instance of a review """
         model = Review
         fields = '__all__'
-        

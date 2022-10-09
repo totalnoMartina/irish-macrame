@@ -78,7 +78,7 @@ def delete_review(request, pk):
     context = {
         'form': form,
         'item': review,
-        'macrame_id':macrame_id
+        'macrame_id': macrame_id
     }
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')

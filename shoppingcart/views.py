@@ -72,8 +72,6 @@ def adjust_shoppingcart(request, item_id):
             shoppingcart.pop(item_id)
             messages.success(request, f'Removed {macrame.name} from your cart')
 
-
-
     request.session['shoppingcart'] = shoppingcart
     return redirect(reverse('view_shoppingcart'))
 
