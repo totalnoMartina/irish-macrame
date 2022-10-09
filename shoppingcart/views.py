@@ -55,15 +55,24 @@ def adjust_shoppingcart(request, item_id):
     if size:
         if quantity > 0:
             shoppingcart[item_id]['items_by_size'][size] = quantity
+            messages.success(request, f'Updated size {size.upper()} {macrame.name} quantity to {shoppingcart[item_id]["items_by_size"][size]}')
+
         else:
             del shoppingcart[item_id]['items_by_size'][size]
             if not shoppingcart[item_id]['items_by_size']:
                 shoppingcart.pop(item_id)
+                messages.success(request, f'Removed size {size.upper()} {macrame.name} from your cart')
+
     else:
         if quantity > 0:
             shoppingcart[item_id] = quantity
+            messages.success(request, f'Updated {macrame.name} quantity to {shoppingcart[item_id]}')
+
         else:
             shoppingcart.pop(item_id)
+            messages.success(request, f'Removed {macrame.name} from your cart')
+
+
 
     request.session['shoppingcart'] = shoppingcart
     return redirect(reverse('view_shoppingcart'))
