@@ -44,11 +44,13 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
+                            <div class="cart__image--container">
                             {% if item.macrame.image %}
                             <img class="image_fluid cart__img" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                             {% else %}
                             <img class="image_fluid cart__img" src="{{ MEDIA_URL }}noimage.jpg" alt="image not uploaded">
                             {% endif %}
+                            </div>
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.macrame.name }}</strong></p>
@@ -83,8 +85,12 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link bg-white text-dark rounded px-1"><small>Update</small></a>
-                            <a class="remove-item bg-dark text-white float-right rounded px-1" id="remove_{{ item.item_id }}" data-macrame_size="{{ item.size }}"><small>Remove</small></a>
+                            <a title="Update" class="update-link bg-white text-dark rounded px-1">
+                                <i class="fa fa-refresh pt-1" aria-hidden="true"></i>
+                        </a>
+                            <a title="Remove" class="remove-item bg-dark text-white float-right rounded px-1" id="remove_{{ item.item_id }}" data-macrame_size="{{ item.size }}">
+                                <i class="fa fa-trash pt-1" aria-hidden="true"></i>
+                            </a>
                         </td>
                         <td class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
@@ -120,10 +126,12 @@
                     <tr>
                         <td colspan="5" class="text-right">
                             <a href="{% url 'macrames' %}" class="btn btn-outline-black rounded btn-lg">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="p-1 btn__shopping rounded">Keep Shopping</span>
+                             
+                                <span class="p-1 btn__shopping rounded">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    Keep Shopping</span>
                             </a>
                             <a href="{% url 'checkout' %}">
                                 <span class="btn p-1 btn__checkout btn-lg">Secure Checkout
