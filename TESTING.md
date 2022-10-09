@@ -96,6 +96,43 @@ ChromeOS is made possible by additional [open source](chrome://os-credits/) soft
 
 * This application is tested on iPhone 7, Safari IOS 15.6.1 Browser
 
+Navigation
+
+![iPhone Navigation](/media/home_iphone.jpg?raw=true)
+
+HomePage 
+
+![iPhone Homepage](/media/nav_iphone.jpg?raw=true)
+
+Macrame Detail
+
+![iPhone Macrame Detail](/media/mac_detail_iphone.jpg?raw=true)
+
+Macrames 
+
+![iPhone Macrames](/media/macrames_iphone.jpg?raw=true)
+
+Add Product - Manage Stock
+
+![iPhone Management](/media/management_iphone.jpg?raw=true)
+
+Editing Products
+
+![iPhone Edit Macrame](/media/edit_mac_iphone.jpg?raw=true)
+
+
+
+Loading Spinner before payments
+
+![iPhone Loader](/media/loading_iphone.jpg?raw=true)
+
+Checkout 
+![iPhone Checkout](/media/checkout_iphone.jpg?raw=true)
+
+Checkout Succesful
+
+![iPhone Checkout success](/media/checkout_succ_iphone.jpg?raw=true)
+
 
 
 # Bugs and Issues
