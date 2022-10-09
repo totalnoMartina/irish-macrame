@@ -1,10 +1,264 @@
 # Testing
 
+* [Manual Testing](#manual-testing)
+* [Lighthouse](#lighthouse)
+* [Bugs and Issues](#bugs-and-issues)
+* [Code Validation](#code-validation)
+   * [HTML Validation](#html-validation)
+   * [CSS Validation](#css-validaton)
+   * [Javascript Validation](#javascript-validation)
+   * [Python Validation - PEP8](#python-validation---pep8)
+# Manual Testing
 
-* [Testing](#testing)
-   * [Manual Testing](#manual-testing)
-   * [Lighthouse](#lighthouse)
-   * [Bugs and Issues](#bugs-and-issues)
+* This application is tested on Chromebook; Chrome is made possible by the [Chromium](https://www.chromium.org/chromium-projects/) open source project and other open source software.
+ChromeOS is made possible by additional [open source](chrome://os-credits/) software, as is [Linux development environment](chrome://crostini-credits/).
+
+* This applications responsiveness as well as signup/registerin, and liking and adding a review was tested on a Personal Computer running on Windows 11 OS by a friend coder and a CI student Ionut Ciobanu
+
+* This application is also tested on a mobile Android  Samsung A52 by a friend coder and a CI student Ionut Ciobanu
+
+* This application is also tested on iPhone 7, Safari IOS 15.6.1 Browser
+
+Navigation
+
+![iPhone Navigation](/media/home_iphone.jpg?raw=true)
+
+HomePage 
+
+![iPhone Homepage](/media/nav_iphone.jpg?raw=true)
+
+Macrame Detail
+
+![iPhone Macrame Detail](/media/mac_detail_iphone.jpg?raw=true)
+
+Macrames 
+
+![iPhone Macrames](/media/macrames_iphone.jpg?raw=true)
+
+Add Product - Manage Stock
+
+![iPhone Management](/media/management_iphone.jpg?raw=true)
+
+Editing Products
+
+![iPhone Edit Macrame](/media/edit_mac_iphone.jpg?raw=true)
+
+Deleting Produts 
+
+![iPhone Deleting Macrame](/media/del_mac_iphone.jpg?raw=true)
+
+Loading Spinner before payments
+
+![iPhone Loader](/media/loading_iphone.jpg?raw=true)
+
+Checkout
+
+![iPhone Checkout](/media/checkout_iphone.jpg?raw=true)
+
+Checkout Successful
+
+![iPhone Checkout success](/media/checkout_succ_iphone.jpg?raw=true)
+
+# Bugs and Issues
+
+Navigation Burger Bar - turns to X on opening - The navigation was working until I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigation started to go outside of the navigation bar, going to the left so I explored how to fix, there was also Javascript function to close navigation onclick when clicked outside of the navbar which caused issues for this burger menu bar to be out of order. I decided to drop it altogether and go simple as possible I used NavBar from Bootstrap4.
+
+I used another repository to try functions before i use them, as I was affraid to crash another app, [the-macrames repository](https://github.com/totalnoMartina/the-macrames) similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with the create part as it was using forms in the case of tutorials I followed and most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i asked for help on Slack and Stackoverflow.
+
+I had a bug for a while, or that I thought it was a bug, showing 404 error when on homepage, but I went to check on Slack and it turned out that I only needed to clear cache and it would render without issues, also incognito works perfect. 
+
+I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking' so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here the redirect needed fixing.
+
+I tryed to test newsletter app in [this repo](https://github.com/totalnoMartina/the-macrames) as I want to make sure something works before I include it in my project as I have crashed so many apps during developing this one. At the moment it is not commited as I am having small issues figuring it out in the most simple way. I might need help from my mentor about this as I got the impression that it is easy but then some tutorials have it quite a bit complicated, so I was exploring this through [this tutorial](https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27).
+
+I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I she helped me and explained finding best way to test to see my error page. She also helped in testing this apps features, so I really appreciate her and her husband Alex Konovalov's help in making sure my error page does show as i had actually renamed the variable that comes from the module that is called 'handler404' and this made an issue.
+
+This [link](https://www.youtube.com/watch?v=3VBHWLFza4s) helped me be reminded on the deletion to be checked before, instead immediately deleting item.
+
+During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charged all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I removed them. Update: The message shows only that owner will contact the user within 48 hours.
+
+Last minute bug appeared on an admin page, coming from Django admin, when chosen an order, it shows 500 error and the variable 'original_bag' was not found, and my variable is called 'original_shoppingcart'. So I am able to recall orders from Admin side when not on django admin, while in django official admin, past orders dont show up. I will put this into the 'Future Feature - Bug Fixes'.
+
+Another last minute bug appeared on Update review page in my Safari mobile IPhone7 version(quite a small screen too), as the form is slightly overflowing the screen but not too much, the ability to fill out a form is still functional but i need to fix this when working more with django form rendering, item by item, so that i could better control the County field also and the fact that stars on reviews ar possible to go until any number, the reason why I did not target to limit this to be 6 stars as I wanted, I decided to leave these details for the time when I will have more time to learn more about detailed fomr handling in Django. 
+Updated Bug: As doing the last check, putting a bootstrap class of mx-auto on form of Update Review, it centers it so nothing overflows. so Bug resolved almost.
+
+# Code Validation
+## Html Validation
+
+Homepage 
+
+![Homepage HTML](/media/html-homepage-valid.png?raw=true)
+
+Add Macrame Items 
+
+![Add Macrame Items - Admin](/media/add_mac_validated-html.png?raw=true)
+
+Macrames
+
+![Macrames](/media/html-macrames-valid.png?raw=true)
+
+Macrame Detail
+
+![Macrame Detail](/media/html-macrame-detail-valid.png?raw=true)
+
+Add Review 
+
+![Add Review](/media/html-add-review-valid.png?raw=true)
+
+Update Review 
+
+![Update review](/media/html-update-rev-valid.png?raw=true)
+
+Checkout
+
+![Checkout Page](/media/html-checkou-valid.png?raw=true)
+
+Checkout Success 
+
+![Checkout Success](/media/html-checkout-success-valid.png?raw=true)
+
+Newsletter  Supscription
+
+![Newsletter](/media/html-newsletter-valid.png?raw=true)
+
+## CSS Validaton
+
+Base CSS
+
+![Base CSS](/media/css-base-valid.png?raw=true)
+
+Checkout CSS
+
+![Checkout CSS](/media/css-checkout-valid.png?raw=true)
+
+## Javascript Validation
+
+Stripe 
+
+![Stripe JSHint](/media/jshint-stripe-1-undef-var.png?raw=true)
+
+Increment - Decrement function
+
+![Increment - Decrement](/media/jshint-quantity-no-error.png?raw=true)
+
+## Python Validation - PEP8
+
+Profile - forms.py
+
+![Profile - forms](/media/profile-forms-pep8.png?raw=true)
+
+Profile - urls.py
+
+![Profile - urls](/media/profile-url-pep8.png?raw=true)
+
+Profile - views.py
+
+![Profile - views](/media/profile-view-pep8.png?raw=true)
+
+Reviews - forms.py
+
+![Reviews - forms](/media/review-form-pep8.png?raw=true)
+
+Reviews - admin.py
+
+![Reviews - admin](/media/review-admin-pep8.png?raw=true)
+
+Reviews - urls.py
+
+![Reviews - urls](/media/review-urls-pep8.png?raw=true)
+
+Reviews - models.py
+
+![Reviews - models](/media/reviews-model-pep8.png?raw=true)
+
+Shoppingapp - forms.py
+
+![Shoppingapp - forms](/media/shopp-forms-pep8.png?raw=true)
+
+Shoppingapp - admin.py
+
+![Shoppingapp - admin](/media/shopping-admin-pep8.png?raw=true)
+
+Shoppingapp - models.py
+
+![Shoppingapp - models](/media/shopp-models-pep8.png?raw=true)
+
+Shoppingapp - urls.py
+
+![Shoppingapp - urls](/media/shopping-urls-pep8.png?raw=true)
+
+Shoppingapp - views.py
+
+![Shoppingapp - views](/media/shopping-views-pep8.png?raw=true)
+
+Shoppingcart - views.py
+
+![Shoppingcart - views](/media/cart-view-pep8.png?raw=true)
+
+Shoppingcart - contexts.py
+
+![Shoppingcart - contexts](/media/cart-contexts-pep8.png?raw=true)
+
+Shoppingcart - widget.py
+
+![Shoppingcart - widget](/media/cart-widget-pep8.png?raw=true)
+
+Shoppingcart - cart_tools.py
+
+![Shoppingcart - cart_tools](/media/cart-tools-pep8.png?raw=true)
+
+Shoppingcart - urls.py
+
+![Shoppingcart - urls](/media/shopping-urls-pep8.png?raw=true)
+
+
+Checkout - admin.py
+
+![Checkout - admin](/media/checkout-admin-pep8.png?raw=true)
+
+Checkout - form.py
+
+![Checkout - form](/media/checkou-form-pep8.png?raw=true)
+
+Checkout - models.py
+
+![Checkout - models](/media/checkout-model-pep8.png?raw=true)
+
+Checkout - signals.py
+
+![Checkout - signals](/media/checkout-signals-pep8.png?raw=true)
+
+Checkout - views.py
+
+![Checkout - views](/media/checkout-views-pep8.png?raw=true)
+
+Newsletter - admin.py
+
+![Newsletter - admin](/media/newsletter-admin-pep8.png?raw=true)
+
+Newsletter - forms.py
+
+![Newsletter - forms](/media/newsl-form-pep8.png?raw=true)
+
+Newsletter - forms.py
+
+![Newsletter - models](/media/newsl-model-pep8.png?raw=true)
+
+Newsletter - models.py
+
+![Newsletter - urls](/media/newsl-url-pep8.png?raw=true)
+
+Newsletter - views.py
+
+![Newsletter - views](/media/newsl-views-pep8.png?raw=true)
+
+MakeMacrame - views.py
+
+![Macemacrame - views](/media/view-makemacrame-pep8.png?raw=true)
+
+Makemacrame - urls.py
+
+![Makemacrame - urls](/media/urls-makemacrame-pep8.png?raw=true)
 ## Manual Testing
 
 - [Lighthouse](toohttps://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to audit the site (efficiency).
@@ -88,73 +342,3 @@ Checkout
 
 Add Macrame Page
 ![Add Macrame Page](/media/add-mac-light.png?raw=true)
-
-# Manual Testing
-
-* This application is tested on Chromebook; Chrome is made possible by the [Chromium](https://www.chromium.org/chromium-projects/) open source project and other open source software.
-ChromeOS is made possible by additional [open source](chrome://os-credits/) software, as is [Linux development environment](chrome://crostini-credits/).
-
-* This application is tested on iPhone 7, Safari IOS 15.6.1 Browser
-
-Navigation
-
-![iPhone Navigation](/media/home_iphone.jpg?raw=true)
-
-HomePage 
-
-![iPhone Homepage](/media/nav_iphone.jpg?raw=true)
-
-Macrame Detail
-
-![iPhone Macrame Detail](/media/mac_detail_iphone.jpg?raw=true)
-
-Macrames 
-
-![iPhone Macrames](/media/macrames_iphone.jpg?raw=true)
-
-Add Product - Manage Stock
-
-![iPhone Management](/media/management_iphone.jpg?raw=true)
-
-Editing Products
-
-![iPhone Edit Macrame](/media/edit_mac_iphone.jpg?raw=true)
-
-Deleting Produts 
-
-![iPhone Deleting Macrame](/media/del_mac_iphone.jpg?raw=true)
-
-Loading Spinner before payments
-
-![iPhone Loader](/media/loading_iphone.jpg?raw=true)
-
-Checkout
-
-![iPhone Checkout](/media/checkout_iphone.jpg?raw=true)
-
-Checkout Successful
-
-![iPhone Checkout success](/media/checkout_succ_iphone.jpg?raw=true)
-
-# Bugs and Issues
-
-Navigation Burger Bar - turns to X on opening - The navigation was working until I left the app for a while(Leave of Absence for work purposes) and came back to it, the navigation of burger button to turn into 'X' on opening of navigation started to go outside of the navigation bar, going to the left so I explored how to fix, there was also Javascript function to close navigation onclick when clicked outside of the navbar which caused issues for this burger menu bar to be out of order. I decided to drop it altogether and go simple as possible I used NavBar from Bootstrap4.
-
-I used another repository to try functions before i use them, as I was affraid to crash another app, [the-macrames repository](https://github.com/totalnoMartina/the-macrames) similar to this to try and test out the CRUD functionality of reviews being created, Updated and Deleted, so before putting the code here i struggled with the create part as it was using forms in the case of tutorials I followed and most helpful in this situation was [this one here](https://www.youtube.com/watch?v=EX6Tt-ZW0so&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15), bug was that i could not make redirect url to go to the same page so i asked for help on Slack and Stackoverflow.
-
-I had a bug for a while, or that I thought it was a bug, showing 404 error when on homepage, but I went to check on Slack and it turned out that I only needed to clear cache and it would render without issues, also incognito works perfect. 
-
-I watched several tutorials on putting likes and dislikes and decided at the end I would not want to promote 'disliking' but focus more on 'liking' so i made the funsction to be able to 'like' or if it is liked to 'unlike which does not show any 'dislike'. After testing it on another app in [this repository](https://github.com/totalnoMartina/macrame-shopping). Also here the redirect needed fixing.
-
-I tryed to test newsletter app in [this repo](https://github.com/totalnoMartina/the-macrames) as I want to make sure something works before I include it in my project as I have crashed so many apps during developing this one. At the moment it is not commited as I am having small issues figuring it out in the most simple way. I might need help from my mentor about this as I got the impression that it is easy but then some tutorials have it quite a bit complicated, so I was exploring this through [this tutorial](https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27).
-
-I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I she helped me and explained finding best way to test to see my error page. She also helped in testing this apps features, so I really appreciate her and her husband Alex Konovalov's help in making sure my error page does show as i had actually renamed the variable that comes from the module that is called 'handler404' and this made an issue.
-
-This [link](https://www.youtube.com/watch?v=3VBHWLFza4s) helped me be reminded on the deletion to be checked before, instead immediately deleting item.
-
-During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charged all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I removed them. Update: The message shows only that owner will contact the user within 48 hours.
-
-Last minute bug appeared on an admin page, coming from Django admin, when chosen an order, it shows 500 error and the variable 'original_bag' was not found, and my variable is called 'original_shoppingcart'. So I am able to recall orders from Admin side when not on django admin, while in django official admin, past orders dont show up. I will put this into the 'Future Feature - Bug Fixes'.
-
-Another last minute bug appeared on Update review page in my Safari mobile IPhone7 version(quite a small screen too), as the form is slightly overflowing the screen but not too much, the ability to fill out a form is still functional but i need to fix this when working more with django form rendering, item by item, so that i could better control the County field also and the fact that stars on reviews ar possible to go until any number, the reason why I did not target to limit this to be 6 stars as I wanted, I decided to leave these details for the time when I will have more time to learn more about detailed fomr handling in Django. 
-Updated Bug: As doing the last check, putting a bootstrap class of mx-auto on form of Update Review, it centers it so nothing overflows. so Bug resolved almost.
