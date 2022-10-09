@@ -129,11 +129,9 @@ Loading Spinner before payments
 Checkout 
 ![iPhone Checkout](/media/checkout_iphone.jpg?raw=true)
 
-Checkout Succesful
+Checkout Successful
 
 ![iPhone Checkout success](/media/checkout_succ_iphone.jpg?raw=true)
-
-
 
 # Bugs and Issues
 
@@ -149,7 +147,9 @@ I tryed to test newsletter app in [this repo](https://github.com/totalnoMartina/
 
 I spoke to a fellow student Iulia Konovalova about Error pages and she recommended something like [this](https://github.com/IuliiaKonovalova/e-commerce/blob/main/ecommerce_project/views.py) and I she helped me and explained finding best way to test to see my error page. She also helped in testing this apps features, so I really appreciate her and her husband Alex Konovalov's help in making sure my error page does show as i had actually renamed the variable that comes from the module that is called 'handler404' and this made an issue.
 
-During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charged all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I removed them.
+This [link](https://www.youtube.com/watch?v=3VBHWLFza4s) helped me be reminded on the deletion to be checked before, instead immediately deleting item.
+
+During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charged all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I removed them. Update: The message shows only that owner will contact the user within 48 hours.
 
 Last minute bug appeared on an admin page, coming from Django admin, when chosen an order, it shows 500 error and the variable 'original_bag' was not found, and my variable is called 'original_shoppingcart'. So I am able to recall orders from Admin side when not on django admin, while in django official admin, past orders dont show up. I will put this into the 'Future Feature - Bug Fixes'.
 
