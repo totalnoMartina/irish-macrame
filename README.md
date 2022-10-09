@@ -183,7 +183,7 @@ Homepage
 
 Add Macrame Items 
 
-![Add Macrame Items - Admin](/media/html-adding-item-error-from-django.png?raw=true)
+![Add Macrame Items - Admin](/media/add_mac_validated-html.png?raw=true)
 
 Macrames
 
