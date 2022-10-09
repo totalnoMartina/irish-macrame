@@ -60,7 +60,7 @@ class AddLike(LoginRequiredMixin, View):
                 break
         if not is_like:
             macrame.likes.add(request.user)
-            messages.success(request, 'Thanks for the "Like"!')
+            messages.info(request, 'Thanks for the "Like"!')
         if is_like:
             macrame.likes.remove(request.user)
         next_ = request.POST.get('next_', '/')

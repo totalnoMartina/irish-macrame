@@ -1,13 +1,12 @@
 """ Imports of modules, models, views, forms """
+import json
 from django.shortcuts import (render, redirect, reverse,
                              get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-
 import stripe
-import json
 
 from shoppingapp.models import Macrame
 from profiles.forms import UserProfileForm
@@ -16,6 +15,7 @@ from shoppingcart.contexts import cart_contents
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -99,7 +99,7 @@ def checkout(request):
         shoppingcart = request.session.get('shoppingcart', {})
         if not shoppingcart:
             messages.error(request,
-                "There's nothing in your bag at the moment")
+                "There's nothing in your cart at the moment")
             return redirect(reverse('macrames'))
 
         current_cart = cart_contents(request)
@@ -172,7 +172,7 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. We will contact you within 48 hours')
+        Your order number is {order_number}. We will contact you within 48 hrs')
 
     if 'shoppingcart' in request.session:
         del request.session['shoppingcart']
