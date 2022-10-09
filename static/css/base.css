@@ -230,7 +230,7 @@ input[name='q']::placeholder {
 
 .home__a,
 .to-top__btn {
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-color: #f3ab99;
     color: #493a3a;
     font-size: calc(60% + 0.8vmin);

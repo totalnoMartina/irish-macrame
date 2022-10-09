@@ -15,7 +15,7 @@ ChromeOS is made possible by additional [open source](chrome://os-credits/) soft
 
 * This applications responsiveness as well as signup/registerin, and liking and adding a review was tested on a Personal Computer running on Windows 11 OS by a friend coder and a CI student Ionut Ciobanu
 
-* This application is also tested on a mobile Android  Samsung A52 by a friend coder and a CI student Ionut Ciobanu
+* This application is also tested for responsiveness and functionality of all CRUD available for users, not admins, on a mobile Android Samsung A52 by a friend coder and a CI student Ionut Ciobanu
 
 * This application is also tested on iPhone 7, Safari IOS 15.6.1 Browser
 
@@ -75,7 +75,7 @@ I spoke to a fellow student Iulia Konovalova about Error pages and she recommend
 
 This [link](https://www.youtube.com/watch?v=3VBHWLFza4s) helped me be reminded on the deletion to be checked before, instead immediately deleting item.
 
-During payment process, message shows email confirmation will be sent but no email goes anywhere also, the order total is not rendering so it charged all zeros, I must check does it have anything to do with profile app that user information on charge is not maybe stored. I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I removed them. Update: The message shows only that owner will contact the user within 48 hours.
+During payment process, I tried implementing webhooks and i can see payments in Stripe succesfull but not in webhooks, so I tried without them and shopping functionality then does not work. so I added the webhooks back and payments are succesfull and message has been changed into contacting a user within 48 hours.
 
 Last minute bug appeared on an admin page, coming from Django admin, when chosen an order, it shows 500 error and the variable 'original_bag' was not found, and my variable is called 'original_shoppingcart'. So I am able to recall orders from Admin side when not on django admin, while in django official admin, past orders dont show up. I will put this into the 'Future Feature - Bug Fixes'.
 
