@@ -227,14 +227,13 @@ Checkout CSS
 
 Stripe 
 
-![Stripe JSHint](/media/jshint-stripe-valid.png?raw=true)
+![Stripe JSHint](/media/jshint-stripe-1-undef-var.png?raw=true)
 
 Increment - Decrement function
 
-![Increment - Decrement](/media/jshint-increm-decrem-valid.png?raw=true)
+![Increment - Decrement](/media/jshint-quantity-no-error.png?raw=true)
 
 ## Python Validation - PEP8
-
 
 Profile - forms.py
 
