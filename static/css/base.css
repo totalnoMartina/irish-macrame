@@ -298,9 +298,8 @@ a .logo__name:hover {
 }
 
 .cart__image--container {
-    height: 10rem !important;
-    width: 10rem !important;
-    background: green;
+    height: 9rem !important;
+    width: 9rem !important;
 }
 
 .cart__image--container img {
@@ -541,6 +540,11 @@ a .logo__name:hover {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
 
+    .cart__image--container {
+        height: 4.5rem !important;
+        width: 4rem !important;
+    }
+
     .cart__img {
         max-width: 40px !important;
     }
@@ -548,6 +552,11 @@ a .logo__name:hover {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 480.98px) {
+
+    .cart__image--container {
+        height: 3.5rem !important;
+        width: 3rem !important;
+    }
 
     .cart__img {
         max-width: 40px !important;
