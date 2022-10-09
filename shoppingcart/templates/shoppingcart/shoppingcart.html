@@ -61,15 +61,15 @@
                             <form class="form update-form" method="POST" action="{% url 'adjust_shoppingcart' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
-                                    <div class="input-group">
+                                    <span class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
                                                 </span>
                                             </button>
-                                        </div>
-                                        <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        </span>
+                                        <input class="form-control form-control-sm qty_input mx-0" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
@@ -84,7 +84,7 @@
                                 </div>
                             </form>
                             <a class="update-link bg-white text-dark rounded px-1"><small>Update</small></a>
-                            <a class="remove-item bg-dark text-white float-right rounded px-1" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                            <a class="remove-item bg-dark text-white float-right rounded px-1" id="remove_{{ item.item_id }}" data-macrame_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
@@ -126,10 +126,12 @@
                                 <span class="p-1 btn__shopping rounded">Keep Shopping</span>
                             </a>
                             <a href="{% url 'checkout' %}">
-                                <span class="btn p-1 btn__checkout btn-lg">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
+                                <span class="btn p-1 btn__checkout btn-lg">Secure Checkout
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
                                 </span>
+   
                             </a>
                         </td>
                     </tr>

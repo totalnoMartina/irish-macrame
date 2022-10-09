@@ -1,5 +1,5 @@
 """ Imports of modules, model and messages """
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 
 from shoppingapp.models import Macrame
@@ -45,6 +45,7 @@ def add_to_shoppingcart(request, item_id):
 def adjust_shoppingcart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
+    macrame = get_object_or_404(Macrame, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
     if 'macrame_size' in request.POST:

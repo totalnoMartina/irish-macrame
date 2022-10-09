@@ -54,3 +54,7 @@
     margin: 0;
     height: 100%;
 }
+
+#id_country {
+    max-width: 11.7rem;
+}
