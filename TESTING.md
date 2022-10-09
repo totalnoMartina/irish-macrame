@@ -120,13 +120,16 @@ Editing Products
 
 ![iPhone Edit Macrame](/media/edit_mac_iphone.jpg?raw=true)
 
+Deleting check 
 
+![iPhone Loader](/media/del_mac_iphone.jpg?raw=true)
 
 Loading Spinner before payments
 
 ![iPhone Loader](/media/loading_iphone.jpg?raw=true)
 
-Checkout 
+Checkout
+
 ![iPhone Checkout](/media/checkout_iphone.jpg?raw=true)
 
 Checkout Successful
