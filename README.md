@@ -27,9 +27,6 @@ The live version of the website can be seen [here](https://black-moon-design.her
    * [Javascript Validation](#javascript-validation)
    * [Python Validation - PEP8](#python-validation---pep8)
 * [Testing](#testing)
-   * [Manual Testing](#manual-testing)
-   * [Lighthouse](#lighthouse)
-   * [Bugs and Issues](#bugs-and-issues)
 * [Deployment and making a clone](#deployment-and-making-a-clone)
    * [Deployment to heroku](#deployment-to-heroku)
    * [Forking the Github Repository](#forking-the-github-repository)
@@ -357,7 +354,7 @@ Makemacrame - urls.py
 ![Makemacrame - urls](/media/urls-makemacrame-pep8.png?raw=true)
 # Testing
 
-[Testing file separately here]()
+[Testing file separately here](https://github.com/totalnoMartina/irish-macrame/blob/main/TESTING.md)
 # Deployment and making a clone
 ## Deployment to heroku
 

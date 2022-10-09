@@ -1,5 +1,10 @@
 # Testing
 
+
+* [Testing](#testing)
+   * [Manual Testing](#manual-testing)
+   * [Lighthouse](#lighthouse)
+   * [Bugs and Issues](#bugs-and-issues)
 ## Manual Testing
 
 - [Lighthouse](toohttps://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to audit the site (efficiency).
@@ -33,7 +38,7 @@ Regarding manual testing, there are things that are checked by a few good friend
    * Navigation				
       1.	Click on the logo	= redirects to the home page	= Y	
       2.	Click 'Browse Now' to check items in the shop =	redirects to Macrame-detailed items page	= Y	
-      3.	Click cart icon button	= redirects to bag page	= Y	
+      3.	Click cart icon button	= redirects to shoppingcart page	= Y	
       4.	Click My Profile button	= redirects to Profile page	Y	
       5.	Click Logout button	= redirects to logout page	= Y
    * Macrame Selection - Irish Macrame Shop				
@@ -43,19 +48,19 @@ Regarding manual testing, there are things that are checked by a few good friend
 		If user is logged out, the user will see a message to login and the click will be ignored
       4.	Click on the macrame item = user will be redirected to the macrame details page	= Y	
       5.	Click on page navigation = users will be redirected to the correct page =	Y
-      I tried making navigation more interesting afew times, but i kept breakins so I stayed with bootstrap one, to try keep it simple and wanted to make sure it works properly first
-      6. Add Reviews in macrame-details page = only for users that are logged in, if not, users will be asked to signu pu/ login first and the message will pop up = Y
+      I tried making navigation more interesting a few times, but it kept breaking so I stayed with bootstrap one, to try keep it simple and wanted to make sure it works properly first
+      6. Add Reviews in macrame-details page = only for users that are logged in, if not, users will be asked to signup/ login first and the message will pop up = Y
       7. Update Reviews by only superuser = when another user(not a superuser), only ability to post reviews, and if written in url to edit or update, message pops up saying 'only store owners can do that'
       8. Delete Reviews = superuser might want to delete a review but one thing is missing here is , ther is no checking again if users are sure to delete a review, so i might need to put more protective programming for this feature
    * My Profile 
-      1. My profile page = for all logged in users to be able to update their own information = I want them to be able to upload an image also =  Yes(Needs improvvement)
+      1. My profile page = for all logged in users to be able to update their own information = Users to be able to upload an image also =  Yes(Needs improvement in image-avatar for users)
       2. Edit/Delete Account = users should be able to delete their account, and as I did not make this possible for everyone, for the moment only admin has the power to do this = No
       3. Store my Orders = users are able to see what orderes have they had and paid = Y
    * Shopping Cart
-      1. Shoppingcart when it is empty, users are redirected to a page that states: your cart is empty! and a 'back to browsing macrame' page = yes
+      1. Shoppingcart when it is empty, users are redirected to a page that states: 'Your cart is empty! and a 'back to browsing macrame' page = yes
       2. Adjust items in the shopping bag with Update/remove item = users tays on the page and the number of item reloads or dissapears if selected 'Remove'
       3. Secure Checkout button - redirects user to checkout page to make a payment = Y
-      4. Checkout Success = users are redirected to a succesfull pop message on a page with details on the code number of the order and email that confirmation is sent to so in each moment thde user is aware what order is this with these 2 details = Y
+      4. Checkout Success = users are redirected to a succesfull pop message on a page with details on the code number of the order and message that we will contact user by email within 48 hours, so that the user is aware what order is this with these 2 details = Y
    * Admin Macrame add items - Manage Stock
       1. Only for admin user - ability to add items, edit them and delete, when added admin is redirected to macrame detail page = Y
       2. Check before deletion - admin should be wanred before deleting anything so this is not implemented right now but kept for future feature = N
@@ -83,6 +88,15 @@ Checkout
 
 Add Macrame Page
 ![Add Macrame Page](/media/add-mac-light.png?raw=true)
+
+# Manual Testing
+
+* This application is tested on Chromebook; Chrome is made possible by the [Chromium](https://www.chromium.org/chromium-projects/) open source project and other open source software.
+ChromeOS is made possible by additional [open source](chrome://os-credits/) software, as is [Linux development environment](chrome://crostini-credits/).
+
+* This application is tested on iPhone 7, Safari IOS 15.6.1 Browser
+
+
 
 # Bugs and Issues
 

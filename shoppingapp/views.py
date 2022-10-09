@@ -115,7 +115,17 @@ def edit_macrame(request, macrame_id):
 @login_required
 def delete_macrame(request, macrame_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     macrame = get_object_or_404(Macrame, pk=macrame_id)
-    macrame.delete()
-    messages.success(request, 'Item deleted!')
-    return redirect(reverse('macrames'))
+    if request.method == 'POST':
+        macrame.delete()
+        messages.success(request, 'Item deleted!')
+        return redirect('home')
+    context = {
+        'macrame': macrame
+    }
+    messages.info(request, 'Are you sure?')
+    return render(request, 'shoppingapp/delete_macrame.html', context)
