@@ -333,7 +333,7 @@ Regarding manual testing, there are things that are checked by a few good friend
 The app is extensively tested for validating all forms in all crud functionality, to make sure only authenticated/superusers can reach certain pages. I used Iphone7 Safari Browser, and Chrome Browser on Chromebook, Linux OS - Debian. I meant to install Ecosia to test it for browser Compatibility and it crashed so I did not have working Ecosia Browser. There is implementation of protective programming which was highly recommended by Iulia Konovalova, a fellow student and a friend, who is the best at testing my apps. Also great help in testing and helping discouver css and targeting bugs, was Iulia's husband Alex Konovalov, who made his own 'Allauth-system' for his app and is constant inspiration for me. This project inspired me to even more get into hackathons and get into creating useful applications that this world can benefit from. And Django has become my number 1, so I am really working to improve my coding skills by making small projects.
 
 Homepage 
-![Homepage](/media/homepage-lighth.png?raw=true)
+![Homepage](/media/homepage-lighthouse.png?raw=true)
 
 Profile Page
 ![Profile Page](/media/profile-light.png?raw=true)
