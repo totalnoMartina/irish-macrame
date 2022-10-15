@@ -83,6 +83,8 @@ Last minute bug appeared on an admin page, coming from Django admin, when chosen
 Another last minute bug appeared on Update review page in my Safari mobile IPhone7 version(quite a small screen too), as the form is slightly overflowing the screen but not too much, the ability to fill out a form is still functional but i need to fix this when working more with django form rendering, item by item, so that i could better control the County field also and the fact that stars on reviews ar possible to go until any number, the reason why I did not target to limit this to be 6 stars as I wanted, I decided to leave these details for the time when I will have more time to learn more about detailed fomr handling in Django. 
 Updated Bug: As doing the last check, putting a bootstrap class of mx-auto on form of Update Review, it centers it so nothing overflows. so Bug resolved almost.
 
+An issue was causing to not being able to register for ne accounts as in new documentation [here](https://docs.djangoproject.com/en/dev/releases/4.0/#format-change) django has changed the setting that we have to address CSRF_TRUSTED_ORIGINS in a list format and add only host name.
+
 # Code Validation
 ## Html Validation
 

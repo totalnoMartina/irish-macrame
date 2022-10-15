@@ -63,7 +63,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto navbar__main align-items-right">
                     <li class="nav-item text-right">
-                        <a class="nav-link rounded-left home__a" href="{% url 'macrames' %}" title="Macrame Selection">Macrames</a>
+                        <a class="nav-link rounded-top home__a" href="{% url 'macrames' %}" title="Macrame Selection">Macrames</a>
                     </li>
                     <li class="nav-item text-right">
                         <a class="nav-link home__a" href="{% url 'newsletter' %}" title="Subscribe to newsletter section">Subscribe!</a>
@@ -88,7 +88,7 @@
                     </li>
 
                     <li class="nav-item text-right">
-                        <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link rounded cart__nav" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
+                        <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link rounded-bottom cart__nav" title="Shoppincart" href="{% url 'view_shoppingcart' %}">
                             <div class="text-right">
                                 <span>
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>

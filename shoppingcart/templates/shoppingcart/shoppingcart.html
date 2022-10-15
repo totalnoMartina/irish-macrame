@@ -64,7 +64,7 @@
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <span class="input-group w-100">
-                                        <div class="input-group-prepend">
+                                        <div class="input-group-prepend w-100">
                                             <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -85,14 +85,14 @@
                                     </div>
                                 </div>
                             </form>
-                            <a title="Update" class="update-link bg-white text-dark rounded px-1">
+                            <a title="Update" class="update-link bg-white text-dark rounded px-1 pt-1">
                                 <i class="fa fa-refresh pt-1" aria-hidden="true"></i>
                             </a>
                             <a title="Remove" class="remove-item bg-dark text-white float-right rounded px-1" id="remove_{{ item.item_id }}" data-macrame_size="{{ item.size }}">
                                 <i class="fa fa-trash pt-1" aria-hidden="true"></i>
                             </a>
                         </td>
-                        <td class="form-check form-check-inline mr-0 w-15">
+                        <td class="form-check mr-0 w-15">
                             {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
