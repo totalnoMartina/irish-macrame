@@ -22,8 +22,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
                  'black-moon-design.herokuapp.com/accounts/signup']
 
-CSRF_TRUSTED_ORIGINS = [ 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu71.gitpod.io',
-CSRF_TRUSTED_ORIGINS = [ 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu72.gitpod.io',
+CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu71.gitpod.io',
                         'https://black-moon-design.herokuapp.com']
 
 
