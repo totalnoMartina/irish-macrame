@@ -36,7 +36,6 @@
                             <th scope="col">Product Info</th>
                             <th scope="col">Price</th>
                             <th scope="col"></th>
-                            <th scope="col"></th>
                             <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
                         </tr>
@@ -92,17 +91,7 @@
                                 <i class="fa fa-trash pt-1" aria-hidden="true"></i>
                             </a>
                         </td>
-                        <td class="form-check mr-0 w-15">
-                            {% if user.is_authenticated %}
-                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                            {% else %}
-                            <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                            </label>
-                            {% endif %}
-                        </td>
+                    
                         <td class="py-3 w-15">
                             <p class="my-0">{{ item.quantity }}</p>
                         </td>
@@ -112,6 +101,17 @@
                     </tr>
                     {% endfor %}
                     <tr>
+                        <thead class="form-check text-center w-100">
+                            {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                            {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                            {% endif %}
+                        </thead>
                         <td colspan="4" class="pt-5 text-right">
                             <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
@@ -123,6 +123,7 @@
                             {% endif %}
                         </td>
                     </tr>
+                  
                     <tr>
                         <td colspan="5" class="text-right">
                             <a href="{% url 'macrames' %}" class="btn btn-outline-black rounded btn-lg">
