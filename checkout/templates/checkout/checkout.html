@@ -77,9 +77,9 @@
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order</p>
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form" class='border'>
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3 my-5 pb-2">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
@@ -122,13 +122,13 @@
                         </span>
                         <span class="font-weight-bold btn__add p-2 rounded">Adjust Cart</span>
                     </a>
-                    <button id="submit-button" class="btn btn__shopping rounded">
+                    <button id="submit-button" class="btn btn__shopping rounded mr-2">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
                     </button>
-                    <p class="small text-danger my-0">
+                    <p class="text-white m-2">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
