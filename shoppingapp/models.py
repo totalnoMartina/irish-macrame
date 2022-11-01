@@ -33,6 +33,7 @@ class Macrame(models.Model):
     likes = models.ManyToManyField(User, blank=True, related_name='likes')
 
     def __str__(self):
+        """ A function to return name of macrame item """
         return self.name
 
     def number_of_likes(self):
