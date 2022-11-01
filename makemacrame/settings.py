@@ -17,12 +17,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
-                 'black-moon-design.herokuapp.com/accounts/signup']
+                 'black-moon-design.herokuapp.com/accounts/signup',
+                 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu73.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu71.gitpod.io',
+CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu73.gitpod.io',
                         'https://black-moon-design.herokuapp.com']
 
 

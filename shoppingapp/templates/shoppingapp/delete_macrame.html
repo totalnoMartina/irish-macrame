@@ -29,7 +29,7 @@
     <div class="row">
         Are You sure you would like to delete this Item?
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_macrame' macrame.id %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'delete_macrame' macrame.id %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                 {% if field.name != 'image' %}
