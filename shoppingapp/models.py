@@ -29,7 +29,7 @@ class Macrame(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    image = CloudinaryField('image', default='placeholder')
+    image = CloudinaryField('image', default=None, null=True)
     likes = models.ManyToManyField(User, blank=True, related_name='likes')
 
     def __str__(self):
