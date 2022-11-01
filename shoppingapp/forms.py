@@ -9,7 +9,7 @@ class MacrameForm(forms.ModelForm):
     class Meta:
         """ A class to render all fields """
         model = Macrame
-        fields = '__all__'
+        fields = ['category', 'name', 'description', 'price', 'has_sizes', 'image']
 
     image = forms.ImageField(label='image', required=False,
                              widget=CustomClearableFileInput)
@@ -19,7 +19,6 @@ class MacrameForm(forms.ModelForm):
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
-        self.fields['likes'].widget = forms.HiddenInput()
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded'

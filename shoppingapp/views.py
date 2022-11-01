@@ -98,7 +98,7 @@ def edit_macrame(request, macrame_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    # Retrieving the particular object to edit
+    # Retrieving a particular object to edit
     macrame = get_object_or_404(Macrame, id=macrame_id)
     if request.method == 'POST':
         form = MacrameForm(request.POST, request.FILES, instance=macrame)
