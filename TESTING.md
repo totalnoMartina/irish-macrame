@@ -85,6 +85,11 @@ Updated Bug: As doing the last check, putting a bootstrap class of mx-auto on fo
 
 An issue was causing to not being able to register for ne accounts as in new documentation [here](https://docs.djangoproject.com/en/dev/releases/4.0/#format-change) django has changed the setting that we have to address CSRF_TRUSTED_ORIGINS in a list format and add only host name.
 
+Functions Delete and Editing Macrame items was not working, delete function due to the wrong name in the template guiding to editing instead deleting. I fixed and tested and worked.
+
+With editing was a bigger issue as there is a likes button which I did not want to make visible to superuser to edit, so i put it in Hidden in form Widget, this was causing the form to be invalid, and I realized this with help of Stackoverflow to use function 'print.error_as_data' to get the Validation error at the end. In the [link here](https://docs.djangoproject.com/en/4.1/ref/forms/validation/) is how to figure out validation form errors that helped me resolve this, thankfully.
+
+
 # Code Validation
 ## Html Validation
 
