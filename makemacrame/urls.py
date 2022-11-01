@@ -1,3 +1,4 @@
+""" Main urls for the apps to be connected """
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
