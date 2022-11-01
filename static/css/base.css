@@ -308,7 +308,8 @@ a .logo__name:hover {
 
 .cart__image--container img {
     display: block;
-    width: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
     object-position: center;
 }
