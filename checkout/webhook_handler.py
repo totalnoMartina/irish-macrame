@@ -50,7 +50,6 @@ class StripeWH_Handler:
         pid = intent.id
         shoppingcart = intent.metadata.shoppingcart
         save_info = intent.metadata.save_info
-
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
         grand_total = round(intent.charges.data[0].amount / 100, 2)
@@ -80,7 +79,9 @@ class StripeWH_Handler:
         # wile loop will make 5 attempts to check if order was already created
         while attempt <= 5:
             try:
+                # gets order details from the database	
                 order = Order.objects.get(
+                    # iexact ignores the uppercase	
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
@@ -92,6 +93,7 @@ class StripeWH_Handler:
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_cart=shoppingcart,
+                    stripe_pid=pid,	
                 )
                 # breaks out of the loop if order exists
                 order_exists = True
