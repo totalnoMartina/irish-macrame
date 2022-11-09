@@ -106,6 +106,7 @@ a>.deleting__mac {
 
 .btn__shopping {
     background-color: #a8552b;
+    color: black !important;
 }
 
 .btn__shopping:hover {
