@@ -150,6 +150,7 @@ a>.deleting__mac {
 
 a>.btn__checkout {
     background-color: #6f5a5c !important;
+    color: white !important;
 }
 
 a>.btn__checkout:hover {

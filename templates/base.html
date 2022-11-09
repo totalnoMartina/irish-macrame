@@ -76,7 +76,7 @@
                         <div class="dropdown-menu text-right">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a class="dropdown-item nav-link text-right home__a px-2" href="{% url 'add_macrame' %}">Manage Stock</a>
+                            <a class="dropdown-item nav-link text-right home__a px-2" href="{% url 'add_macrame' %}">Management - Add items</a>
                             {% endif %}
                             <a class="dropdown-item nav-link text-right home__a px-2" href="{% url 'profile' %}">My Profile</a>
                             <a class="dropdown-item nav-link text-right home__a px-2" href="{% url 'account_logout' %}">Logout</a>
