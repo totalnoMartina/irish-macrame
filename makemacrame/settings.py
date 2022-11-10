@@ -17,15 +17,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
                  'black-moon-design.herokuapp.com/accounts/signup',
-                 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu74.gitpod.io',
-                 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu74.gitpod.io/checkout/']
+                 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
+                 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io/checkout/']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu74.gitpod.io',
+CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                         'https://black-moon-design.herokuapp.com']
 
 
@@ -214,4 +214,4 @@ else:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')

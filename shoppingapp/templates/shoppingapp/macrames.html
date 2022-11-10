@@ -40,7 +40,7 @@
                         </a>
                         {% else %}
                         <a href="{% url 'macrame-detail' macrame.id %}" aria-label="no-image placeholder of the macrame item leading to details page">
-                            <img class="img-fluid img-thumbnail rounded card__img" src="{% static '/static/images/noimage.png' %}" alt="{{ macrame.name }}">
+                            <img class="img-fluid img-thumbnail rounded card__img" src="{% static '/images/noimage.png' %}" alt="{{ macrame.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
