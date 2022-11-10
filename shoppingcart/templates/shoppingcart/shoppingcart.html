@@ -48,7 +48,7 @@
                             {% if item.macrame.image %}
                             <img class="image_fluid cart__img" src="{{ item.macrame.image.url }}" alt="{{ macrame.name }}">
                             {% else %}
-                            <img class="image_fluid cart__img" src="{{ MEDIA_URL }}noimage.png" alt="image not uploaded">
+                            <img class="image_fluid cart__img" src="{% static '/images/noimage.png' %}" alt="image not uploaded">
                             {% endif %}
                             </div>
                         </td>

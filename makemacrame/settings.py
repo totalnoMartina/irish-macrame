@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
@@ -26,7 +26,8 @@ ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
                  'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io/checkout/']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
-                        'https://black-moon-design.herokuapp.com']
+                        'https://black-moon-design.herokuapp.com',
+                        'https://black-moon-design.herokuapp.com/macrames/',]
 
 
 # Application definition
