@@ -12,7 +12,7 @@ def newsletter_sign_up(request):
         email_user = NewsletterUserForm(request.POST)
         email_user.save()
         print(email_user)
-        messages.success(request, "Email received. thank You! ")
+        messages.success(request, "Email stored. thank You! ")
         return redirect('home')
 
     return render(request, "newsletter/newsletter.html", context)
