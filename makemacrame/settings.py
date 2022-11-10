@@ -21,7 +21,7 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
-                 '127.0.0.1', 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io/']
+                 '127.0.0.1', 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                         'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io/macrames',
