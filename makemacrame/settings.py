@@ -22,7 +22,7 @@ DEBUG = True
 
 # ALLOWED_sHOSTS = ['black-moon-design.herokuapp.com', 'localhost',
 #                  '127.0.0.1']
-ALLOWED_HOSTS = ['*', '.example.com']
+ALLOWED_HOSTS = ['*', '.example.com', 'example.herokuapp.com']
 print(ALLOWED_HOSTS)
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
