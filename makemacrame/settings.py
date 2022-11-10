@@ -19,7 +19,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
                  'black-moon-design.herokuapp.com/accounts/signup',
                  'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
