@@ -42,7 +42,7 @@ a {
     object-fit: contain !important;
     display: block !important;
     max-height: 100% !important;
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 
 .card__img:hover {
