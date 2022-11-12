@@ -130,7 +130,7 @@ The User Stories that have been satisfied are:
 ![Manage Admin, Edit and delete items from offer](/media/manage-stock-panel-edit-delete.png?raw=true)
 - Admin ability to add, update and remove product without accessing the admin panel featured in Django
 
-![Add, update, remove items from shopping cart](/media/add-macrame-detail.png?raw=true)
+![Add, update, remove items from shopping cart](/media/macrame_detail.png?raw=true)
 
 - Add/ Update/ Remove product into the shopping cart
 
