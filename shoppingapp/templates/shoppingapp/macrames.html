@@ -46,15 +46,15 @@
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ macrame.name|truncatechars:20 }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
+                        <div class="card-footer pt-2 text-left">
+                            <div class="row text-center">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">€{{ macrame.price }}</p>
                                 </div>
                                 {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'edit_macrame' macrame.id %}" class="editing__mac" aria-label="editing macrame item - admin">Edit</a> |
-                                    <a class=" delete__mac" href="{% url 'delete_macrame' macrame.id %}" aria-label="deleting macrame item - admin">Delete</a>
+                                <small class="mr-3 ">
+                                    <a href="{% url 'edit_macrame' macrame.id %}" class="btn p-1 btn__add" aria-label="editing macrame item - admin">Edit</a>
+                                    <a class="btn p-1 btn__add" href="{% url 'delete_macrame' macrame.id %}" aria-label="deleting macrame item - admin">Delete</a>
                                 </small>
                                 {% endif %}
 

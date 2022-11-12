@@ -10,6 +10,7 @@
 <br>
 <br>
 <hr>
+<div class="container text-center">
 <h2 class="logo-font mb-4">{% trans "Sign Out" %}</h2>
 <hr>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
@@ -20,8 +21,11 @@
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
     <a class="btn btn__shopping rounded" href="{% url 'home' %}">Cancel</a>
-    <button type="submit" class="signout-btn btn__add">{% trans 'Sign Out' %}</button>
+    <button type="submit" class="signout-btn btn__add rounded">{% trans 'Sign Out' %}</button>
 </form>
-
-
+<hr>
+</div>
+<br>
+<br>
+<hr>
 {% endblock %}
