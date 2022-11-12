@@ -91,19 +91,19 @@ p {
     opacity: 0.7 !important;
 }
 
-a>.editing__mac {
+.product-details-container .macrame_detail_render.editing__mac {
     background-color: #884e53 !important;
 }
 
-a>.editing__mac:hover {
+.macrame_detail_render.editing__mac:hover {
     background-color: #c49195 !important;
 }
 
-a>.deleting__mac:hover {
+.macrame_detail_render.deleting__mac:hover {
     background-color: #988e8f !important;
 }
 
-a>.deleting__mac {
+.macrame_detail_render.deleting__mac {
     background-color: #a8552b;
 }
 
