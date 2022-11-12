@@ -27,7 +27,8 @@ ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
 CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                         'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io/macrames',
                         'https://black-moon-design.herokuapp.com',
-                        'https://black-moon-design.herokuapp.com/macrames']
+                        'https://black-moon-design.herokuapp.com/macrames',
+                        'https://black-moon-design.herokuapp.com/accounts']
 
 
 # Application definition

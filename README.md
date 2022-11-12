@@ -1,6 +1,6 @@
 # Irish Macrame by Black Moon Designs
 
-![Home Page Macrames](media/homepage-macrame.png?raw=true)
+![Home Page Macrames](media/homepage.png?raw=true)
 
 The live version of the website can be seen [here](https://black-moon-design.herokuapp.com/)
 
@@ -101,11 +101,11 @@ The User Stories that have been satisfied are:
 ![Navigation Desktop](/media/nav-desktop.png?raw=true)
 - Main Navigation right next to the Logo on Desktop versions, but on mobile the navigation is placed on the right hand side, supposing the users are more rigght-handed so it is easier to manage and access on mobile versions.
 
-![Homepage Logos](/media/logos-homepage.png?raw=true)
+![Homepage Logos](/media/homepage_.png?raw=true)
 
 - Main Logo and Homepage/landing page
 
-![Homepage Logos](/media/browse-btn.png?raw=true)
+![Homepage Logos](/media/browse_btn.png?raw=true)
 
 - Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
 
@@ -113,7 +113,7 @@ The User Stories that have been satisfied are:
 
 - Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page
 
-![Macrame Detail - Add item to shopping cart](/media/add-macrame-detail.png?raw=true)
+![Macrame Detail - Add item to shopping cart](/media/macrame_detail.png?raw=true)
 
 - Detailed product page with ability to add products in the shopping cart
 
