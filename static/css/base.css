@@ -230,8 +230,9 @@ input[name='q']::placeholder {
 }
 
 .shop-now-button {
-    background-color: #dc3545 !important;
+    background-color: #4B0209 !important;
     font-weight: bolder !important;
+    color: floralwhite;
 }
 
 .shop-now-button:hover {
