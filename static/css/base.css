@@ -71,9 +71,13 @@ p {
 }
 
 .product-details-container {
-    background-color: rgba(60, 30, 30, 0.456);
-    color: #ebe8ee;
+    background-color: rgb(37 23 23 / 84%);
+    color: #ffffff;
     font-size: 2rem;
+}
+
+.product-details-container p {
+    color: #efe1d6;
 }
 
 .card__img {
@@ -103,9 +107,15 @@ a>.deleting__mac {
     background-color: #a8552b;
 }
 
+.decrement-qty,
+.increment-qty {
+    background-color: #f3ab99;
+}
+
 .btn__shopping {
     background-color: #a8552b;
     color: black !important;
+    padding: 6.9px 12px !important;
 }
 
 .btn__shopping:hover {

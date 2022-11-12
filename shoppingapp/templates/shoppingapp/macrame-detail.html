@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 pb-4">
-            <div class="product-details-container rounded mt-md-5 p-2 mt-1">
-                <p class="mb-0">{{ macrame.name }}</p>
+            <div class="product-details-container rounded mt-md-5 p-2 pb-3 mt-1">
+                <p class="mb-0">{{ macrame.name }}</p> 
                 <p class="lead mb-0 text-left font-weight-bold">€{{ macrame.price }}</p>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
@@ -75,14 +75,14 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'macrames' %}" class="btn mt-5">
+                            <a href="{% url 'macrames' %}" class="btn mt-3 pl-0">
                                 <span class="p-1 btn__shopping rounded">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn__add rounded mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn__add rounded mt-3" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
