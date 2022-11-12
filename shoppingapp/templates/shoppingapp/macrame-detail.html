@@ -31,7 +31,7 @@
                 <p class="lead mb-0 text-left font-weight-bold">€{{ macrame.price }}</p>
                 {% if request.user.is_superuser %}
                 <small>
-                    <a href="{% url 'edit_macrame' macrame.id %}" class="rounded text-white editing__mac macrame_detail_render px-2">Edit</a> |
+                    <a href="{% url 'edit_macrame' macrame.id %}" class="rounded text-white editing__mac macrame_detail_render px-2">Edit</a>
                     <a class="text-white deleting__mac macrame_detail_render rounded px-2" href="{% url 'delete_macrame' macrame.id %}">Delete</a>
                 </small>
                 {% endif %}
@@ -75,8 +75,8 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'macrames' %}" class="btn mt-3 pl-0">
-                                <span class="p-1 btn__shopping rounded">
+                            <a href="{% url 'macrames' %}" class="btn mt-3 btn__shopping rounded">
+                                <span>
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
