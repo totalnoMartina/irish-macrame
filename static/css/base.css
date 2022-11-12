@@ -38,17 +38,6 @@ a {
     max-height: 17rem;
 }
 
-.card__img {
-    object-fit: contain !important;
-    display: block !important;
-    max-height: 100% !important;
-    margin: 0 auto !important;
-}
-
-.card__img:hover {
-    opacity: 0.7 !important;
-}
-
 p {
     color: #2f231a;
 }
@@ -70,7 +59,6 @@ p {
 .nav-link {
     color: #1e1f1f !important;
     background-color: #f3ab99 !important;
-
 }
 
 .nav-link:hover {
@@ -86,6 +74,17 @@ p {
     background-color: rgba(37, 23, 23, 0.188);
     color: #ebe8ee;
     font-size: 2rem;
+}
+
+.card__img {
+    object-fit: contain !important;
+    display: block !important;
+    max-height: 100% !important;
+    margin: 0 auto !important;
+}
+
+.card__img:hover {
+    opacity: 0.7 !important;
 }
 
 a>.editing__mac {
@@ -228,6 +227,11 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #e19ea4;
     border-radius: 0;
+}
+
+.shop-now-button {
+    background-color: #dc3545 !important;
+    font-weight: bolder !important;
 }
 
 .shop-now-button:hover {
