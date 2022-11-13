@@ -91,6 +91,7 @@ The User Stories that have been satisfied are:
 |[#15](https://github.com/totalnoMartina/irish-macrame/issues/15) Admin authorisation and authentication   |![image of admin logged in](/media/admin_nav.png?raw=true)| Must Have|
 |[#19](https://github.com/totalnoMartina/irish-macrame/issues/19) Home page   |![Homepage](/media/homepage.png?raw=true)|Must Have|
 |[#20](https://github.com/totalnoMartina/irish-macrame/issues/20) Add notification while after supscription to newsletter| ![Add notification of supscription](/media/newsletter-success.png?raw=true)|Must Have|
+|[#22](https://github.com/totalnoMartina/irish-macrame/issues/22) Macrame Deletion ability - Admin should be warned before deleting anything |![Deleting Protection Question](/media/del_mac.png?raw=true)|Must Have|
 
 ## Features
 
@@ -109,7 +110,7 @@ The User Stories that have been satisfied are:
 
 - Main Shopping button outlined in the middle of the homepage as the most obvious thing to do next, to shop for macrames
 
-![Macrame detail - Likes](/media/macrame-detail-pg.png?raw=true)
+![Macrame detail - Likes](/media/macrames.png?raw=true)
 
 - Products page with listed items for sale and option to add likes to items on this page without entering the detailed part of the page
 
@@ -117,17 +118,16 @@ The User Stories that have been satisfied are:
 
 - Detailed product page with ability to add products in the shopping cart
 
-
 ![Message user signed in](/media/msg-sign-in.png?raw=true)
 ![Message user signed out](/media/msg-sign-out.png?raw=true)
 
 - Messages to notify the user when he/she is logged in succesfully or made an order
 
-![My Profile Page](/media/my-profile-pg.png?raw=true)
+![My Profile Page](/media/my_profile_pg.png?raw=true)
  
 - User profile wher users can update their personal information
 
-![Manage Admin, Edit and delete items from offer](/media/manage-stock-panel-edit-delete.png?raw=true)
+![Manage Admin, Edit and delete items from offer](/media/admin_logout.png?raw=true)
 - Admin ability to add, update and remove product without accessing the admin panel featured in Django
 
 ![Add, update, remove items from shopping cart](/media/macrame_detail.png?raw=true)
@@ -136,13 +136,15 @@ The User Stories that have been satisfied are:
 
 ![Checkout Page](/media/checkout-pg.png?raw=true)
 - Checkout page for reaching the payment and completing with stripe payment system
+
+![Thank You Page for succesful Order](/media/thank_ordered.png?raw=true)
 ## Future Features
 
 - [#11](https://github.com/totalnoMartina/irish-macrame/issues/11) Add pagination to macrame items page
 - [#21](https://github.com/totalnoMartina/irish-macrame/issues/21) Ability to write responses to the reviews of users by the author
 - [#16](https://github.com/totalnoMartina/irish-macrame/issues/16) Add Facebook/Google Login option 
 - [#18](https://github.com/totalnoMartina/irish-macrame/issues/18) Add delivery price to be determined by the country where items are shipped out to 
-- Review / Msacrame Deletion ability - Admin should be warned before deleting anything so this will be implemented for live sites that will be used in real time
+ 
 ## Wireframes
 
 First three pages for wireframes - Homepage, Macrame list page, item details page
