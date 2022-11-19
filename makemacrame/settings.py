@@ -24,6 +24,11 @@ ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
                  '127.0.0.1', 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                  'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu74.gitpod.io/accounts/login']
 
+ # Add Render.com URL to allowed hosts
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                         'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io/macrames',
                         'https://black-moon-design.herokuapp.com',
