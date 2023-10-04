@@ -21,7 +21,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
-                'https://irish-macrame.onrender.com/',
+                'https://irish-macrame.onrender.com/','https://irish-macrame.onrender.com/macrames'
                  '127.0.0.1', '8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu105.gitpod.io', 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                  '8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu105.gitpod.io/accounts/login']
 
