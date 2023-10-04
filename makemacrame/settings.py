@@ -21,9 +21,10 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['black-moon-design.herokuapp.com', 'localhost',
-                'https://irish-macrame.onrender.com/','https://irish-macrame.onrender.com/macrames'
+                'https://irish-macrame.onrender.com/', 'https://irish-macrame.onrender.com/macrames'
                  '127.0.0.1', '8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu105.gitpod.io', 'https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu75.gitpod.io',
                  '8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu105.gitpod.io/accounts/login']
+
 
  # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -35,7 +36,8 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-totalnomart-irishmacram-2xfjpzurppx.ws-eu7
                         'https://black-moon-design.herokuapp.com',
                         'https://black-moon-design.herokuapp.com/macrames',
                         'https://black-moon-design.herokuapp.com/accounts',
-                        'https://irish-macrame.onrender.com']
+                        'https://irish-macrame.onrender.com',
+                        'https://irish-macrame.onrender.com/macrames']
 
 
 # Application definition
